@@ -19,7 +19,14 @@
             </ul>
         </nav>
         <main class="content">
+            <header>
+                <h1>{% block header %}Professor Jiseon Yang{% endblock %}</h1>
+            </header>
             {% block content %}{% endblock %}
+            <footer>
+                <p>&copy; 2024 Professor Jiseon Yang. All rights reserved.</p>
+                <p>Department of Computer Science, University Name</p>
+            </footer>
         </main>
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

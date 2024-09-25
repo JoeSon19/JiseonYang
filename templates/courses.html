@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Name - Courses{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Courses</h1>
+
+<section class="section">
+    <h2>Current Courses (Fall 2023)</h2>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title">CS 401: Introduction to Artificial Intelligence</h3>
+            <p class="card-text">This course provides an overview of artificial intelligence concepts, including search algorithms, knowledge representation, and machine learning.</p>
+            <p><strong>Schedule:</strong> Mondays and Wednesdays, 10:00 AM - 11:30 AM</p>
+            <p><strong>Location:</strong> Science Building, Room 301</p>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title">CS 502: Advanced Machine Learning</h3>
+            <p class="card-text">An in-depth exploration of machine learning algorithms, focusing on deep learning and neural networks.</p>
+            <p><strong>Schedule:</strong> Tuesdays and Thursdays, 2:00 PM - 3:30 PM</p>
+            <p><strong>Location:</strong> Engineering Building, Room 205</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Past Courses</h2>
+    <ul>
+        <li>CS 301: Data Structures and Algorithms</li>
+        <li>CS 405: Natural Language Processing</li>
+        <li>CS 510: Ethics in Artificial Intelligence</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>Office Hours</h2>
+    <p>My office hours for the current semester are:</p>
+    <ul>
+        <li>Mondays: 2:00 PM - 4:00 PM</li>
+        <li>Thursdays: 10:00 AM - 12:00 PM</li>
+    </ul>
+    <p>Office: Science Building, Room 405</p>
+    <p>Students are also welcome to schedule appointments outside of these hours by <a href="{{ url_for('contact') }}">contacting me</a>.</p>
+</section>
+{% endblock %}

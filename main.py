@@ -17,9 +17,9 @@ def index():
 def research():
     return render_template('research.html')
 
-@app.route('/courses')
-def courses():
-    return render_template('courses.html')
+@app.route('/teaching')
+def teaching():
+    return render_template('teaching.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -31,10 +31,6 @@ def contact():
         flash('Your message has been sent!', 'success')
         return redirect(url_for('index'))
     return render_template('contact.html', form=form)
-
-@app.route('/youtube')
-def youtube():
-    return render_template('youtube.html')
 
 if __name__ == '__main__':
     with app.app_context():

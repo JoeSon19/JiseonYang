@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Professor Jiseon Yang's Website{% endblock %}</title>
+    <title>{% block title %}Jiseon Yang{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <nav class="sidebar">
-            <h1>Professor Jiseon Yang</h1>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('research') }}">Research</a></li>
-                <li><a href="{{ url_for('courses') }}">Courses</a></li>
-                <li><a href="{{ url_for('youtube') }}">YouTube</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            <header>
-                <h1>{% block header %}Professor Jiseon Yang{% endblock %}</h1>
-            </header>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('research') }}">Research</a></li>
+                    <li><a href="{{ url_for('teaching') }}">Teaching</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
             {% block content %}{% endblock %}
-            <footer>
-                <p>&copy; 2024 Professor Jiseon Yang. All rights reserved.</p>
-                <p>Department of Computer Science, University Name</p>
-            </footer>
         </main>
+        <footer>
+            <p>&copy; 2024 Jiseon Yang. All rights reserved.</p>
+        </footer>
     </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

@@ -83,6 +83,25 @@ nav {
     text-align: center;
 }
 
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.profile-text {
+    text-align: left;
+}
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -150,6 +169,19 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-text {
+        text-align: center;
     }
 }
 

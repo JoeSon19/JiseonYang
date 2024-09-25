@@ -2,16 +2,16 @@ import os
 import shutil
 
 def move_profile_picture():
-    source_path = 'image.png'
+    source_path = 'jiseon yang.jpg'
     destination_path = 'static/images/profile_picture.jpg'
     
     # Create the destination directory if it doesn't exist
     os.makedirs(os.path.dirname(destination_path), exist_ok=True)
     
-    # Move and rename the file
-    shutil.move(source_path, destination_path)
+    # Copy and rename the file
+    shutil.copy(source_path, destination_path)
     
-    print(f"Profile picture moved from {source_path} to {destination_path}")
+    print(f"Profile picture copied from {source_path} to {destination_path}")
 
 if __name__ == "__main__":
     move_profile_picture()

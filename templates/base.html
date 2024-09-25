@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <aside class="sidebar">
             <nav>
                 <ul>
                     <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -17,13 +17,13 @@
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </aside>
         <main>
             {% block content %}{% endblock %}
         </main>
-        <footer>
-            <p>&copy; 2024 Jiseon Yang. All rights reserved.</p>
-        </footer>
     </div>
+    <footer>
+        <p>&copy; 2024 Jiseon Yang. All rights reserved.</p>
+    </footer>
 </body>
 </html>

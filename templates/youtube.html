@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Name - YouTube{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">YouTube Channel</h1>
+
+<section class="section">
+    <h2>Featured Video</h2>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+    <p class="mt-3">This video showcases some of my recent research in Artificial Intelligence and its applications in solving real-world problems.</p>
+</section>
+
+<section class="section">
+    <h2>Playlists</h2>
+    <ul>
+        <li><a href="https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxx" target="_blank">Introduction to Machine Learning</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxx" target="_blank">Advanced AI Concepts</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxx" target="_blank">Ethics in AI</a></li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>Subscribe to My Channel</h2>
+    <p>Stay updated with my latest research and lectures by subscribing to my YouTube channel.</p>
+    <a href="https://www.youtube.com/channel/UCxxxxxxxxxxxxxxx" class="btn btn-primary" target="_blank">Subscribe Now</a>
+</section>
+{% endblock %}

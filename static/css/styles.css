@@ -30,3 +30,21 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+/* YouTube page styles */
+.embed-responsive {
+    margin-bottom: 1rem;
+}
+
+.playlist-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.playlist-list li {
+    margin-bottom: 0.5rem;
+}
+
+.subscribe-button {
+    margin-top: 1rem;
+}

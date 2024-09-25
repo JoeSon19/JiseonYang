@@ -32,6 +32,10 @@ def contact():
         return redirect(url_for('index'))
     return render_template('contact.html', form=form)
 
+@app.route('/youtube')
+def youtube():
+    return render_template('youtube.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

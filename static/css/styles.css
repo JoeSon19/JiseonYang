@@ -40,25 +40,11 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #0077be;
-}
-
-.media-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077be;
-    color: #fff !important;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.media-button:hover {
-    background-color: #005fa3;
 }
 
 h1 {

@@ -20,6 +20,9 @@
             </nav>
         </aside>
         <main>
+            <header>
+                <a href="{{ url_for('media') }}" class="media-button">Media</a>
+            </header>
             {% block content %}{% endblock %}
         </main>
     </div>

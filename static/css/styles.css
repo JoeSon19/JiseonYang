@@ -26,28 +26,6 @@ main {
     position: relative;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 20px;
-}
-
-.media-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077be;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.media-button:hover {
-    background-color: #005fa3;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -66,6 +44,21 @@ nav a {
 
 nav a:hover {
     color: #0077be;
+}
+
+.media-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077be;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.media-button:hover {
+    background-color: #005fa3;
 }
 
 h1 {
@@ -127,11 +120,5 @@ footer {
     .profile-picture {
         margin-right: 0;
         margin-bottom: 20px;
-    }
-
-    header {
-        position: static;
-        text-align: center;
-        padding: 20px 0;
     }
 }

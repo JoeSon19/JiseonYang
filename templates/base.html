@@ -14,15 +14,13 @@
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('research') }}">Research</a></li>
                     <li><a href="{{ url_for('publications') }}">Publications</a></li>
+                    <li><a href="{{ url_for('media') }}" class="media-button">Media</a></li>
                     <li><a href="{{ url_for('teaching') }}">Teaching</a></li>
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 </ul>
             </nav>
         </aside>
         <main>
-            <header>
-                <a href="{{ url_for('media') }}" class="media-button">Media</a>
-            </header>
             {% block content %}{% endblock %}
         </main>
     </div>

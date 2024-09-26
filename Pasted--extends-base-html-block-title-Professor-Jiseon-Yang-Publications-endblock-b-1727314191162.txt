@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Jiseon Yang - Publications{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Publications</h1>
+
+<section class="section">
+    <h2>Journal Articles</h2>
+    <ol>
+        <li>
+            <strong>Yang, J.</strong>, Smith, J., & Johnson, A. (2023). "Advancements in Deep Learning for NLP." <em>Journal of AI, 45</em>(2), 123-145.
+        </li>
+        <li>
+            <strong>Yang, J.</strong>, & Brown, R. (2022). "Ethical Considerations in AI Development." <em>Tech Ethics Review, 18</em>(4), 67-89.
+        </li>
+        <li>
+            Lee, S., <strong>Yang, J.</strong>, & Davis, M. (2021). "Novel Approaches to Computer Vision." <em>Computer Vision Quarterly, 32</em>(1), 12-34.
+        </li>
+    </ol>
+</section>
+
+<section class="section">
+    <h2>Conference Proceedings</h2>
+    <ol>
+        <li>
+            <strong>Yang, J.</strong>, & Park, S. (2023). "Explainable AI in Healthcare Decision Making." In <em>Proceedings of the International Conference on AI in Medicine</em> (pp. 78-85). New York, NY: ACM.
+        </li>
+        <li>
+            Kim, H., <strong>Yang, J.</strong>, & Chen, L. (2022). "Robust Neural Networks for Adversarial Environments." In <em>Advances in Neural Information Processing Systems 35</em> (pp. 3456-3468).
+        </li>
+    </ol>
+</section>
+
+<section class="section">
+    <h2>Book Chapters</h2>
+    <ol>
+        <li>
+            <strong>Yang, J.</strong> (2023). "The Future of AI in Education." In A. Johnson & B. Smith (Eds.), <em>AI and the Transformation of Learning</em> (pp. 201-225). Cambridge University Press.
+        </li>
+    </ol>
+</section>
+
+<section class="section">
+    <h2>Recent Preprints</h2>
+    <ol>
+        <li>
+            <strong>Yang, J.</strong>, & Roberts, T. (2024). "Quantum Machine Learning: A New Frontier." arXiv preprint arXiv:2403.12345.
+        </li>
+    </ol>
+</section>
+
+<p>For a complete list of publications, please visit my <a href="#" target="_blank">Google Scholar profile</a>.</p>
+{% endblock %}

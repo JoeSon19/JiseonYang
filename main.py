@@ -21,6 +21,10 @@ def research():
 def teaching():
     return render_template('teaching.html')
 
+@app.route('/publications')
+def publications():
+    return render_template('publications.html')
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()

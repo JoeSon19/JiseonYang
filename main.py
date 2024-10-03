@@ -40,6 +40,10 @@ def contact():
 def media():
     return render_template('media.html')
 
+@app.route('/team')
+def team():
+    return render_template('team.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

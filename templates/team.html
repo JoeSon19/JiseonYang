@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Jiseon Yang - Our Team{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Our Team</h1>
+
+<section class="section">
+    <h2>Research Group Members</h2>
+    <div class="team-members">
+        <div class="team-member">
+            <h3>Dr. Jiseon Yang</h3>
+            <p><strong>Position:</strong> Principal Investigator</p>
+            <p><strong>Research Focus:</strong> Microbiology in Space, Bacterial Pathogenesis</p>
+            <p>Dr. Yang leads the research group, focusing on understanding microbial interactions in space environments and their implications for human health during long-term space missions.</p>
+        </div>
+        <div class="team-member">
+            <h3>Dr. Sarah Johnson</h3>
+            <p><strong>Position:</strong> Postdoctoral Researcher</p>
+            <p><strong>Research Focus:</strong> Microbial Genomics, Bioinformatics</p>
+            <p>Dr. Johnson specializes in analyzing genomic data from space-exposed microorganisms to identify genetic adaptations to microgravity.</p>
+        </div>
+        <div class="team-member">
+            <h3>Michael Chen</h3>
+            <p><strong>Position:</strong> Ph.D. Student</p>
+            <p><strong>Research Focus:</strong> Biofilm Formation in Microgravity</p>
+            <p>Michael's research investigates how microgravity affects biofilm formation and antibiotic resistance in pathogenic bacteria.</p>
+        </div>
+        <div class="team-member">
+            <h3>Emily Rodriguez</h3>
+            <p><strong>Position:</strong> Lab Manager</p>
+            <p><strong>Expertise:</strong> Molecular Biology Techniques, Lab Operations</p>
+            <p>Emily ensures the smooth operation of our lab, manages resources, and assists in various research projects.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Collaborators</h2>
+    <ul>
+        <li>Dr. Robert McLean - Texas State University</li>
+        <li>Dr. Cheryl Nickerson - Arizona State University</li>
+        <li>Dr. Mark Ott - NASA Johnson Space Center</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>Join Our Team</h2>
+    <p>We are always looking for motivated students and researchers interested in space microbiology and astrobiology. If you're passionate about understanding how microorganisms behave in space and want to contribute to the future of space exploration, please <a href="{{ url_for('contact') }}">contact us</a> for potential opportunities.</p>
+</section>
+{% endblock %}

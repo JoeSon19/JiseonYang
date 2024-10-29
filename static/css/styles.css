@@ -67,6 +67,19 @@ p {
     color: #e6e6e6;
 }
 
+/* Publications styles */
+.publication-link {
+    color: #4da6ff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.publication-link:hover {
+    color: #99ccff;
+    text-decoration: underline;
+}
+
+/* Rest of existing styles */
 .profile-section {
     display: flex;
     align-items: center;

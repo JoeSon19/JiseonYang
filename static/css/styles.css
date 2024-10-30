@@ -20,6 +20,7 @@ body {
     width: 200px;
     background-color: #1a1a1a;
     padding: 20px;
+    padding-right: 30px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -30,7 +31,7 @@ body {
 main {
     flex-grow: 1;
     padding: 40px;
-    margin-left: 200px; /* Add margin to prevent content from being hidden under sidebar */
+    margin-left: 240px; /* Increased from 200px to create more space */
     position: relative;
 }
 
@@ -99,7 +100,7 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #cccccc;
-    margin-left: 200px; /* Add margin to align with main content */
+    margin-left: 240px; /* Updated to match main content margin */
 }
 
 .video-section {
@@ -226,6 +227,7 @@ a:hover {
     .sidebar {
         width: 100%;
         position: relative;
+        padding-right: 20px;
     }
 
     main {

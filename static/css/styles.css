@@ -13,17 +13,24 @@ body {
 .container {
     display: flex;
     flex-grow: 1;
+    position: relative;
 }
 
 .sidebar {
     width: 200px;
     background-color: #1a1a1a;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
 }
 
 main {
     flex-grow: 1;
     padding: 40px;
+    margin-left: 200px; /* Add margin to prevent content from being hidden under sidebar */
     position: relative;
 }
 
@@ -92,6 +99,7 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #cccccc;
+    margin-left: 200px; /* Add margin to align with main content */
 }
 
 .video-section {
@@ -217,6 +225,15 @@ a:hover {
 
     .sidebar {
         width: 100%;
+        position: relative;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    footer {
+        margin-left: 0;
     }
 
     .profile-section {

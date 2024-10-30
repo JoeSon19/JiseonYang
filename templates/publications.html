@@ -6,95 +6,178 @@
 <h1 class="mb-4">Publications</h1>
 
 <section class="section">
-    <h2>Peer-Reviewed Publications</h2>
-    <div class="publication-box">
-        <!-- Publication 1 -->
-        <div class="box peer-reviewed">
-            <img src="{{ url_for('static', filename='images/publications/spaceflight_microbiology.jpg') }}" alt="Microbiology of Human Spaceflight">
-            <a href="https://doi.org/10.1128/mmbr.00144-23" target="_blank">Microbiology of Human Spaceflight: Microbial Responses to Mechanical Forces that Impact Health and Habitat Sustainability</a>
-            <p>Nickerson CA, McLean RJC, Barrila J, <strong>Yang J</strong>, et al. (2024). <em>Microbio Mol Biol Rev</em>.</p>
+    <style>
+      body {
+        background-color: #1c1c1c;
+        color: #e0e0e0;
+      }
+
+      .publication-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .button-container {
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .filter-button {
+        background-color: #0073e6;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-button:hover {
+        background-color: #005bb5;
+      }
+
+      .filter-button.active {
+        background-color: #005bb5;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      }
+
+      .publication-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .box {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      }
+
+      .box img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .box a {
+        color: #0073e6;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .box a:hover {
+        color: #66b2ff;
+      }
+
+      .box p {
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 992px) {
+        .publication-box {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .publication-box {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <div class="publication-container">
+      <div class="button-container">
+        <button class="filter-button active" onclick="filterPublications('all', this)">All Years</button>
+        <button class="filter-button" onclick="filterPublications('2024', this)">2024</button>
+        <button class="filter-button" onclick="filterPublications('2023', this)">2023</button>
+        <button class="filter-button" onclick="filterPublications('2022', this)">2022</button>
+        <button class="filter-button" onclick="filterPublications('2021', this)">2021</button>
+        <button class="filter-button" onclick="filterPublications('type-peer-reviewed', this)">Peer-Reviewed</button>
+        <button class="filter-button" onclick="filterPublications('type-book-chapter', this)">Book Chapters</button>
+        <button class="filter-button" onclick="filterPublications('type-research', this)">Research Activity</button>
+      </div>
+
+      <div class="publication-box">
+        <!-- 2024 Publications -->
+        <div class="box" data-year="2024" data-type="peer-reviewed">
+          <img src="{{ url_for('static', filename='images/publications/spaceflight_microbiology.jpg') }}" alt="Publication Image">
+          <a href="https://doi.org/10.1128/mmbr.00144-23" target="_blank">Microbiology of Human Spaceflight: Microbial Responses to Mechanical Forces that Impact Health and Habitat Sustainability</a>
+          <p>Nickerson CA, McLean RJC, Barrila J, <strong>Yang J</strong>, Thornhill S, et al. (2024). <em>Microbio Mol Biol Rev</em>. Aug 19:e0014423.</p>
         </div>
 
-        <!-- Publication 2 -->
-        <div class="box peer-reviewed">
-            <img src="{{ url_for('static', filename='images/publications/gut_microbes.jpg') }}" alt="Gut Microbes Publication">
-            <a href="https://doi.org/10.1080/19490976.2024.2357767" target="_blank">Incremental increases in physiological fluid shear progressively alter pathogenic phenotypes</a>
-            <p><strong>Yang J</strong>†, Barrila J, et al. (2024). <em>Gut Microbes</em>. †Corresponding author.</p>
+        <!-- 2023 Publications -->
+        <div class="box" data-year="2023" data-type="peer-reviewed">
+          <img src="{{ url_for('static', filename='images/publications/sustainable_space.jpg') }}" alt="Publication Image">
+          <a href="https://doi.org/10.1038/s41467-023-37070-2" target="_blank">Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms</a>
+          <p>Santomartino R, Averesch NJH, Bhuiyan M, et al. including <strong>Yang J</strong>. (2023). <em>Nat Commun</em>, 14(1), 1391.</p>
         </div>
 
-        <!-- Publication 3 -->
-        <div class="box peer-reviewed">
-            <img src="{{ url_for('static', filename='images/publications/sustainable_space.jpg') }}" alt="Nature Communications Publication">
-            <a href="https://doi.org/10.1038/s41467-023-37070-2" target="_blank">Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms</a>
-            <p>Santomartino, R., et al. including <strong>Yang J</strong>. (2023). <em>Nat Commun</em>.</p>
+        <!-- 2022 Publications -->
+        <div class="box" data-year="2022" data-type="peer-reviewed">
+          <img src="{{ url_for('static', filename='images/publications/gut_microbes.jpg') }}" alt="Publication Image">
+          <a href="#" target="_blank">Role of RpoS in Regulating Stationary Phase Salmonella Typhimurium</a>
+          <p>Franco Meléndez K, Crenshaw K, Barrila J, <strong>Yang J</strong>, et al. (2022). <em>mSphere</em>, 7(4), e0021022.</p>
         </div>
-    </div>
 
-    <h2>Book Chapters and Reviews</h2>
-    <div class="publication-box">
-        <!-- Book Chapter 1 -->
-        <div class="box book-chapters">
-            <img src="{{ url_for('static', filename='images/publications/spaceflight_book.jpg') }}" alt="Springer Book Chapter">
-            <a href="#">Using Spaceflight and Spaceflight Analogue Culture for Novel Mechanistic Insight</a>
-            <p>Barrila, J., Wilson, J. W., Soni, A., <strong>Yang J</strong>, et al. (2016). Springer Science+Business Media.</p>
+        <!-- 2021 Publications -->
+        <div class="box" data-year="2021" data-type="peer-reviewed">
+          <img src="{{ url_for('static', filename='images/publications/spaceflight_book.jpg') }}" alt="Publication Image">
+          <a href="https://doi.org/10.1038/s41522-021-00240-5" target="_blank">Longitudinal characterization of multispecies microbial populations recovered from spaceflight potable water</a>
+          <p><strong>Yang J</strong>, Barrila J, Mark Ott C, et al. (2021). <em>NPJ Biofilms Microbiomes</em>, 7(1), 70.</p>
         </div>
-    </div>
 
-    <h2>Research Projects</h2>
-    <div class="publication-box">
-        <!-- Research Project -->
-        <div class="box research-activity">
-            <img src="{{ url_for('static', filename='images/publications/nasa_research.jpg') }}" alt="NASA Research Project">
-            <strong>Understanding the Evolution of Microbial Interactions during Spaceflight</strong>
-            <p>NASA-funded project (2019-2023). PI: Jiseon Yang, Ph.D. Funding: $749,999</p>
+        <!-- Research Activity -->
+        <div class="box" data-year="2024" data-type="type-research">
+          <img src="{{ url_for('static', filename='images/publications/nasa_research.jpg') }}" alt="Research Activity Image">
+          <strong>Understanding the Evolution of Microbial Interactions during Spaceflight</strong>
+          <p>Jiseon Yang, Ph.D. (PI, Arizona State University). NASA (11/01/2019-10/30/2024). $749,999</p>
         </div>
+      </div>
     </div>
 </section>
 
-<p style="text-align: center; margin-top: 30px;">
-    For a complete list of publications, please visit my 
-    <a href="https://scholar.google.com/citations?user=__yH8X4AAAAJ&hl=en" target="_blank">Google Scholar profile</a>.
-</p>
+<p style="text-align: center;">For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=__yH8X4AAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
 
-<style>
-.publication-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-}
+<script>
+  function filterPublications(category, button) {
+    // Update active button state
+    document.querySelectorAll('.filter-button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
 
-.box {
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.box:hover {
-    transform: translateY(-5px);
-}
-
-.box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
-.box a {
-    display: block;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #66b3ff;
-}
-
-.box p {
-    font-size: 0.9em;
-    color: #cccccc;
-}
-</style>
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+      if (category === 'all') {
+        box.style.display = 'block';
+      } else if (category.startsWith('type-')) {
+        // Handle type-based filtering
+        const type = category.replace('type-', '');
+        box.style.display = box.dataset.type === type ? 'block' : 'none';
+      } else {
+        // Handle year-based filtering
+        box.style.display = box.dataset.year === category ? 'block' : 'none';
+      }
+    });
+  }
+</script>
 {% endblock %}

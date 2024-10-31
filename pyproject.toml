@@ -14,6 +14,7 @@ psycopg2-binary = "^2.9.9"
 wtforms = "^3.1.2"
 requests = "^2.32.3"
 pillow = "^11.0.0"
+email-validator = "^2.2.0"
 
 
 [build-system]

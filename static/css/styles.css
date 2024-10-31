@@ -124,57 +124,6 @@ footer {
     height: 100%;
 }
 
-/* Contact form styles */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #333333;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #262626;
-    color: #ffffff;
-}
-
-.form-group textarea {
-    height: 150px;
-}
-
-.btn-primary {
-    background-color: #0077be;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #0099ff;
-}
-
 /* Team member styles */
 .team-members {
     display: flex;
@@ -246,10 +195,6 @@ a:hover {
     .profile-picture {
         margin-right: 0;
         margin-bottom: 20px;
-    }
-
-    .contact-form {
-        padding: 15px;
     }
 
     .team-member {

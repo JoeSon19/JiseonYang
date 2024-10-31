@@ -28,12 +28,27 @@ def publications():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
-    if form.validate_on_submit():
-        contact = Contact(name=form.name.data, email=form.email.data, message=form.message.data)
-        db.session.add(contact)
-        db.session.commit()
-        flash('Your message has been sent!', 'success')
-        return redirect(url_for('index'))
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            try:
+                contact = Contact(
+                    name=form.name.data,
+                    email=form.email.data,
+                    message=form.message.data
+                )
+                db.session.add(contact)
+                db.session.commit()
+                flash('Your message has been sent successfully!', 'success')
+                return redirect(url_for('contact'))
+            except Exception as e:
+                db.session.rollback()
+                flash('An error occurred while sending your message. Please try again.', 'error')
+                app.logger.error(f'Database error: {str(e)}')
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    flash(f'{field}: {error}', 'error')
+    
     return render_template('contact.html', form=form)
 
 @app.route('/media')

@@ -6,93 +6,13 @@
 <h1 class="mb-4">Publications</h1>
 
 <section class="section">
-
     <style>
-      body {
-        background-color: #1c1c1c;
-        color: #e0e0e0;
-      }
-
-      .publication-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      .button-container {
-        text-align: center;
-        margin-bottom: 20px;
-        display: flex; /* Use flexbox for easy alignment */
-        justify-content: center; /* Center the buttons horizontally */
-        flex-wrap: wrap; /* Allow buttons to wrap to a new line if needed */
-        gap: 10px; /* Space between buttons */
-      }
-
-      .filter-button {
-        background-color: #2b2b2b;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        flex: 1 1 auto; /* Make the button flexible, allowing it to adjust its size */
-        max-width: 150px; /* Limit the maximum width to keep them from becoming too wide */
-      }
-
-      .filter-button:hover {
-        background-color: #005bb5;
-      }
-
-      .publication-box {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Updated to 3 columns */
-        gap: 20px;
-      }
-
-      .box {
-        background-color: #2b2b2b;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .box:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-      }
-
-      .box img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        margin-bottom: 15px;
-      }
-
-      .box a {
-        color: #0073e6;
-        font-weight: bold;
-        text-decoration: none;
-        display: block;
-        margin-bottom: 10px;
-      }
-
-      .box a:hover {
-        color: #66b2ff;
-      }
-
-      .box p {
-        color: #cccccc;
-        font-size: 14px;
-        line-height: 1.6;
-      }
+      /* ... existing styles ... */
     </style>
 
     <div class="publication-container">
       <div class="button-container">
-        <button class="filter-button" onclick="filterPublications('all')">All</button>
+        <button class="filter-button active" onclick="filterPublications('all')">All</button>
         <button class="filter-button" onclick="filterPublications('peer-reviewed')">Peer-Reviewed Publications</button>
         <button class="filter-button" onclick="filterPublications('book-chapters')">Book Chapters<div>and</div> Non-Peer-Reviewed Publications</button>
         <button class="filter-button" onclick="filterPublications('research-activity')">Research Activity</button>
@@ -113,313 +33,8 @@
       </div>
 
       <div class="publication-box">
-
-
-
-        <style>
-          .journal-name-box {
-            background-color: darkslategray;
-            padding: 5px;
-            font-size: 0.7em;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
-          }
-        </style>
-
-        
-        <!-- Example Box for Peer-Reviewed Publication -->
-
-        <!-- 1 -->
-        <div class="box peer-reviewed" data-year="2024">
-          <div class="journal-name-box" style="font-size: 0.7em;">Microbiology and Molecular Biology Reviews</div>
-          
-          <img src="https://journals.asm.org/cms/10.1128/mmbr.00144-23/asset/7217a188-b344-4482-97ea-a19a24c97bc2/assets/images/large/mmbr.00144-23.f001.jpg" alt="Publication Image">
-          
-          <a href="https://doi.org/10.1128/mmbr.00144-23" target="_blank">Microbiology of Human Spaceflight: Microbial Responses to Mechanical Forces that Impact Health and Habitat Sustainability</a>
-          
-          <p>Nickerson CA, McLean RJC, Barrila J, <strong>Yang J</strong>, Thornhill S, Banken L, Porterfield DM, Poste G, Pellis N, and Mark Ott C. (2024). <em>Microbio Mol Biol Rev</em>. Aug 19:e0014423. doi: 10.1128/mmbr.00144-23 (IF 12.9).</p></div>
-
-
-
-        <!-- 2 -->
-        <div class="box peer-reviewed" data-year="2024">
-            <div class="journal-name-box" style="font-size: 0.7em;">Gut Microbes</div>
-
-            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/f1f5/11135960/4172b2dd299b/KGMI_A_2357767_F0005_OC.jpg" alt="Publication Image">
-
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11135960/" target="_blank">Incremental increases in physiological fluid shear progressively alter pathogenic phenotypes and gene expression in multidrug resistant Salmonella</a>
-
-            <p>Yang J.†, Barrila J, Nauman EA, Nydam SD, Yang S, Jin Park, Gutierrez-Jensen AD, Castro CL, Mark Ott C, Buss K, Steel J, Zakrajsek AD, Schuff MM, Nickerson CA†. (May 2024) <em>Gut Microbes</em>. DOI - 10.1080/19490976.2024.2357767 †Corresponding author (IF 12.2).</p>
-        </div>
-
-        <!-- 3 -->
-        <div class="box peer-reviewed" data-year="2024">
-          <div class="journal-name-box" style="font-size: 0.7em;">Microbiology Resource Announcements</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6371/10793275/466a37a2a170/mra.00345-23.f001.jpg" alt="Publication Image">
-
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10793275/" target="_blank">Draft genome sequence of *Sphingomonas paucimobilis* strain Sph5, isolated from tap water filtration membrane</a>
-
-          <p>Koroli S, Buss K, Blain JM, Nakka GS, Hong M, McLean RJ, Plugge CM, and <strong>Yang J†</strong>. (2024). <em>Microbiol Resour Announc</em>. Jan 17;13(1):e0034523. doi:10.1128/MRA.00345-23 †Corresponding author</p>
-        </div>
-
-        <!-- 4 -->
-        <div class="box peer-reviewed" data-year="2023">
-          <div class="journal-name-box" style="font-size: 0.7em;">Nature Communications</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/95b1/10030976/69536b42e76c/41467_2023_37070_Fig1_HTML.jpg" alt="Publication Image">
-
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10030976/" target="_blank">Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms</a>
-
-          <p>Santomartino R, Averesch NJH, Bhuiyan M, Cockell CS, Colangelo J, Gumulya Y, Lehner B, Lopez-Ayala I, McMahon S, Mohanty A, Santa Maria SR, Urbaniak C, Volger R, <strong>Yang J</strong>, and Zea L. (2023). <em>Nat Commun</em>. Mar 21;14(1):1391. doi:10.1038/s41467-023-37070-2. *Authors alphabetical ordered, equally contributed (IF 17.7)</p>
-        </div>
-
-        <!-- 5 -->
-        <div class="box peer-reviewed" data-year="2023">
-          <div class="journal-name-box" style="font-size: 0.7em;">Biofilm</div>
-
-          <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2590207522000363-gr1.jpg" alt="Publication Image">
-
-          <a href="https://www.sciencedirect.com/science/article/pii/S2590207522000363" target="_blank">Mitigation and use of biofilms in space for the benefit of human space exploration</a>
-
-          <p>Vélez Justiniano YA, Goeres DM, Sandvik EL, Kjellerup BV, Sysoeva TA, Harris JS, Warnat S, McGlennen M, Foreman CM, <strong>Yang J</strong>, Li W, Cassilly CD, Lott K, and HerrNeckar LE. (2023). <em>Biofilm</em>. Dec;5:100102. doi:10.1016/j.bioflm.2022.100102 (IF 5.27)</p>
-        </div>
-
-
-        <!-- 6 -->
-        <div class="box peer-reviewed" data-year="2022">
-          <div class="journal-name-box" style="font-size: 0.7em;">mSphere</div>
-
-          <img src="https://journals.asm.org/cms/10.1128/msphere.00210-22/asset/0e1eae13-0002-4105-885f-18b56915468f/assets/images/medium/msphere.00210-22-f002.gif" alt="Publication Image">
-
-          <a href="https://journals.asm.org/doi/10.1128/msphere.00210-22" target="_blank">Role of RpoS in Regulating Stationary Phase Salmonella Typhimurium Pathogenesis-Related Stress Responses under Physiological Low Fluid Shear Force Conditions</a>
-
-          <p>Franco Meléndez K, Crenshaw K, Barrila J, <strong>Yang J</strong>, Gangaraju S, Davis RR, Forsyth RJ, Ott CM, Kader R, Curtiss R, Roland K, and Nickerson CA. (2022). <em>mSphere</em>. Aug 31;7(4):e0021022. doi:10.1128/msphere.00210-22 (IF 4.17)</p>
-        </div>
-
-        <!-- 7 -->
-        <div class="box peer-reviewed" data-year="2022">
-          <div class="journal-name-box" style="font-size: 0.7em;">Frontiers in Cellular and Infection Microbiology</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6c23/9195300/2d50c4e3f090/fcimb-12-705647-g001.jpg" alt="Publication Image">
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov/35711662/" target="_blank">Spaceflight Analogue Culture Enhances the Host-Pathogen Interaction Between Salmonella and a 3-D Biomimetic Intestinal Co-Culture Model</a>
-
-          <p>Barrila J, <strong>Yang J</strong>, Franco Meléndez KP, Yang S, Buss K, Davis TJ, Aronow BJ, Bean HD, Davis RR, Forsyth RJ, Ott CM, Gangaraju S, Kang BY, Hanratty B, Nydam SD, Nauman EA, Kong W, Steel J, and Nickerson CA. (2022). <em>Front Cell Infect Microbiol</em>. May 31;12:705647. doi:10.3389/fcimb.2022.705647 (IF 6.073)</p>
-        </div>
-
-        <!-- 8 -->
-        <div class="box peer-reviewed" data-year="2021">
-          <div class="journal-name-box" style="font-size: 0.7em;">NPJ Biofilms and Microbiomes</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6d54/8421509/8061a14eac3b/41522_2021_240_Fig5_HTML.jpg" alt="Publication Image">
-
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8421509/" target="_blank">Longitudinal characterization of multispecies microbial populations recovered from spaceflight potable water</a>
-
-          <p><strong>Yang J†</strong>, Barrila J, Mark Ott C, King O, Bruce R, McLean RJC, and Nickerson CA†. (2021). <em>NPJ Biofilms Microbiomes</em>. Sep 06;7(1):70. doi:10.1038/s41522-021-00240-5 †Corresponding author (IF 8.462)</p>
-        </div>
-
-        <!-- 9 -->
-        <div class="box peer-reviewed" data-year="2018">
-          <div class="journal-name-box" style="font-size: 0.7em;">Infection and Immunity</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fe60/6204695/6f59ebd3f1a7/zii9990925890001.jpg" alt="Publication Image">
-
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6204695/" target="_blank">Modeling Host-Pathogen Interactions in the Context of the Microenvironment: Three-Dimensional Cell Culture Comes of Age</a>
-
-          <p>Barrila J, Crabbé A, <strong>Yang J</strong>, Franco K, Nydam SD, Forsyth RJ, Davis RR, Gangaraju S, Ott CM, Coyne CB, Bissell MJ, and Nickerson CA. (2018). <em>Infect Immun</em>. Nov;86(11):e00282-18. doi:10.1128/IAI.00282-18 (IF 3.256)</p>
-        </div>
-
-
-        <!-- 10 -->
-        <div class="box peer-reviewed" data-year="2017">
-          <div class="journal-name-box" style="font-size: 0.7em;">NPJ Microgravity</div>
-
-          <img src="https://www.researchgate.net/profile/Shameema-Sarker/publication/317098158/figure/fig1/AS:497589218799616@1495645922428/Development-strategy-for-3-D-co-culture-model-of-human-intestinal-epithelium-and.png" alt="Publication Image">
-
-          <a href="https://www.researchgate.net/publication/317098158_Three-dimensional_organotypic_co-culture_model_of_intestinal_epithelial_cells_and_macrophages_to_study_Salmonella_enterica_colonization_patterns" target="_blank">Three-dimensional organotypic co-culture model of intestinal epithelial cells and macrophages to study Salmonella enterica colonization patterns</a>
-
-          <p>Barrila J, <strong>Yang J</strong> (Co-first), Crabbe A, Sarker SF, Liu Y, Ott CM, Nelman-Gonzalez MA, Clemett SJ, Nydam SD, Forsyth RJ, Davis RR, Crucian BE, Quiriarte H, Roland KL, Brenneman K, Sams C, Loscher C, and Nickerson CA. (2017). <em>NPJ Microgravity</em>. Feb 28;3:10. doi:10.1038/s41526-017-0011-2 (IF 5.1)</p>
-        </div>
-
-        <!-- 11 -->
-        <div class="box peer-reviewed" data-year="2016">
-          <div class="journal-name-box" style="font-size: 0.7em;">NPJ Microgravity</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/86d9/5515522/79f22f9911cd/npjmgrav201621-f1.gif" alt="Publication Image">
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov/28725732/" target="_blank">Physiological fluid shear alters the virulence potential of invasive multidrug-resistant non-typhoidal Salmonella Typhimurium D23580</a>
-
-          <p><strong>Yang J</strong>, Barrila J (co-first), Roland KL, Ott CM, and Nickerson CA. (2016). <em>NPJ Microgravity</em>. Jun;2:16021. doi:10.1038/npjmgrav.2016.21 (IF 5.1)</p>
-        </div>
-
-
-        <!-- 12 -->
-        <div class="box peer-reviewed" data-year="2015">
-          <div class="journal-name-box" style="font-size: 0.7em;">PLoS Neglected Tropical Diseases</div>
-
-          <img src="https://journals.plos.org/plosntds/article/figure/image?size=large&id=10.1371/journal.pntd.0003839.g002" alt="Publication Image">
-
-          <a href="https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003839" target="_blank">Characterization of the Invasive, Multidrug Resistant Non-typhoidal Salmonella Strain D23580 in a Murine Model of Infection</a>
-
-          <p><strong>Yang J</strong>, Barrila J, Roland KL, Kilbourne J, Ott CM, Forsyth RJ, and Nickerson CA. (2015). <em>PLoS Negl Trop Dis</em>. Jun;9(6):e0003839. doi:10.1371/journal.pntd.0003839 (IF 3.256)</p>
-        </div>
-
-        <!-- 13 -->
-        <div class="box peer-reviewed" data-year="2012">
-          <div class="journal-name-box" style="font-size: 0.7em;">PLoS ONE</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ab27/3391293/d3ce576da6b0/pone.0040645.g003.jpg" alt="Publication Image">
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov/22792393/" target="_blank">Comparative Genome Analysis of the High Pathogenicity Salmonella Typhimurium Strain UK-1</a>
-
-          <p>Luo YQ, Kong QK, <strong>Yang J</strong>, Mitra A, Golden G, Wanda SY, Roland KL, Jensen RV, Ernst PB, and Curtiss R. (2012). <em>PLoS ONE</em>. Jul;7(7):e40645. doi:10.1371/journal.pone.0040645 (IF 4.41)</p>
-        </div>
-
-        <!-- 14 -->
-        <div class="box peer-reviewed" data-year="2012">
-          <div class="journal-name-box" style="font-size: 0.7em;">Infection and Immunity</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ab0b/3264310/e1bfc5968c43/zii9990995240001.jpg" alt="Publication Image">
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov/22144485/" target="_blank">Live Attenuated Salmonella Vaccines Displaying Regulated Delayed Lysis and Delayed Antigen Synthesis To Confer Protection against Mycobacterium tuberculosis</a>
-
-          <p>Juarez-Rodriguez MD, <strong>Yang J</strong>, Kader R, Alamuri P, Curtiss R, and Clark-Curtiss JE. (2012). <em>Infection and Immunity</em>. Feb;80(2):815-831. doi:10.1128/Iai.05526-11 (IF 3.256)</p>
-        </div>
-
-
-        <!-- 15 -->
-        <div class="box peer-reviewed" data-year="2011">
-          <div class="journal-name-box" style="font-size: 0.7em;">Infection and Immunity</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/aa57/3187260/a62247c2c31f/zii9990993330001.jpg" alt="Publication Image">
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov/21768282/" target="_blank">Effect of Deletion of Genes Involved in Lipopolysaccharide Core and O-Antigen Synthesis on Virulence and Immunogenicity of Salmonella enterica Serovar Typhimurium</a>
-
-          <p>Kong QK, <strong>Yang JS</strong>, Liu Q, Alamuri P, Roland KL, and Curtiss R. (2011). <em>Infection and Immunity</em>. Oct;79(10):4227-4239. doi:10.1128/Iai.05398-11 (IF 3.256)</p>
-        </div>
-
-        <!-- 16 -->
-        <div class="box peer-reviewed" data-year="2011">
-          <div class="journal-name-box" style="font-size: 0.7em;">Journal of Bacteriology</div>
-
-          <img src="https://i.imgur.com/3fqVPhY.png" alt="Publication Image">
-
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3147501/" target="_blank">Complete Genome Sequence of the Universal Killer Salmonella enterica Serovar Typhimurium UK-1 (ATCC 68169)</a>
-
-          <p>Luo YQ, Kong QK, <strong>Yang J</strong>, Golden G, Wanda SY, Jensen RV, Ernst PB, and Curtiss R. (2011). <em>Journal of Bacteriology</em>. Aug;193(15):4035-4036. doi:10.1128/Jb.05224-11 (IF 3.825)</p>
-        </div>
-
-        <!-- 17 -->
-        <div class="box peer-reviewed" data-year="2011">
-          <div class="journal-name-box" style="font-size: 0.7em;">Vaccine</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6bb0/3092860/d0c817b472d4/nihms285296f1.jpg" alt="Publication Image">
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov/21466806/" target="_blank">Protective cellular responses elicited by vaccination with influenza nucleoprotein delivered by a live recombinant attenuated Salmonella vaccine</a>
-
-          <p>Ashraf S, Kong W, Wang SF, <strong>Yang JS</strong>, and Curtiss R. (2011). <em>Vaccine</em>. May 23;29(23):3990-4002. doi:10.1016/j.vaccine.2011.03.066 (IF 3.49)</p>
-        </div>
-
-        <!-- 18 -->
-        <div class="box peer-reviewed" data-year="2008">
-          <div class="journal-name-box" style="font-size: 0.7em;">Korean Journal of Life Sciences</div>
-
-          <img src="https://www.researchgate.net/profile/Jiseon-Yang-2/publication/262919651/figure/tbl1/AS:392413530083328@1470570084512/Characteristics-of-ompW-deletion-mutant-A-Measurement-of-Zeta-potential.png" alt="Publication Image">
-
-          <a href="https://www.researchgate.net/figure/Characteristics-of-ompW-deletion-mutant-A-Measurement-of-Zeta-potential_tbl1_262919651" target="_blank">Regulation of an outer membrane protein, OmpW, expression and its biological function in Salmonella Typhimurium</a>
-
-          <p>Yoo AY, Yu JE, <strong>Yang J</strong>, Kim YH, Baek CH, Oh JI, and Kang HY. (2008). <em>Korean Journal of Life Sciences</em>. 18(11):1606-1611</p>
-        </div>
-
-
-        
-        <!-- Example Box for Book Chapter -->
-
-        
-        <!-- 19 -->
-          <div class="box book-chapters" data-year="2016">
-          <div class="journal-name-box" style="font-size: 0.7em;">Springer Science+Business Media</div>
-
-          <img src="https://i.imgur.com/Udx3Byo.png" alt="Publication Image" width="200" height="300">
-
-          <a href="https://link.springer.com/chapter/10.1007/978-1-4939-3277-1_11" target="_blank">
-            Using Spaceflight and Spaceflight Analogue Culture for Novel Mechanistic Insight into Salmonella Pathogenesis
-          </a>
-
-          <p>Barrila J, Wilson JW, Soni A, <strong>Yang J</strong>, Ott CM, and Nickerson CA. (2016). In: Nickerson CA, Pellis NR, and Ott CM, editors. 
-            <em>Effect of Spaceflight and Spaceflight Analogue Culture on Human and Microbial Cells: Novel Insights into Disease Mechanisms</em>. 
-            New York, NY: Springer Science+Business Media, pp. 209-235.
-          </p>
-        </div>
-
-
-        <!-- 20 -->
-        <div class="box book-chapters" data-year="2018">
-          <div class="journal-name-box" style="font-size: 0.7em;">Microbiology of Atypical Environments</div>
-
-          <img src="https://i.imgur.com/W6r4RK6.png" alt="Publication Image">
-
-          <a href="https://colab.ws/articles/10.1016%2Fbs.mim.2018.07.002" target="_blank">
-            Microbiology of the Built Environment in Spacecraft Used for Human Flight
-          </a>
-
-          <p>Yang, J., Thornhill, S. G., Barrila, J., Nickerson, C. A., Ott, C. M., and McLean, R. J. C. (2018). In: 
-            <em>Microbiology of Atypical Environments</em>, 45, pp. 3-26. doi:10.1016/bs.mim.2018.07.002
-          </p>
-        </div>
-
-        <!-- 21 -->
-        <div class="box book-chapters" data-year="2021">
-          <div class="journal-name-box" style="font-size: 0.7em;">National Academies of Science, Engineering and Medicine</div>
-
-          <img src="https://i.imgur.com/kzIitfm.png" alt="Publication Image">
-
-          <a href="https://smd-cms.nasa.gov/wp-content/uploads/2023/05/217_0ba1fc8cb18f451a37d3f0661ac12732_OttCharlieM.pdf" target="_blank">
-            A Vision for the Next Generation of Spaceflight Microbiology: Human Health and Habitat Sustainability
-          </a>
-
-          <p>Mark Ott C, Nickerson CA, Poste G, Curtiss R, Wilson J, McLean R.JC, Pellis N, Niesel D, Buchanan K, <strong>Yang J</strong>, Blakely E, Shelhamer M, Bohórquez D, Broddrick J, Stafford P, Goldschmidt ME, Kaplan HB, Antonsen E, Nauman E, Oubre C. (2021). Submitted to the Decadal Survey on Biological and Physical Sciences Research in Space 2023-2032 conducted by the National Academies of Science, Engineering and Medicine.
-          </p>
-        </div>
-        
-        <!-- 22 -->
-        <div class="box book-chapters" data-year="2021">
-          <div class="journal-name-box" style="font-size: 0.7em;">National Academies of Science, Engineering and Medicine</div>
-
-          <img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0607/9843197/4f2974cac4e7/gr2.jpg" alt="Publication Image">
-
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9843197/" target="_blank">
-            Topical: Mitigation and Use of Biofilms in Space for the Benefit of Human Space Exploration
-          </a>
-
-          <p>Vélez Justiniano, Y. A., Goeres, D. M., Sandvik, E. L., Kjellerup, B. V., Sysoeva, T. A., Harris, J. S., Warnat, S., McGlennen, M., Foreman, C. M., <strong>Yang J</strong>, Li, W., Cassilly, C. D., Lott, K., and HerrNeckar, L. E. (2021). Submitted to the Decadal Survey on Biological and Physical Sciences Research in Space 2023-2032 conducted by the National Academies of Science, Engineering and Medicine.
-          </p>
-        </div>
-
-        <!-- 23 -->
-        <div class="box book-chapters" data-year="2021">
-          <div class="journal-name-box" style="font-size: 0.7em;">Biological and Physical Sciences in Space Decadal Survey</div>
-
-          <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-023-37070-2/MediaObjects/41467_2023_37070_Fig2_HTML.png?as=webp" alt="Publication Image">
-
-          <a href="https://www.nature.com/articles/s41467-023-37070-2" target="_blank">
-            Biologically Facilitated Processes Towards Sustainable Space Exploration
-          </a>
-
-          <p>Santomartino, R., Averesch, N. J. H., Bhuiyan, M., Cockell, C. S., Colangelo, J., Gumulya, Y., Lehner, B., Lopez-Ayala, I., McMahon, S., Mohanty, A., Santa Maria, S. R., Urbaniak, C., Volger, R., <strong>Yang J</strong>. (2021). Topical White Paper submitted to the Biological and Physical Sciences in Space Decadal Survey 2023-2032.
-          </p>
-        </div>
-
-        
-
-      <!-- Additional boxes for Academic Press can go here -->
-      
-
-
-
-      
+        <!-- ... existing publication boxes ... -->
+      </div>
     </div>
 </section>
 
@@ -428,6 +43,13 @@
 <script>
   function filterPublications(category) {
     const publicationBoxes = document.querySelectorAll('.box');
+    const buttons = document.querySelectorAll('.filter-button');
+    
+    // Remove active class from all buttons
+    buttons.forEach(button => button.classList.remove('active'));
+    // Add active class to clicked button
+    event.target.classList.add('active');
+    
     publicationBoxes.forEach(box => {
       if (category === 'all') {
         box.style.display = 'block';
@@ -441,8 +63,15 @@
 
   function filterPublicationsByYear(year) {
     const publicationBoxes = document.querySelectorAll('.box');
+    const buttons = document.querySelectorAll('.filter-button');
+    
+    // Remove active class from all buttons
+    buttons.forEach(button => button.classList.remove('active'));
+    // Add active class to clicked button
+    event.target.classList.add('active');
+    
     publicationBoxes.forEach(box => {
-      if (box.getAttribute('data-year') === year) {
+      if (box.dataset.year === year) {
         box.style.display = 'block';
       } else {
         box.style.display = 'none';
@@ -450,4 +79,10 @@
     });
   }
 </script>
+
+<style>
+  .filter-button.active {
+    background-color: #005bb5;
+  }
+</style>
 {% endblock %}

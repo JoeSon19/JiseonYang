@@ -31,7 +31,7 @@ body {
 main {
     flex-grow: 1;
     padding: 40px;
-    margin-left: 240px; /* Increased from 200px to create more space */
+    margin-left: 240px;
     position: relative;
 }
 
@@ -94,13 +94,25 @@ p {
     flex-grow: 1;
 }
 
+.timeline-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.timeline-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 footer {
     background-color: #1a1a1a;
     padding: 20px;
     text-align: center;
     font-size: 14px;
     color: #cccccc;
-    margin-left: 240px; /* Updated to match main content margin */
+    margin-left: 240px;
 }
 
 .video-section {
@@ -124,7 +136,6 @@ footer {
     height: 100%;
 }
 
-/* Team member styles */
 .team-members {
     display: flex;
     flex-wrap: wrap;

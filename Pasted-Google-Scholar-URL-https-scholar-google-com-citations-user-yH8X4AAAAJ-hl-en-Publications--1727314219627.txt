@@ -1,0 +1,72 @@
+Google Scholar URL
+https://scholar.google.com/citations?user=__yH8X4AAAAJ&hl=en
+Publications
+ 
+
+Publications (peer-reviewed) 
+
+1. Nickerson CA, McLean RJC, Barrila J, Yang J., Thornhill S, Banken L, Porterfield DM, Poste G, Pellis N, and Mark Ott C. Microbiology of Human Spaceflight: Microbial Responses to Mechanical Forces that Impact Health and Habitat Sustainability. Microbio Mol Biol Rev. Aug 19:e0014423. doi: 10.1128/mmbr.00144-23 (2024) (IF 12.9).
+
+2. Yang J.†, Barrila J, Nauman EA, Nydam SD, Yang S, Jin Park, Gutierrez-Jensen AD, Castro CL, Mark Ott C, Buss K, Steel J, Zakrajsek AD, Schuff MM, Nickerson CA†. (May 2024) Incremental increases in physiological fluid shear progressively alter pathogenic phenotypes and gene expression in multidrug resistant Salmonella. Gut Microbes DOI - 10.1080/19490976.2024.2357767 †Corresponding author (IF 12.2)
+
+
+3. Koroli, S., Buss, K., Blain, J. M., Nakka, G. S., Hong, M., McLean, R. J., Plugge, C. M. and Yang, J. (Jan 17 2024) 'Draft genome sequence of', Microbiol Resour Announc, 13(1), pp. e0034523. doi:10.1128/MRA.00345-23 †Corresponding author
+
+4. Santomartino, R., Averesch, N. J. H., Bhuiyan, M., Cockell, C. S., Colangelo, J., Gumulya, Y., Lehner, B., Lopez-Ayala, I., McMahon, S., Mohanty, A., Santa Maria, S. R., Urbaniak, C., Volger, R., Yang, J. and Zea, L. (Mar 21 2023) 'Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms', Nat Commun, 14(1), pp. 1391. doi:10.1038/s41467-023-37070-2 *Authors alphabetically ordered, equally contributed (IF 17.7)
+
+5. Vélez Justiniano, Y. A., Goeres, D. M., Sandvik, E. L., Kjellerup, B. V., Sysoeva, T. A., Harris, J. S., Warnat, S., McGlennen, M., Foreman, C. M., Yang, J., Li, W., Cassilly, C. D., Lott, K. and HerrNeckar, L. E. (Dec 2023) 'Mitigation and use of biofilms in space for the benefit of human space exploration', Biofilm, 5, pp. 100102. doi:10.1016/j.bioflm.2022.100102 (IF 5.27)
+
+6. Franco Meléndez, K., Crenshaw, K., Barrila, J., Yang, J., Gangaraju, S., Davis, R. R., Forsyth, R. J., Ott, C. M., Kader, R., Curtiss, R., Roland, K. and Nickerson, C. A. (Aug 31 2022) 'Role of RpoS in Regulating Stationary Phase Salmonella Typhimurium Pathogenesis-Related Stress Responses under Physiological Low Fluid Shear Force Conditions', mSphere, 7(4), pp. e0021022. doi:10.1128/msphere.00210-22 (IF 4.17)
+
+7. Barrila, J., Yang, J., Franco Meléndez, K. P., Yang, S., Buss, K., Davis, T. J., Aronow, B. J., Bean, H. D., Davis, R. R., Forsyth, R. J., Ott, C. M., Gangaraju, S., Kang, B. Y., Hanratty, B., Nydam, S. D., Nauman, E. A., Kong, W., Steel, J. and Nickerson, C. A. (May 31 2022) 'Spaceflight Analogue Culture Enhances the Host-Pathogen Interaction Between Salmonella and a 3-D Biomimetic Intestinal Co-Culture Model', Front Cell Infect Microbiol, 12, pp. 705647. doi:10.3389/fcimb.2022.705647 (IF 6.073)
+
+8. Yang, J., Barrila, J., Mark Ott, C., King, O., Bruce, R., McLean, R. J. C. and Nickerson, C. A. (Sep 06 2021) 'Longitudinal characterization of multispecies microbial populations recovered from spaceflight potable water', NPJ Biofilms Microbiomes, 7(1), pp. 70. doi:10.1038/s41522-021-00240-5 †Corresponding author (IF 8.462)
+
+9. Barrila, J., Crabbé, A., Yang, J., Franco, K., Nydam, S. D., Forsyth, R. J., Davis, R. R., Gangaraju, S., Ott, C. M., Coyne, C. B., Bissell, M. J. and Nickerson, C. A. (Nov 2018) 'Modeling Host-Pathogen Interactions in the Context of the Microenvironment: Three-Dimensional Cell Culture Comes of Age', Infect Immun, 86(11). e00282-18 doi:10.1128/IAI.00282-18 (IF 3.256)
+
+10. Barrila, J., Yang, J., Crabbe, A., Sarker, S. F., Liu, Y., Ott, C. M., Nelman-Gonzalez, M. A., Clemett, S. J., Nydam, S. D., Forsyth, R. J., Davis, R. R., Crucian, B. E., Quiriarte, H., Roland, K. L., Brenneman, K., Sams, C., Loscher, C. and Nickerson, C. A. (Feb 28 2017) 'Three-dimensional organotypic co-culture model of intestinal epithelial cells and macrophages to study Salmonella enterica colonization patterns', NPJ Microgravity, 3, pp. 10. doi:10.1038/s41526-017-0011-2 *Co-first author. (IF 5.1)
+
+11. Yang, J., Barrila, J., Roland, K. L., Ott, C. M. and Nickerson, C. A. (Jun 2016) 'Physiological fluid shear alters the virulence potential of invasive multidrug-resistant non-typhoidal Salmonella Typhimurium D23580', NPJ Microgravity, 2, pp. 16021. doi:10.1038/npjmgrav.2016.21 *Co-first author. (IF 5.1)
+
+12.Yang, J., Barrila, J., Roland, K. L., Kilbourne, J., Ott, C. M., Forsyth, R. J. and Nickerson, C. A. (Jun 2015) 'Characterization of the Invasive, Multidrug Resistant Non-typhoidal Salmonella Strain D23580 in a Murine Model of Infection', PLoS Negl Trop Dis, 9(6), pp. e0003839. el of Infection. PLoS Negl Trop Dis. Jun 2015;9(6):e0003839. doi:10.1371/journal.pntd.0003839 (IF 3.256)
+
+13.Luo, Y. Q., Kong, Q. K., Yang, J., Mitra, A., Golden, G., Wanda, S. Y., Roland, K. L., Jensen, R. V., Ernst, P. B. and Curtiss, R. (Jul 2012) 'Comparative Genome Analysis of the High Pathogenicity Salmonella Typhimurium Strain UK-1', Plos One, 7(7). doi:ARTN e4064510.1371/journal.pone.0040645 (IF 4.41)
+
+14. Juarez-Rodriguez, M. D., Yang, J., Kader, R., Alamuri, P., Curtiss, R. and Clark-Curtiss, J. E. (Feb 2012) 'Live Attenuated Salmonella Vaccines Displaying Regulated Delayed Lysis and Delayed Antigen Synthesis To Confer Protection against Mycobacterium tuberculosis', Infection and Immunity, 80(2), pp. 815-831. doi:10.1128/Iai.05526-11 (IF 3.256)
+
+15.Kong, Q. K., Yang, J. S., Liu, Q., Alamuri, P., Roland, K. L. and Curtiss, R. (Oct 2011) 'Effect of Deletion of Genes Involved in Lipopolysaccharide Core and O-Antigen Synthesis on Virulence and Immunogenicity of Salmonella enterica Serovar Typhimurium', Infection and Immunity, 79(10), pp. 4227-4239. doi:10.1128/Iai.05398-11 (IF 3.256)
+
+16.Luo, Y. Q., Kong, Q. K., Yang, J., Golden, G., Wanda, S. Y., Jensen, R. V., Ernst, P. B. and Curtiss, R. (Aug 2011) 'Complete Genome Sequence of the Universal Killer Salmonella enterica Serovar Typhimurium UK-1 (ATCC 68169)', Journal of Bacteriology, 193(15), pp. 4035-4036. doi:10.1128/Jb.05224-11 (IF 3.825)
+
+17. Ashraf, S., Kong, W., Wang, S. F., Yang, J. S. and Curtiss, R. (May 23 2011) 'Protective cellular responses elicited by vaccination with influenza nucleoprotein delivered by a live recombinant attenuated Salmonella vaccine', Vaccine, 29(23), pp. 3990-4002. doi:10.1016/j.vaccine.2011.03.066 (IF 3.49)
+
+18.Yoo, A.Y., Yu, J. E., Yang, J, Kim, Y. H., Baek, C. H., Oh, J. I., Kang, H. Y. (2008) Regulation of an outer membrane protein, OmpW, expression and its biological function in Salmonella Typhimurium. Kor J Life Sci 18(11): 1606-1611
+
+ 
+
+Book Chapter and Non-peer-revied publications
+
+19.Barrila, J., Wilson, J. W., Soni, A., Yang, J., Ott, C. M. and Nickerson, C. A. (2016) 'Using Spaceflight and Spaceflight Analogue Culture for Novel Mechanistic Insight into Salmonella Pathogenesis', in Cheryl A. Nickerson, Neal R. Pellis and Ott, C.M. (eds.) Effect of spaceflight and spaceflight analogue culture on human and microbial cells : novel insights into disease mechanisms. New York, NY: Springer Science+Business Media, pp. 209-235.
+
+20. Yang, J., Thornhill, S. G., Barrila, J., Nickerson, C. A., Ott, C. M. and McLean, R. J. C. (2018) 'Microbiology of the Built Environment in Spacecraft Used for Human Flight', Microbiology of Atypical Environments, 45, pp. 3-26. doi:10.1016/bs.mim.2018.07.002
+
+21. Mark Ott C, Nickerson CA, Poste G, Curtiss R, Wilson J, McLean R.JC, Pellis N, Niesel D, Buchanan K, Yang J, Blakely E, Shelhamer M, Bohórquez D, Broddrick J, Stafford P, Goldschmidt ME, Kaplan HB, Antonsen E, Nauman E, Oubre C. (2021) A Vision for the Next Generation of Spaceflight Microbiology: Human Health and Habitat Sustainability. Submitted to the Decadal Survey on Biological and Physical Sciences Research in Space 2023-2032 conducted by the National Academies of Science, Engineering and Medicine.
+
+22. Vélez Justiniano, Y. A., Goeres, D. M., Sandvik, E. L., Kjellerup, B. V., Sysoeva, T. A., Harris, J. S., Warnat, S., McGlennen, M., Foreman, C. M., Yang, J., Li, W., Cassilly, C. D., Lott, K. and HerrNeckar, L. E. (2021) Topical: Mitigation and Use of Biofilms in Space for the Benefit of Human Space Exploration. Submitted to the Decadal Survey on Biological and Physical Sciences Research in Space 2023-2032 conducted by the National Academies of Science
+
+23.Santomartino, R., Averesch, N. J. H., Bhuiyan, M., Cockell, C. S., Colangelo, J., Gumulya, Y., Lehner, B., Lopez-Ayala, I., McMahon, S., Mohanty, A., Santa Maria, S. R., Urbaniak, C., Volger, R., Yang, J. (2021) Biologically Facilitated Processes Towards Sustainable Space Exploration. Topical White Paper submitted to the Biological and Physical Sciences in Space Decadal Survey 2023-2032
+
+ 
+
+Academic Press
+
+1. Jiseon Yang. 2015. Characterizing the Molecular Genetic, Phenotypic and Virulence Properties of the Invasive Nontyphoidal Salmonella Strain D23580: An Integrated Approach. Dissertation paper. Arizona State University.
+
+2. Jiseon Yang. 2005. Identification and characterization of outer membrane proteins in Salmonella Typhimurium. Master’s Thesis. Pusan National University. Academic press.
+
+Research Activity
+Understanding the evolution of microbial interactions during spaceflight. Jiseon Yang Ph.D. (PI, Arizona State University). NASA (11/01/2019-10/30/2023). $749,999
+Spaceflight-Induced Changes in Microbial Virulence and the Impact to the Host Immune Response. Mark Ott, Ph.D. (PI); Cheryl A. Nickerson, Ph.D. (PI, Arizona State University). NASA (12/1/2019 - 11/30/2024). $2,100,000
+Polymicrobial biofilm growth and control during spaceflight. Robert McLean Ph.D. (PI); Cheryl A. Nickerson, Ph.D. (Co-PI); Jiseon Yang (Senior Person). NASA (10/1/2016-8/31/25) $1,255,879
+Biofilm Inhibition with Germicidal Light Side-Emitted from Nano-enabled Flexible Optical Fibers in Water Systems. Paul Westerhoff, Ph.D., (PI); Cheryl A. Nickerson, Ph.D., (Co-PI); Jennifer Barrila, Ph.D. (Co-PI); Francois Perreault, Ph.D. (Co-PI); Jiseon Yang (Senior Person). NSF, NASA (10/1/2022 - 9/30/2025). $380,000
+Developing Predictive Model Systems of Polymicrobial Biofilm Formation and Susceptibility to Chemical Disinfectant: A longitudinal study with implications for spaceflight systems integrity and health risks. Jiseon Yang (sponsor PI), Cheryl Nickerson (internal PI). Sloan (Alfred P.) Foundation. $140,000

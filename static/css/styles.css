@@ -10,23 +10,6 @@ body {
     background-color: #000000;
 }
 
-.timeline-section {
-    margin: 40px 0;
-    padding: 20px 0;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-}
-
-.timeline-image {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    margin: 20px auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
 .container {
     display: flex;
     flex-grow: 1;
@@ -48,7 +31,7 @@ body {
 main {
     flex-grow: 1;
     padding: 40px;
-    margin-left: 240px;
+    margin-left: 240px; /* Increased from 200px to create more space */
     position: relative;
 }
 
@@ -117,7 +100,7 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #cccccc;
-    margin-left: 240px;
+    margin-left: 240px; /* Updated to match main content margin */
 }
 
 .video-section {
@@ -141,6 +124,7 @@ footer {
     height: 100%;
 }
 
+/* Team member styles */
 .team-members {
     display: flex;
     flex-wrap: wrap;

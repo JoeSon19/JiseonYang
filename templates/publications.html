@@ -7,14 +7,104 @@
 
 <section class="section">
     <style>
-      /* ... existing styles ... */
+      body {
+        background-color: #1c1c1c;
+        color: #e0e0e0;
+      }
+
+      .publication-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .button-container {
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .filter-button {
+        background-color: #2b2b2b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-button:hover {
+        background-color: #005bb5;
+      }
+
+      .filter-button.active {
+        background-color: #005bb5;
+      }
+
+      .publication-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .box {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      }
+
+      .box img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      .box a {
+        color: #0073e6;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .box a:hover {
+        color: #66b2ff;
+      }
+
+      .box p {
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .journal-name-box {
+        background-color: darkslategray;
+        padding: 5px;
+        font-size: 0.7em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+      }
     </style>
 
     <div class="publication-container">
       <div class="button-container">
         <button class="filter-button active" onclick="filterPublications('all')">All</button>
-        <button class="filter-button" onclick="filterPublications('peer-reviewed')">Peer-Reviewed Publications</button>
-        <button class="filter-button" onclick="filterPublications('book-chapters')">Book Chapters<div>and</div> Non-Peer-Reviewed Publications</button>
+        <button class="filter-button" onclick="filterPublications('peer-reviewed')">Peer-Reviewed</button>
+        <button class="filter-button" onclick="filterPublications('book-chapters')">Book Chapters</button>
         <button class="filter-button" onclick="filterPublications('research-activity')">Research Activity</button>
       </div>
 
@@ -33,7 +123,46 @@
       </div>
 
       <div class="publication-box">
-        <!-- ... existing publication boxes ... -->
+        <!-- 2024 Publications -->
+        <div class="box peer-reviewed" data-year="2024">
+          <div class="journal-name-box">Microbiology and Molecular Biology Reviews</div>
+          <img src="{{ url_for('static', filename='images/publications/spaceflight_microbiology.jpg') }}" alt="Publication Image">
+          <a href="https://doi.org/10.1128/mmbr.00144-23" target="_blank">Microbiology of Human Spaceflight: Microbial Responses to Mechanical Forces that Impact Health and Habitat Sustainability</a>
+          <p>Nickerson CA, McLean RJC, Barrila J, <strong>Yang J</strong>, Thornhill S, Banken L, Porterfield DM, Poste G, Pellis N, and Mark Ott C. (2024). <em>Microbio Mol Biol Rev</em>. Aug 19:e0014423. doi: 10.1128/mmbr.00144-23 (IF 12.9).</p>
+        </div>
+
+        <div class="box peer-reviewed" data-year="2024">
+          <div class="journal-name-box">Gut Microbes</div>
+          <img src="{{ url_for('static', filename='images/publications/gut_microbes.jpg') }}" alt="Publication Image">
+          <a href="https://doi.org/10.1080/19490976.2024.2357767" target="_blank">Incremental increases in physiological fluid shear progressively alter pathogenic phenotypes and gene expression in multidrug resistant Salmonella</a>
+          <p><strong>Yang J</strong>†, Barrila J, Nauman EA, et al. (May 2024). <em>Gut Microbes</em>. DOI: 10.1080/19490976.2024.2357767 †Corresponding author (IF 12.2).</p>
+        </div>
+
+        <!-- 2023 Publications -->
+        <div class="box peer-reviewed" data-year="2023">
+          <div class="journal-name-box">Nature Communications</div>
+          <img src="{{ url_for('static', filename='images/publications/sustainable_space.jpg') }}" alt="Publication Image">
+          <a href="https://doi.org/10.1038/s41467-023-37070-2" target="_blank">Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms</a>
+          <p>Santomartino R, et al. (2023). <em>Nat Commun</em>. 14(1):1391. *Authors alphabetically ordered, equally contributed (IF 17.7)</p>
+        </div>
+
+        <!-- Book Chapters -->
+        <div class="box book-chapters" data-year="2016">
+          <div class="journal-name-box">Springer Science+Business Media</div>
+          <img src="{{ url_for('static', filename='images/publications/spaceflight_book.jpg') }}" alt="Publication Image">
+          <a href="https://link.springer.com/chapter/10.1007/978-1-4939-3277-1_11" target="_blank">Using Spaceflight and Spaceflight Analogue Culture for Novel Mechanistic Insight into Salmonella Pathogenesis</a>
+          <p>Barrila J, Wilson JW, Soni A, <strong>Yang J</strong>, et al. (2016). Effect of Spaceflight and Spaceflight Analogue Culture on Human and Microbial Cells.</p>
+        </div>
+
+        <!-- Research Activity -->
+        <div class="box research-activity" data-year="2024">
+          <div class="journal-name-box">NASA Research Project</div>
+          <img src="{{ url_for('static', filename='images/publications/nasa_research.jpg') }}" alt="Research Activity Image">
+          <strong>Understanding the Evolution of Microbial Interactions during Spaceflight</strong>
+          <p>PI: Jiseon Yang, Ph.D. (Arizona State University)<br>
+          Duration: 2019-2023<br>
+          Funding: NASA - $749,999</p>
+        </div>
       </div>
     </div>
 </section>
@@ -45,9 +174,7 @@
     const publicationBoxes = document.querySelectorAll('.box');
     const buttons = document.querySelectorAll('.filter-button');
     
-    // Remove active class from all buttons
     buttons.forEach(button => button.classList.remove('active'));
-    // Add active class to clicked button
     event.target.classList.add('active');
     
     publicationBoxes.forEach(box => {
@@ -65,9 +192,7 @@
     const publicationBoxes = document.querySelectorAll('.box');
     const buttons = document.querySelectorAll('.filter-button');
     
-    // Remove active class from all buttons
     buttons.forEach(button => button.classList.remove('active'));
-    // Add active class to clicked button
     event.target.classList.add('active');
     
     publicationBoxes.forEach(box => {
@@ -79,10 +204,4 @@
     });
   }
 </script>
-
-<style>
-  .filter-button.active {
-    background-color: #005bb5;
-  }
-</style>
 {% endblock %}

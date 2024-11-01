@@ -67,6 +67,10 @@ def funding():
 def honors():
     return render_template('honors.html')
 
+@app.route('/techniques')
+def techniques():
+    return render_template('techniques.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

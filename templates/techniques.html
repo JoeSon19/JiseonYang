@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Jiseon Yang - Research Techniques & Certificates{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Research Techniques & Certificates</h1>
+
+<style>
+    .techniques-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .technique-card {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .technique-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .category-title {
+        color: #66b3ff;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #404040;
+        padding-bottom: 10px;
+    }
+
+    .technique-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .technique-item {
+        color: #e0e0e0;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .technique-item:hover {
+        background-color: #363636;
+    }
+
+    .certificate-box {
+        background-color: #333333;
+        border-left: 4px solid #66b3ff;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .certificate-title {
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .certificate-details {
+        color: #cccccc;
+        font-size: 0.9em;
+    }
+</style>
+
+<div class="techniques-container">
+    <!-- Molecular Biology Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Molecular Biology Techniques</h2>
+        <ul class="technique-list">
+            <li class="technique-item">DNA/RNA extraction and purification</li>
+            <li class="technique-item">PCR, RT-PCR, and qPCR</li>
+            <li class="technique-item">Gene cloning and molecular cloning techniques</li>
+            <li class="technique-item">Plasmid construction and transformation</li>
+            <li class="technique-item">Protein expression and purification</li>
+            <li class="technique-item">Western blot analysis</li>
+            <li class="technique-item">Site-directed mutagenesis</li>
+        </ul>
+    </div>
+
+    <!-- Microbiology Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Microbiology Techniques</h2>
+        <ul class="technique-list">
+            <li class="technique-item">Bacterial culture and maintenance</li>
+            <li class="technique-item">Biofilm formation assays</li>
+            <li class="technique-item">Antimicrobial susceptibility testing</li>
+            <li class="technique-item">Microbial identification techniques</li>
+            <li class="technique-item">Flow cell experiments</li>
+            <li class="technique-item">Bacterial pathogenesis studies</li>
+            <li class="technique-item">Space microbiology techniques</li>
+        </ul>
+    </div>
+
+    <!-- Cell Culture and Microscopy -->
+    <div class="technique-card">
+        <h2 class="category-title">Cell Culture and Microscopy</h2>
+        <ul class="technique-list">
+            <li class="technique-item">3D cell culture techniques</li>
+            <li class="technique-item">Mammalian cell culture</li>
+            <li class="technique-item">Fluorescence microscopy</li>
+            <li class="technique-item">Confocal microscopy</li>
+            <li class="technique-item">Electron microscopy (SEM, TEM)</li>
+            <li class="technique-item">Live cell imaging</li>
+            <li class="technique-item">Immunofluorescence techniques</li>
+        </ul>
+    </div>
+
+    <!-- Data Analysis and Computational Skills -->
+    <div class="technique-card">
+        <h2 class="category-title">Data Analysis and Computational Skills</h2>
+        <ul class="technique-list">
+            <li class="technique-item">Statistical analysis (R, Python)</li>
+            <li class="technique-item">Bioinformatics tools and databases</li>
+            <li class="technique-item">Next-generation sequencing analysis</li>
+            <li class="technique-item">Image analysis software</li>
+            <li class="technique-item">Experimental design and data visualization</li>
+        </ul>
+    </div>
+
+    <!-- Certificates and Training -->
+    <div class="technique-card">
+        <h2 class="category-title">Certificates and Professional Training</h2>
+        
+        <div class="certificate-box">
+            <div class="certificate-title">Biosafety Level 3 (BSL-3) Training</div>
+            <div class="certificate-details">
+                Advanced training in handling potentially lethal microorganisms in containment facilities
+            </div>
+        </div>
+
+        <div class="certificate-box">
+            <div class="certificate-title">Radiation Safety Training</div>
+            <div class="certificate-details">
+                Certification for handling radioactive materials in research settings
+            </div>
+        </div>
+
+        <div class="certificate-box">
+            <div class="certificate-title">Advanced Flow Cytometry</div>
+            <div class="certificate-details">
+                Specialized training in flow cytometry techniques and analysis
+            </div>
+        </div>
+
+        <div class="certificate-box">
+            <div class="certificate-title">NASA Space Biology Training</div>
+            <div class="certificate-details">
+                Specialized training in conducting biological experiments in space environments
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

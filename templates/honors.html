@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Jiseon Yang - Honors and Awards{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Honors and Awards</h1>
+
+<style>
+    .awards-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .award-card {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .award-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .award-year {
+        color: #66b3ff;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .award-title {
+        color: #ffffff;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .award-description {
+        color: #e0e0e0;
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+</style>
+
+<div class="awards-container">
+    <section class="section">
+        <h2>Recent Awards</h2>
+        
+        <div class="award-card">
+            <div class="award-year">2023</div>
+            <div class="award-title">ASM Peggy Cotter Early Career Award</div>
+            <div class="award-description">
+                Awarded by the American Society for Microbiology for exceptional contributions to microbiology research, particularly in space microbiology and bacterial pathogenesis.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2022</div>
+            <div class="award-title">NASA Early Career Public Achievement Medal</div>
+            <div class="award-description">
+                Recognition for significant early career contributions to space microbiology research and the advancement of our understanding of microbial behavior in space environments.
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Research Awards</h2>
+        
+        <div class="award-card">
+            <div class="award-year">2017</div>
+            <div class="award-title">Alfred P. Sloan Foundation Postdoctoral Fellowship</div>
+            <div class="award-description">
+                Awarded for studying the ISS microbiome and developing predictive models for microbial behavior in space environments.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2015</div>
+            <div class="award-title">Outstanding Dissertation Award</div>
+            <div class="award-description">
+                School of Life Sciences, Arizona State University - Recognition for exceptional doctoral research in microbiology.
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Teaching Excellence</h2>
+        
+        <div class="award-card">
+            <div class="award-year">2014</div>
+            <div class="award-title">Outstanding Teaching Award</div>
+            <div class="award-description">
+                School of Life Sciences, Arizona State University - Recognition for excellence in undergraduate education and mentoring.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2013</div>
+            <div class="award-title">Graduate Teaching Excellence Award</div>
+            <div class="award-description">
+                Recognition for outstanding contribution to undergraduate education while serving as a Graduate Teaching Associate.
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

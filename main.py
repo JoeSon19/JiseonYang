@@ -63,7 +63,11 @@ def team():
 def funding():
     return render_template('funding.html')
 
+@app.route('/honors')
+def honors():
+    return render_template('honors.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(host='0.0.0.0', port=5000)  # Updated port to 5000
+    app.run(host='0.0.0.0', port=5000)

@@ -1,120 +1,77 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Extends the base template -->
 
-{% block title %}Jiseon Yang - Home{% endblock %}
+{% block title %}Jiseon Yang - Home{% endblock %} <!-- Sets the page title -->
 
-{% block content %}
+{% block content %} <!-- Content block begins -->
 
+<!-- Profile section with image, title, and basic information -->
 <div class="profile-section">
+    <!-- Profile picture -->
     <img src="{{ url_for('static', filename='images/profile_picture.jpg') }}" alt="Jiseon Yang" class="profile-picture">
+    
+    <!-- Profile information -->
     <div class="profile-info">
         <h1>Jiseon Yang, Ph.D.</h1>
         <p>Assistant Research Professor</p>
         <p>Biodesign Center for Fundamental & Applied Microbiomics</p>
         <p>Arizona State University</p>
     </div>
+    
+    <!-- Research background image -->
     <img src="{{ url_for('static', filename='images/bannerfinal2.png') }}" alt="Space Research Background" class="research-image">
 </div>
 
-<!-- White line separator -->
+<!-- White line separator for visual division -->
 <hr class="white-line" style="height: 4px;">
 
-<!-- Timeline section goes here -->
-<div class="timeline">
-    <!-- Timeline content -->
+<!-- Placeholder for timeline section -->
+<div class="Banner size">
+    <!-- Timeline content can be added here -->
 </div>
 
+<!-- CSS styling for the layout and visual elements -->
 <style>
     .profile-section {
-        display: flex;
-        align-items: center;
-        gap: 20px;
+        display: flex; /* Align items in a row */
+        align-items: center; /* Center items vertically */
+        gap: 20px; /* Space between elements */
     }
 
     .profile-picture {
-        width: 150px;
-        height: auto;
-        border-radius: 50%;
+        width: 150px; /* Fixed width for the profile picture */
+        height: auto; /* Maintains aspect ratio */
+        border-radius: 50%; /* Makes the image circular */
     }
 
     .profile-info {
-        flex-grow: 1;
-        max-width: 400px;
+        flex-grow: 1; /* Allows info to expand as needed */
+        max-width: 400px; /* Limits width for readability */
     }
 
     .research-image {
-        width: 600px;
-        height: auto;
-        border-radius: 10px;
-        margin-left: auto;
+        width: 600px; /* Sets research image width */
+        height: auto; /* Maintains aspect ratio */
+        border-radius: 10px; /* Slightly rounded corners */
+        margin-left: auto; /* Aligns image to the right */
     }
 
     /* Style for the white line */
     .white-line {
-        border: none;
-        height: 2px;
-        background-color: white;
-        margin: 20px 0; /* Adjust spacing around the line */
+        border: none; /* Removes default border */
+        height: 2px; /* Sets line thickness */
+        background-color: white; /* Sets line color */
+        margin: 20px 0; /* Spacing above and below the line */
     }
 </style>
 
-
-
-
-
-
-<!--Key Milestones in Microbial Pathogenesis and Space Microbiology Research image -->
-
-<div class="timeline" style="position: relative; max-width: 1000px; margin-left: 0;">
-    <img src="{{ url_for('static', filename='images/Key Milestones in Microbial Pathogenesis and Space Microbiology Research.png') }}" 
-         alt="Key Milestones in Microbial Pathogenesis and Space Microbiology Research" 
-         style="width: 100%; height: auto;">
-
-    <!-- Clickable links for each milestone -->
-    <div class="circle-links">
-        <a href="#milestone1" class="circle" style="top: 30%; left: 6%;"></a>
-        <a href="#milestone2" class="circle" style="top: 58%; left: 16%;"></a>
-        <a href="#milestone3" class="circle" style="top: 30%; left: 25.5%;"></a>
-        <a href="#milestone4" class="circle" style="top: 58%; left: 35.28%;"></a>
-        <a href="#milestone5" class="circle" style="top: 30%; left: 45.1%;"></a>
-        <a href="#milestone6" class="circle" style="top: 58%; left: 55%;"></a>
-        <a href="#milestone7" class="circle" style="top: 30%; left: 65%;"></a>
-        <a href="#milestone8" class="circle" style="top: 58%; left: 75%;"></a>
-        <a href="#milestone9" class="circle" style="top: 30%; left: 84.25%;"></a>
-    </div>
-</div>
-
-<style>
-    .circle-links {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .circle-links .circle {
-        position: absolute;
-        width: 71px;  /* Increased size for better visibility */
-        height: 71px;
-        border-radius: 50%;
-        background-color: transparent;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        border: 2px solid rgba(0, 0, 0, 0.3); /* Added a border for visibility */
-    }
-
-    .circle-links .circle:hover {
-        background-color: rgba(0, 0, 0, 0.2);  /* Darker hover color for better feedback */
-    }
-</style>
-
-
+<!-- About Me section with description of expertise and achievements -->
 <section class="about">
     <h2>About Me</h2>
     <p>I specialize in bacteriology and space life science, focusing on bacterial pathogenesis, genetic engineering, biofilms, space biology, vaccine development, and host-pathogen interaction. My work leverages diverse human surrogate models, such as 3D tissue cultures and animal models, with a goal of advancing our understanding of microbial interactions within ecosystems. This research aims to uncover microbial community dynamics, persistence, and pathogenicity both on Earth and in space, supporting life sustainability in challenging environments.</p>
     <p>I hold an Alfred P. Sloan Postdoctoral Fellowship for studying the ISS microbiome, with publications on genomics, microbiology, and space biology. I currently lead a NASA-funded project on bacterial interspecies interactions in extreme environments, integrating systemic approaches and multi-directional analysis to explore complex microbial interactions. My achievements include the ASM Peggy Cotter Early Career Award and an Outstanding Teaching Award.</p>
 </section>
 
+<!-- Research Interests section with a list of topics -->
 <section class="research-interests">
     <h2>Research Interests</h2>
     <ul>
@@ -128,6 +85,7 @@
     </ul>
 </section>
 
+<!-- Education section listing academic qualifications -->
 <section class="education">
     <h2>Education</h2>
     <ul>
@@ -138,51 +96,4 @@
     </ul>
 </section>
 
-<!-- Milestone sections with ids for each -->
-<section id="milestone1" class="milestone">
-    <h2>Salmonella Membrane Proteins Regulated by Iron Independent of Fur</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone2" class="milestone">
-    <h2>Vaccine Development (TB and Influenza) Using Salmonella Lysis-Based T-cell Antigen Delivery System</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone3" class="milestone">
-    <h2>Characteristics of MDR Invasive Salmonella and Its Response to Physiological Fluid Shear</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone4" class="milestone">
-    <h2>Mechanosensing in Pathogens and Infectious Disease Pathogenesis</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone5" class="milestone">
-    <h2>Biofilms in Space and the ISS Water Isolates</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone6" class="milestone">
-    <h2>Burkholderia and Valley Fever Transmission and Host-Pathogen Interactions</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone7" class="milestone">
-    <h2>Development of 3D Cell Culture Models and Tissue Regeneration</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone8" class="milestone">
-    <h2>Microbiome of the ISS and Multispecies Microbial Communities in Space</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-<section id="milestone9" class="milestone">
-    <h2>Space Microbiology and Long-Term Microbial Interactions in Space</h2>
-    <p>Details about this milestone...</p>
-</section>
-
-
-{% endblock %}
+{% endblock %} <!-- Content block ends -->

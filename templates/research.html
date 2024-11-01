@@ -5,41 +5,97 @@
 {% block content %}
 <h1 class="mb-4">Research</h1>
 
-<section class="section">
-    <h2>Current Projects</h2>
-    <ul>
-        <li>
-            <h3>AI-driven Climate Change Mitigation</h3>
-            <p>Developing machine learning models to predict and mitigate the effects of climate change on urban environments.</p>
-        </li>
-        <li>
-            <h3>Natural Language Understanding in Healthcare</h3>
-            <p>Creating advanced NLP systems to improve patient-doctor communication and medical record analysis.</p>
-        </li>
-        <li>
-            <h3>Ethical AI Decision Making</h3>
-            <p>Investigating methods to incorporate ethical considerations into AI decision-making processes.</p>
-        </li>
-    </ul>
+<!--Key Milestones in Microbial Pathogenesis and Space Microbiology Research image -->
+
+<div class="timeline" style="position: relative; max-width: 1000px; margin-left: 0;">
+    <img src="{{ url_for('static', filename='images/Key Milestones in Microbial Pathogenesis and Space Microbiology Research.png') }}" 
+         alt="Key Milestones in Microbial Pathogenesis and Space Microbiology Research" 
+         style="width: 100%; height: auto;">
+
+    <!-- Clickable links for each milestone -->
+    <div class="circle-links">
+        <a href="#milestone1" class="circle" style="top: 30%; left: 6%;"></a>
+        <a href="#milestone2" class="circle" style="top: 58%; left: 16%;"></a>
+        <a href="#milestone3" class="circle" style="top: 30%; left: 25.5%;"></a>
+        <a href="#milestone4" class="circle" style="top: 58%; left: 35.28%;"></a>
+        <a href="#milestone5" class="circle" style="top: 30%; left: 45.1%;"></a>
+        <a href="#milestone6" class="circle" style="top: 58%; left: 55%;"></a>
+        <a href="#milestone7" class="circle" style="top: 30%; left: 65%;"></a>
+        <a href="#milestone8" class="circle" style="top: 58%; left: 75%;"></a>
+        <a href="#milestone9" class="circle" style="top: 30%; left: 84.25%;"></a>
+    </div>
+</div>
+
+<style>
+    .circle-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle-links .circle {
+        position: absolute;
+        width: 71px;  /* Increased size for better visibility */
+        height: 71px;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border: 2px solid rgba(0, 0, 0, 0.3); /* Added a border for visibility */
+    }
+
+    .circle-links .circle:hover {
+        background-color: rgba(0, 0, 0, 0.2);  /* Darker hover color for better feedback */
+    }
+</style>
+
+
+<!-- Milestone sections with ids for each -->
+<section id="milestone1" class="milestone">
+    <h2>Salmonella Membrane Proteins Regulated by Iron Independent of Fur</h2>
+    <p>Details about this milestone...</p>
 </section>
 
-<section class="section">
-    <h2>Selected Publications</h2>
-    <ol>
-        <li>
-            <strong>Smith, J., Johnson, A., & Yang, J. (2023).</strong> "Advancements in Deep Learning for NLP." <em>Journal of AI, 45</em>(2), 123-145.
-        </li>
-        <li>
-            <strong>Yang, J., & Brown, R. (2022).</strong> "Ethical Considerations in AI Development." <em>Tech Ethics Review, 18</em>(4), 67-89.
-        </li>
-        <li>
-            <strong>Lee, S., Yang, J., & Davis, M. (2021).</strong> "Novel Approaches to Computer Vision." <em>Computer Vision Quarterly, 32</em>(1), 12-34.
-        </li>
-    </ol>
+<section id="milestone2" class="milestone">
+    <h2>Vaccine Development (TB and Influenza) Using Salmonella Lysis-Based T-cell Antigen Delivery System</h2>
+    <p>Details about this milestone...</p>
 </section>
 
-<section class="section">
-    <h2>Research Opportunities</h2>
-    <p>I am always looking for motivated graduate students and researchers to join my team. If you're interested in working on cutting-edge AI projects, please <a href="{{ url_for('contact') }}">contact me</a> with your CV and research interests.</p>
+<section id="milestone3" class="milestone">
+    <h2>Characteristics of MDR Invasive Salmonella and Its Response to Physiological Fluid Shear</h2>
+    <p>Details about this milestone...</p>
 </section>
+
+<section id="milestone4" class="milestone">
+    <h2>Mechanosensing in Pathogens and Infectious Disease Pathogenesis</h2>
+    <p>Details about this milestone...</p>
+</section>
+
+<section id="milestone5" class="milestone">
+    <h2>Biofilms in Space and the ISS Water Isolates</h2>
+    <p>Details about this milestone...</p>
+</section>
+
+<section id="milestone6" class="milestone">
+    <h2>Burkholderia and Valley Fever Transmission and Host-Pathogen Interactions</h2>
+    <p>Details about this milestone...</p>
+</section>
+
+<section id="milestone7" class="milestone">
+    <h2>Development of 3D Cell Culture Models and Tissue Regeneration</h2>
+    <p>Details about this milestone...</p>
+</section>
+
+<section id="milestone8" class="milestone">
+    <h2>Microbiome of the ISS and Multispecies Microbial Communities in Space</h2>
+    <p>Details about this milestone...</p>
+</section>
+
+<section id="milestone9" class="milestone">
+    <h2>Space Microbiology and Long-Term Microbial Interactions in Space</h2>
+    <p>Details about this milestone...</p>
+</section>
+
 {% endblock %}

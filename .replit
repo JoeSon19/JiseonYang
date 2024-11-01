@@ -21,11 +21,7 @@ args = "Save Publication Images"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Create Placeholders"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Flask Website"
+args = "Flask Server"
 
 [[workflows.workflow]]
 name = "Move Profile Picture"
@@ -53,21 +49,7 @@ task = "shell.exec"
 args = "python save_publication_images.py"
 
 [[workflows.workflow]]
-name = "Create Placeholders"
-author = "agent"
-
-[workflows.workflow.metadata]
-agentRequireRestartOnSave = false
-
-[[workflows.workflow.tasks]]
-task = "packager.installForAll"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python create_placeholder_images.py"
-
-[[workflows.workflow]]
-name = "Flask Website"
+name = "Flask Server"
 author = "agent"
 
 [workflows.workflow.metadata]

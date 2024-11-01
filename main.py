@@ -75,6 +75,10 @@ def techniques():
 def services():
     return render_template('services.html')
 
+@app.route('/presentations')
+def presentations():
+    return render_template('presentations.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

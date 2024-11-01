@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Jiseon Yang - Funding{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Research Funding</h1>
+
+<section class="section">
+    <style>
+        .funding-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .funding-card {
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .funding-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .funding-title {
+            color: #66b3ff;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .funding-details {
+            color: #e0e0e0;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .funding-amount {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .funding-period {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
+
+    <div class="funding-container">
+        <div class="funding-card">
+            <div class="funding-title">Understanding the evolution of microbial interactions during spaceflight</div>
+            <div class="funding-details">
+                <strong>Principal Investigator:</strong> Jiseon Yang, Ph.D.<br>
+                <strong>Institution:</strong> Arizona State University<br>
+                <strong>Funding Agency:</strong> NASA
+            </div>
+            <div class="funding-period">11/01/2019 - 10/30/2023</div>
+            <div class="funding-amount">$749,999</div>
+        </div>
+
+        <div class="funding-card">
+            <div class="funding-title">Spaceflight-Induced Changes in Microbial Virulence and the Impact to the Host Immune Response</div>
+            <div class="funding-details">
+                <strong>Principal Investigators:</strong> Mark Ott, Ph.D.; Cheryl A. Nickerson, Ph.D.<br>
+                <strong>Institution:</strong> Arizona State University<br>
+                <strong>Funding Agency:</strong> NASA
+            </div>
+            <div class="funding-period">12/1/2019 - 11/30/2024</div>
+            <div class="funding-amount">$2,100,000</div>
+        </div>
+
+        <div class="funding-card">
+            <div class="funding-title">Polymicrobial biofilm growth and control during spaceflight</div>
+            <div class="funding-details">
+                <strong>Principal Investigator:</strong> Robert McLean, Ph.D.<br>
+                <strong>Co-PI:</strong> Cheryl A. Nickerson, Ph.D.<br>
+                <strong>Role:</strong> Senior Person<br>
+                <strong>Funding Agency:</strong> NASA
+            </div>
+            <div class="funding-period">10/1/2016 - 8/31/25</div>
+            <div class="funding-amount">$1,255,879</div>
+        </div>
+
+        <div class="funding-card">
+            <div class="funding-title">Biofilm Inhibition with Germicidal Light Side-Emitted from Nano-enabled Flexible Optical Fibers in Water Systems</div>
+            <div class="funding-details">
+                <strong>Principal Investigator:</strong> Paul Westerhoff, Ph.D.<br>
+                <strong>Co-PIs:</strong> Cheryl A. Nickerson, Ph.D., Jennifer Barrila, Ph.D., Francois Perreault, Ph.D.<br>
+                <strong>Role:</strong> Senior Person<br>
+                <strong>Funding Agency:</strong> NSF, NASA
+            </div>
+            <div class="funding-period">10/1/2022 - 9/30/2025</div>
+            <div class="funding-amount">$380,000</div>
+        </div>
+
+        <div class="funding-card">
+            <div class="funding-title">Developing Predictive Model Systems of Polymicrobial Biofilm Formation and Susceptibility to Chemical Disinfectant</div>
+            <div class="funding-details">
+                <strong>Sponsor PI:</strong> Jiseon Yang<br>
+                <strong>Internal PI:</strong> Cheryl Nickerson<br>
+                <strong>Details:</strong> A longitudinal study with implications for spaceflight systems integrity and health risks<br>
+                <strong>Funding Agency:</strong> Sloan (Alfred P.) Foundation
+            </div>
+            <div class="funding-amount">$140,000</div>
+        </div>
+    </div>
+</section>
+{% endblock %}

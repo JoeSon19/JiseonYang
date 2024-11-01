@@ -71,6 +71,10 @@ def honors():
 def techniques():
     return render_template('techniques.html')
 
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

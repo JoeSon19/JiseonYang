@@ -74,91 +74,717 @@
 </style>
 
 <div class="techniques-container">
-    <!-- Molecular Biology Techniques -->
+
+     <script>
+        function toggleDescription(id) {
+            const desc = document.getElementById(id);
+            desc.style.display = desc.style.display === "none" || desc.style.display === "" ? "block" : "none";
+        }
+        </script>
+
+        <style>
+            .description {
+                display: none; /* Start with descriptions hidden */
+                padding-left: 28px; /* Aligns the text after the icon */
+                margin-top: 5px;
+                font-size: 14px;
+                color: #fff; /* Set text color to white */
+            }
+
+
+        .language-title {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        </style>
+    
+    <!-- Computer Languages -->
     <div class="technique-card">
-        <h2 class="category-title">Molecular Biology Techniques</h2>
+        <h2 class="category-title">Computer Languages</h2>
         <ul class="technique-list">
-            <li class="technique-item">DNA/RNA extraction and purification</li>
-            <li class="technique-item">PCR, RT-PCR, and qPCR</li>
-            <li class="technique-item">Gene cloning and molecular cloning techniques</li>
-            <li class="technique-item">Plasmid construction and transformation</li>
-            <li class="technique-item">Protein expression and purification</li>
-            <li class="technique-item">Western blot analysis</li>
-            <li class="technique-item">Site-directed mutagenesis</li>
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREC93mALVZOfrNonlHxyvt8ljWQKpP-Q6nCQ&s" alt="R Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-r')">R (main)</span>
+                <div class="description" id="desc-r">
+                    R is a language primarily used for statistical computing and graphics, making it popular in data science.
+                </div>
+            </li>
+
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3oytIAYWvBQA8pHr91xQPcLvBGg7w6wSjVqTGwxaLDw1_Iq1wm2yL8ucyhPkJ0ngOXu4&usqp=CAU" alt="Python Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-python')">Python</span>
+                <div class="description" id="desc-python">
+                    Python is a versatile programming language used for web development, data analysis, AI, and more.
+                </div>
+            </li>
+
+
+            <li class="technique-item">
+                <img src="https://i.pinimg.com/736x/73/96/b8/7396b8543078228985df506d122df2e7.jpg" alt="SAS Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-sas')">SAS</span>
+                <div class="description" id="desc-sas">
+                    SAS is used for advanced analytics, business intelligence, and data management.
+                </div>
+            </li>
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlNYFWmyTZQCQBQxPeYNdU3PzXTZNTQvRPjkiSaWXMMKka6IWd65vWQDhciFAmj7kTSuM&usqp=CAU" alt="Java Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-java')">Java (entry)</span>
+                <div class="description" id="desc-java">
+                    Java is a general-purpose programming language that is platform-independent and widely used in web applications.
+                </div>
+            </li>
+
+
+            <li class="technique-item">
+                <img src="https://bairesdev.mo.cloudinary.net/blog/2021/11/Linux.png?tx=w_1920,q_auto" alt="Linux Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-linux')">Linux (entry)</span>
+                <div class="description" id="desc-linux">
+                    Linux is an open-source operating system used for various computing environments, from servers to desktops.
+                </div>
+            </li>
+
+
+            
         </ul>
     </div>
 
-    <!-- Microbiology Techniques -->
+   
+    <!-- Statistical Modeling -->
     <div class="technique-card">
-        <h2 class="category-title">Microbiology Techniques</h2>
+        <h2 class="category-title">Statistical Modeling</h2>
         <ul class="technique-list">
-            <li class="technique-item">Bacterial culture and maintenance</li>
-            <li class="technique-item">Biofilm formation assays</li>
-            <li class="technique-item">Antimicrobial susceptibility testing</li>
-            <li class="technique-item">Microbial identification techniques</li>
-            <li class="technique-item">Flow cell experiments</li>
-            <li class="technique-item">Bacterial pathogenesis studies</li>
-            <li class="technique-item">Space microbiology techniques</li>
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/0vOWpGC.png" alt="Linear Regression Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="model-title" onclick="toggleDescription('desc-linear-regression')">Linear Regression</span>
+                <div class="description" id="desc-linear-regression">
+                    Linear regression models the relationship between a dependent variable and one or more independent variables.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://www.biologyforlife.com/uploads/2/2/3/9/22392738/anova2_orig.jpg" alt="ANOVA Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="model-title" onclick="toggleDescription('desc-anova')">ANOVA</span>
+                <div class="description" id="desc-anova">
+                    ANOVA (Analysis of Variance) is used to compare means across multiple groups to find if they significantly differ.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/IZnjwDg.png" alt="Mixed Effect Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="model-title" onclick="toggleDescription('desc-mixed-effect')">Mixed Effect Models</span>
+                <div class="description" id="desc-mixed-effect">
+                    Mixed effect models analyze data that includes both fixed and random effects, useful for complex data structures.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/rMYachG.png" alt="Spatiotemporal Data Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="model-title" onclick="toggleDescription('desc-spatiotemporal')">Spatiotemporal Data Analysis</span>
+                <div class="description" id="desc-spatiotemporal">
+                    Spatiotemporal data analysis studies data that changes over space and time, often used in environmental studies.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/ReCbqks.png" alt="Longitudinal Data Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="model-title" onclick="toggleDescription('desc-longitudinal')">Longitudinal Data Analysis</span>
+                <div class="description" id="desc-longitudinal">
+                    Longitudinal data analysis tracks data collected repeatedly over time, important for understanding changes within subjects.
+                </div>
+            </li>
+
+
+            
         </ul>
     </div>
 
-    <!-- Cell Culture and Microscopy -->
-    <div class="technique-card">
-        <h2 class="category-title">Cell Culture and Microscopy</h2>
-        <ul class="technique-list">
-            <li class="technique-item">3D cell culture techniques</li>
-            <li class="technique-item">Mammalian cell culture</li>
-            <li class="technique-item">Fluorescence microscopy</li>
-            <li class="technique-item">Confocal microscopy</li>
-            <li class="technique-item">Electron microscopy (SEM, TEM)</li>
-            <li class="technique-item">Live cell imaging</li>
-            <li class="technique-item">Immunofluorescence techniques</li>
-        </ul>
-    </div>
 
-    <!-- Data Analysis and Computational Skills -->
+    <!-- Bioinformatics -->
     <div class="technique-card">
-        <h2 class="category-title">Data Analysis and Computational Skills</h2>
+        <h2 class="category-title">Bioinformatics</h2>
         <ul class="technique-list">
-            <li class="technique-item">Statistical analysis (R, Python)</li>
-            <li class="technique-item">Bioinformatics tools and databases</li>
-            <li class="technique-item">Next-generation sequencing analysis</li>
-            <li class="technique-item">Image analysis software</li>
-            <li class="technique-item">Experimental design and data visualization</li>
-        </ul>
-    </div>
+            
+            
+            <li class="technique-item">
+                <img src="https://www.science.org/do/10.5555/article.2385520/abs/2015_07_31_transcriptomics_large_2.jpg" alt="Transcriptomics Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="bioinformatics-title" onclick="toggleDescription('desc-transcriptomics')">Transcriptomics</span>
+                <div class="description" id="desc-transcriptomics">
+                    Transcriptomics involves the study of RNA transcripts, allowing for insights into gene expression in various biological contexts.
+                </div>
+            </li>
 
-    <!-- Certificates and Training -->
-    <div class="technique-card">
-        <h2 class="category-title">Certificates and Professional Training</h2>
+            
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/zli7EBT.png" alt="Microbiome Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="bioinformatics-title" onclick="toggleDescription('desc-microbiome')">Microbiome (16S rRNA Sequencing Analysis)</span>
+                <div class="description" id="desc-microbiome">
+                    Microbiome analysis through 16S rRNA sequencing is used to identify and compare bacteria within a sample, often for ecological and health-related studies.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://avatars.githubusercontent.com/u/18176583?s=280&v=4" alt="Qiime2 Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="bioinformatics-title" onclick="toggleDescription('desc-qiime2')">Qiime2</span>
+                <div class="description" id="desc-qiime2">
+                    Qiime2 is an open-source bioinformatics software for microbiome analysis, used to analyze and interpret high-throughput microbial community sequencing data.
+                </div>
+            </li>
+
         
-        <div class="certificate-box">
-            <div class="certificate-title">Biosafety Level 3 (BSL-3) Training</div>
-            <div class="certificate-details">
-                Advanced training in handling potentially lethal microorganisms in containment facilities
-            </div>
-        </div>
-
-        <div class="certificate-box">
-            <div class="certificate-title">Radiation Safety Training</div>
-            <div class="certificate-details">
-                Certification for handling radioactive materials in research settings
-            </div>
-        </div>
-
-        <div class="certificate-box">
-            <div class="certificate-title">Advanced Flow Cytometry</div>
-            <div class="certificate-details">
-                Specialized training in flow cytometry techniques and analysis
-            </div>
-        </div>
-
-        <div class="certificate-box">
-            <div class="certificate-title">NASA Space Biology Training</div>
-            <div class="certificate-details">
-                Specialized training in conducting biological experiments in space environments
-            </div>
-        </div>
+        
+        </ul>
     </div>
+
+
+    <!-- General Molecular Biology Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">General Molecular Biology Techniques</h2>
+        <ul class="technique-list">
+            
+            <li class="technique-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1308/1308930.png" alt="General Cloning Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-cloning')">General Cloning</span>
+                <div class="description" id="desc-cloning">
+                    General cloning techniques are used to replicate DNA sequences and are fundamental for genetic manipulation and study.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/vLvoIzX.png" alt="Vector Construction Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-vector')">Engineering Plasmids</span>
+                <div class="description" id="desc-vector">
+                    Engineering plasmids involves constructing vector backbones for antigen delivery or genetic modification applications.
+                </div>
+            </li>
+            
+
+            <li class="technique-item">
+                <img src="https://www.takarabio.com/images/360-Tet/CC-TechFigs/Tet-inducible-mouse-models-2991-iT.gif" alt="Inducible System Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-inducible')">Inducible Systems</span>
+                <div class="description" id="desc-inducible">
+                    Inducible systems are designed to control gene expression, allowing targeted and timely gene activation or repression.
+                </div>
+            </li>
+
+            <li class="technique-item">
+                <img src="https://cdn.hswstatic.com/gif/gettyimages-174037044.jpg" alt="DNA Mutagenesis Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-mutagenesis')">DNA Mutagenesis</span>
+                <div class="description" id="desc-mutagenesis">
+                    DNA mutagenesis techniques, such as allelic exchange and transduction mutagenesis, introduce targeted mutations to study gene function.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gel_electrophoresis_apparatus.JPG/1200px-Gel_electrophoresis_apparatus.JPG" alt="Gel Electrophoresis Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-electrophoresis')">Gel Electrophoresis</span>
+                <div class="description" id="desc-electrophoresis">
+                    Gel electrophoresis, including RNA/DNA gels, SDS-PAGE, and 2D-PAGE, is used to separate biomolecules by size and charge.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://reallaboratory.com/wp-content/uploads/2020/10/viral-RNA-kit-705x423.jpg" alt="DNA, RNA Purification Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-purification')">DNA, RNA Purification</span>
+                <div class="description" id="desc-purification">
+                    DNA and RNA purification techniques are crucial for obtaining clean samples for downstream molecular analysis.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKAe1meHlKbBhKh5lv8VKx64gOOtSXXyPQhQ&s" alt="qRT-PCR Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-qrtpcr')">qRT-PCR</span>
+                <div class="description" id="desc-qrtpcr">
+                    qRT-PCR is a quantitative PCR technique used to measure RNA levels, allowing gene expression analysis.
+                </div>
+            </li>
+
+
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoG-G2_M0suymgJ2hD6RqldhtqF4Rh2mkUkg&s" alt="Protein Purification Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-protein-purification')">Protein Purification</span>
+                <div class="description" id="desc-protein-purification">
+                    Protein purification isolates specific proteins for functional and structural studies.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://www.mybiosource.com/learn/wp-content/uploads/2018/06/western-blotting-feature-678x381.jpg" alt="Western Blotting Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-western')">Western Blotting</span>
+                <div class="description" id="desc-western">
+                    Western blotting is a technique used to detect specific proteins in a sample using antibodies.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://www.southernbiotech.com/wp/wp-content/uploads/2022/08/ELISA_Plate_26Jul22.jpg" alt="ELISA Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-elisa')">ELISA</span>
+                <div class="description" id="desc-elisa">
+                    ELISA is a plate-based assay used to detect and quantify substances such as proteins, antibodies, and hormones.
+                </div>
+            </li>
+
+
+            <li class="technique-item">
+                <img src="https://resources.revvity.com/images/cell-based-protein-protein-interaction-assays-fig1.jpeg?format=auto&" alt="Protein Interaction Assays Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-protein-interaction')">Protein Interaction Assays</span>
+                <div class="description" id="desc-protein-interaction">
+                    Protein interaction assays investigate interactions between proteins, revealing signaling and structural pathways.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://www.tebubio.com/blog/wp-content/uploads/2099/02/Dojindo-DT-Spider-Bgal-assay-principle-2-1.jpg" alt="Beta-Galactosidase Assays Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-beta-galactosidase')">Beta-Galactosidase Assays</span>
+                <div class="description" id="desc-beta-galactosidase">
+                    Beta-galactosidase assays measure enzyme activity, often used in gene expression studies.
+                </div>
+            </li>
+
+            
+        </ul>
+    </div>
+
+    <!-- Bacterial Phage Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Bacterial Phage Techniques</h2>
+        <ul class="technique-list">
+            
+            
+            <li class="technique-item">
+                <img src="https://microbiologyclass.net/wp-content/uploads/2023/03/mechanism-of-antibiotic-resistance.png" alt="Phage Maintenance Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-maintenance')">General Maintenance</span>
+                <div class="description" id="desc-maintenance">
+                    General maintenance of bacterial phages includes processes like expansion, storage, and titration to ensure viability and usability.
+                </div>
+            </li>
+
+
+
+            
+            <li class="technique-item">
+                <img src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2020/7/shutterstock_1522378760.jpg" alt="Transduction Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-transduction')">Transduction</span>
+                <div class="description" id="desc-transduction">
+                    Transduction is a method used to introduce genetic material into bacterial cells via bacteriophages, aiding in genetic studies and manipulation.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+    <!-- General Microbiology Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">General Microbiology Techniques</h2>
+        <ul class="technique-list">
+            
+            
+            <li class="technique-item">
+                <img src="https://media.istockphoto.com/id/1390149605/photo/gram-positive-bacteria-staphylococcus-or-streptococcus-growth-on-blood-agar-closeup.jpg?s=612x612&w=0&k=20&c=iFHoYKNvyVH5uUhuh-j84kjSebn0DKXxdcit7xY7UqY=" alt="Cell Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-cell-culture')">Standard Bacterial Cell Culture</span>
+                <div class="description" id="desc-cell-culture">
+                    Standard bacterial cell culture techniques involve growing bacteria in controlled conditions to study their behavior, characteristics, and applications.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnu7dF3hCKI7x7lhuDPq4-Ll7iB7qA2OGnkQ&s" alt="Isolation Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-isolation')">Isolation and Identification of Bacterial Species</span>
+                <div class="description" id="desc-isolation">
+                    Techniques for isolating and identifying bacterial species are essential in microbiology for species characterization and study.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmOkSqFZQHEK5EjGw9gtlxFoy82669cjw8H-OqsAl5VsfNmvlPemrLxpY6t56iGq0OTs0&usqp=CAU" alt="Biochemical Testing Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-biochemical-testing')">Various Biochemical Testing</span>
+                <div class="description" id="desc-biochemical-testing">
+                    Biochemical tests are conducted to assess metabolic and chemical properties of bacteria, aiding in identification and classification.
+                </div>
+            </li>
+
+
+
+            
+            <li class="technique-item">
+                <img src="https://www.researchgate.net/publication/283754366/figure/fig1/AS:614099700437006@1523424186813/Schematic-representation-of-rotating-wall-vessel-RWV-bioreactor.png" alt="RWV Bioreactor Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-rwv-bioreactor')">Culture Using NASA-designed RWV Bioreactors</span>
+                <div class="description" id="desc-rwv-bioreactor">
+                    The Rotating Wall Vessel (RWV) bioreactor, designed by NASA, provides a dynamic culture environment that simulates microgravity for advanced bacterial studies.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+    <!-- Cell and Tissue Culture Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Cell and Tissue Culture Techniques</h2>
+        <ul class="technique-list">
+            
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ZoyxXacACrXkmTMvyyErAByTEHVnif743pekPlJO8wNWWpxtti4sv3K9V7wJC9E_4TM&usqp=CAU" alt="Monolayer Cell Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-monolayer')">Standard Monolayer Cell Culture</span>
+                <div class="description" id="desc-monolayer">
+                    Standard monolayer cell culture techniques are used for cultivating cells such as intestinal epithelial cells, monocytes, and macrophages in a two-dimensional layer.
+                </div>
+            </li>
+
+
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRa4JlECTPs9QNsYmLm82neuis10_vDru-mQ&s" alt="3D Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-3d-culture')">3D Organotypic Intestinal Cell Culture</span>
+                <div class="description" id="desc-3d-culture">
+                    Three-dimensional (3D) organotypic intestinal cell cultures are developed using RWV bioreactors, providing a more physiologically relevant model for cell studies.
+                </div>
+            </li>
+
+
+
+            
+            <li class="technique-item">
+                <img src="https://journals.physiology.org/cms/10.1152/ajpgi.00043.2021/asset/images/medium/ajpgi.00043.2021_f001.gif" alt="Co-Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-co-culture')">3D Human Intestinal Epithelial Co-Cultures</span>
+                <div class="description" id="desc-co-culture">
+                    3D human intestinal epithelial co-cultures integrate human macrophages, creating a complex model to study host-microbe interactions.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghNQp1bKOguTjv7uEtbIjk7Z8XCMFcqGsy7V3qkAxyMcb_rwGGJ_1Oi6Rr-p_-cdHhUs&usqp=CAU" alt="Bacterial Infection Studies Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-infection')">Bacterial Infection Studies</span>
+                <div class="description" id="desc-infection">
+                    Bacterial infection studies, such as the gentamicin protection assay, are used to investigate bacterial invasion and replication within host cells.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://www.popsci.com/wp-content/uploads/2019/03/18/C6YTM3RR3KGX6GN3YPKV7A7X7U.jpeg?quality=85&w=1280" alt="Tissue Regeneration Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-tissue-regeneration')">Tissue Regeneration</span>
+                <div class="description" id="desc-tissue-regeneration">
+                    Tissue regeneration techniques explore the ability of cells and tissues to repair and renew, essential in regenerative medicine research.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+    <!-- Caenorhabditis elegans Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Caenorhabditis elegans Techniques</h2>
+        <ul class="technique-list">
+            
+            
+            <li class="technique-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/CelegansGoldsteinLabUNC.jpg/220px-CelegansGoldsteinLabUNC.jpg" alt="General Maintenance Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-maintenance')">General Maintenance</span>
+                <div class="description" id="desc-maintenance">
+                    General maintenance of *C. elegans* includes feeding, freezing, and recovery processes to ensure healthy and viable populations.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://choosenatives.org/wp-content/uploads/2023/01/IMG_9231.jpg" alt="Egg Preparation Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-egg-preparation')">Egg and Larvae Preparation</span>
+                <div class="description" id="desc-egg-preparation">
+                    Egg preparation and larvae staging (L1 and L4) are essential for developmental studies and controlled experimental setups.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://o.quizlet.com/b37d7NWvT9oVEA1j4251Pg.jpg" alt="Infection Study Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-infection-study')">Infection Study and TD50</span>
+                <div class="description" id="desc-infection-study">
+                    Infection studies in *C. elegans*, including TD50 determination, are used to analyze pathogen interactions and host response.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+<!-- Microscopy and Staining Techniques -->
+<div class="technique-card">
+    <h2 class="category-title">Microscopy and Staining Techniques</h2>
+    <ul class="technique-list">
+
+        <li class="technique-item">
+            <img src="https://i.imgur.com/9d2af20.jpg" alt="Light Microscopy Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="technique-title" onclick="toggleDescription('desc-light-microscopy')">Light Microscopy</span>
+            <div class="description" id="desc-light-microscopy">
+                Light microscopy is a basic technique used to visualize cells and tissues with the aid of visible light.
+            </div>
+        </li>
+
+        <li class="technique-item">
+            <img src="https://accu-scope.com/wp/wp-content/uploads/2020/10/Phase-contrast-feature-image.jpg" alt="Phase Contrast Microscopy Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="technique-title" onclick="toggleDescription('desc-phase-contrast')">Phase Contrast Microscopy</span>
+            <div class="description" id="desc-phase-contrast">
+                Phase contrast microscopy enhances contrast in transparent specimens, making it ideal for observing live cells.
+            </div>
+        </li>
+
+        <li class="technique-item">
+            <img src="https://www.canadiannaturephotographer.com/epifluorescence/DSC_0095_1160.jpg" alt="Epi-Fluorescent Microscopy Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="technique-title" onclick="toggleDescription('desc-epi-fluorescent')">Epi-Fluorescent Microscopy</span>
+            <div class="description" id="desc-epi-fluorescent">
+                Epi-fluorescent microscopy uses fluorescence to illuminate specimens, allowing visualization of specific cellular components.
+            </div>
+        </li>
+
+        <li class="technique-item">
+            <img src="https://biotium.com/wp-content/uploads/2017/12/Three-color-live-cell-cropped1.png" alt="Chemical Staining Techniques Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="technique-title" onclick="toggleDescription('desc-staining')">Chemical Staining Techniques</span>
+            <div class="description" id="desc-staining">
+                Expertise in various chemical staining techniques for bacterial and mammalian cells, including immunohistochemistry and biofilm staining.
+            </div>
+        </li>
+
+        <li class="technique-item">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCtX4jtC56MsZyvJCJ1oM-yN1ECcg3k2nV7PhuqpnEMCkIlgQZsh8ZV5MqJoV3IpRq2CZWuhzjYCt-_rloKEcd2THX6GE7OYe1fmUYaxfyBNKB7FaE1eWd5tjpHqffdXDZxjvlYq3DHvk/s1600/sem+vs+tem+majordifferences.jpg" alt="SEM and TEM Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="technique-title" onclick="toggleDescription('desc-sem-tem')">SEM and TEM</span>
+            <div class="description" id="desc-sem-tem">
+                Scanning Electron Microscopy (SEM) and Transmission Electron Microscopy (TEM) are advanced techniques for high-resolution imaging of cellular structures.
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+    <!-- Animal Studies Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Animal Studies Techniques</h2>
+        <ul class="technique-list">
+
+            
+            <li class="technique-item">
+                <img src="https://media.biocompare.com/m/37/category/26098-187x140.jpg" alt="Polyclonal Antibody Generation Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-antibody')">Generating Polyclonal Antibodies</span>
+                <div class="description" id="desc-antibody">
+                    Techniques for generating polyclonal antibodies using small laboratory animals such as rabbits, mice, and chickens.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://media.publit.io/file/procedureswithcare/PWC_Mouse_IP_4.jpg" alt="Administration Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-administration')">Oral, Intraperitoneal, and Intradermal Administration</span>
+                <div class="description" id="desc-administration">
+                    Methods for administering substances orally, intraperitoneally, or intradermally to laboratory animals.
+                </div>
+            </li>
+
+
+            <li class="technique-item">
+                <img src="https://i.imgur.com/ZSDRjh7.png" alt="Animal Infections Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-infection')">Animal Infections and LD50 Studies</span>
+                <div class="description" id="desc-infection">
+                    Techniques for studying animal infections and determining lethal dose 50% (LD50) in experimental animals.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/AsKiFdq.png" alt="Tissue Dissection Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-dissection')">Tissue Dissections in Mice and Chickens</span>
+                <div class="description" id="desc-dissection">
+                    Procedures for dissecting tissues in mice and chickens to study various biological processes and diseases.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780323910156001229-f26_02-01-9780323910156.jpg" alt="Organ Examination Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-examination')">Examination of Mouse and Chicken Organs</span>
+                <div class="description" id="desc-examination">
+                    Techniques for examining organs in mice and chickens to assess health, infection, and physiological conditions.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScBLtloC9ZaZKV9cK0J1EG-8rU2cLXdLadgbsErQMYoK-PseGezKz5L-e0yX_z8PCgJ5U&usqp=CAU" alt="Microorganism Isolation Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-isolation')">Isolation and Quantitation of Microorganisms</span>
+                <div class="description" id="desc-isolation">
+                    Methods for isolating and quantifying microorganisms from animal tissues and organs.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://www.researchgate.net/publication/380950363/figure/fig3/AS:11431281247929385@1716994362675/Blood-sample-collection-through-cardiac-puncture-in-Rat.jpg" alt="Cardiac Puncture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-cardiac-puncture')">Cardiac Puncture</span>
+                <div class="description" id="desc-cardiac-puncture">
+                    Cardiac puncture is a technique used for obtaining blood samples from laboratory animals for analysis.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+    <!-- Biofilm Study Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Biofilm Study Techniques</h2>
+        <ul class="technique-list">
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhwRrI1EAQLCK2xtueRdpFUugYrIIQS66JDg&s" alt="Biofilm Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-biofilm-culture')">Standard Biofilm Culture</span>
+                <div class="description" id="desc-biofilm-culture">
+                    Standard biofilm culture techniques are used to grow single or mixed-species biofilms under controlled conditions.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://i.imgur.com/AIEBkuy.png" alt="EPS Detection Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-eps-detection')">EPS Detection</span>
+                <div class="description" id="desc-eps-detection">
+                    Techniques for detecting extracellular polymeric substances (EPS) and other extracellular compounds in biofilms.
+                </div>
+            </li>
+
+
+            
+            <li class="technique-item">
+                <img src="https://images.aatbio.com/products/figures-and-data/mycolight-fluorescence-live-dead-bacterial-imaging-kit/figure-for-mycolight-fluorescence-live-dead-bacterial-imaging-kit_5ZcUA.jpg" alt="Live/Dead Staining Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-live-dead-staining')">Live/Dead Staining</span>
+                <div class="description" id="desc-live-dead-staining">
+                    Live/dead staining techniques are used to assess the viability of cells within a biofilm, distinguishing live cells from dead ones.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+    <!-- Space Life Science Techniques -->
+    <div class="technique-card">
+        <h2 class="category-title">Space Life Science Techniques</h2>
+        <ul class="technique-list">
+
+            
+            <li class="technique-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9JwkElkrRkK2EDpkzfJjsprF7u27TA0xpAw&s" alt="Spaceflight Hardware Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-spaceflight-hardware')">Spaceflight Hardware for ISS Experiments</span>
+                <div class="description" id="desc-spaceflight-hardware">
+                    Utilization of various spaceflight hardware to conduct biological experiments aboard the International Space Station (ISS).
+                </div>
+            </li>
+
+
+            <li class="technique-item">
+                <img src="https://www.shutterstock.com/image-photo/astronaut-spaceman-outer-space-people-260nw-259107509.jpg" alt="Spaceflight Analogue Systems Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-spaceflight-analogue')">Spaceflight-Analogue Cell Culture Systems</span>
+                <div class="description" id="desc-spaceflight-analogue">
+                    Use of spaceflight-analogue cell culture systems to simulate microgravity and other space conditions for biological studies on Earth.
+                </div>
+            </li>
+
+            
+        </ul>
+    </div>
+
+    <!-- Development of Selective Media -->
+    <div class="technique-card">
+        <h2 class="category-title">Development of Selective Media</h2>
+        <ul class="technique-list">
+
+            
+            <li class="technique-item">
+                <img src="https://asm.org/ASM/media/Article-Images/2020/September/Hemolysis_types-592x460.jpg?ext=.jpg" alt="Selective Media Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-selective-media')">Selective and Differential Media Development</span>
+                <div class="description" id="desc-selective-media">
+                    Techniques for developing selective and selective/differential media to support the growth of specific microorganisms while inhibiting others.
+                </div>
+            </li>
+
+            
+        </ul>
+    </div>
+
+    <!-- Languages -->
+    <div class="technique-card">
+        <h2 class="category-title">Languages</h2>
+        <ul class="technique-list">
+
+            <li class="technique-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg" alt="English Language Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-english')">English</span>
+                <div class="description" id="desc-english">
+                    Proficient in English, used for communication, academic writing, and professional collaboration.
+                </div>
+            </li>
+
+            
+            <li class="technique-item">
+                <img src="https://cdn.britannica.com/49/1949-050-39ED83BA/Flag-South-Korea.jpg" alt="Korean Language Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="language-title" onclick="toggleDescription('desc-korean')">Korean</span>
+                <div class="description" id="desc-korean">
+                    Fluent in Korean, used for native communication, cultural understanding, and bilingual support.
+                </div>
+            </li>
+
+
+            
+        </ul>
+    </div>
+
+    
+
+    
 </div>
 {% endblock %}

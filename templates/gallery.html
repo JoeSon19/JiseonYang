@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Professor Jiseon Yang - Gallery{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Research Gallery</h1>
+
+<style>
+    .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .gallery-item {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-caption {
+        padding: 15px;
+        color: #ffffff;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .gallery-date {
+        color: #66b3ff;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90vh;
+        margin-top: 50px;
+    }
+
+    .modal-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+<div class="gallery-container">
+    <div class="gallery-grid">
+        <!-- Research Images -->
+        <div class="gallery-item">
+            <img src="static/images/publications/spaceflight_microbiology.jpg" 
+                 alt="Spaceflight Microbiology Research" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Spaceflight Microbiology: Analysis of microbial responses in space environments
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="static/images/publications/gut_microbes.jpg" 
+                 alt="Gut Microbes Research" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Study of pathogenic phenotypes in fluid shear conditions
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="static/images/publications/sustainable_space.jpg" 
+                 alt="Sustainable Space Research" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Sustainable space exploration through microbial research
+                <div class="gallery-date">2023</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="static/images/publications/spaceflight_book.jpg" 
+                 alt="Spaceflight Research Publication" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Book chapter on spaceflight culture studies and disease mechanisms
+                <div class="gallery-date">2016</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="static/images/publications/nasa_research.jpg" 
+                 alt="NASA Research Project" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                NASA-funded research on microbial interactions in space
+                <div class="gallery-date">2019-2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption" class="modal-caption"></div>
+</div>
+
+<script>
+    function openModal(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var captionText = document.getElementById("modalCaption");
+        
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.nextElementSibling.textContent;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+{% endblock %}

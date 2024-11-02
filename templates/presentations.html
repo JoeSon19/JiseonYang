@@ -1,178 +1,280 @@
-{% extends "base.html" %}
+{% extends "base.html" %}  
 
-{% block title %}Professor Jiseon Yang - Presentations & Abstracts{% endblock %}
+{% block title %}Professor Jiseon Yang - Presentations & Abstracts{% endblock %}  
 
 {% block content %}
-<h1 class="mb-4">Presentations & Abstracts</h1>
+<h1 class="mb-4">Presentations & Abstracts</h1>  
 
-<style>
-    .presentations-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+<style>     
+    .presentations-container {         
+        max-width: 1200px;         
+        margin: 0 auto;         
+        padding: 20px;     
+    }      
+    .presentation-card {         
+        background-color: #2b2b2b;         
+        border-radius: 8px;         
+        padding: 20px;         
+        margin-bottom: 20px;         
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);         
+        transition: transform 0.3s ease, box-shadow 0.3s ease;     
+    }      
+    .presentation-card:hover {         
+        transform: scale(1.02);         
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);     
+    }      
+    .category-title {         
+        color: #66b3ff;         
+        font-size: 1.3em;         
+        font-weight: bold;         
+        margin-bottom: 15px;         
+        border-bottom: 2px solid #404040;         
+        padding-bottom: 10px;     
+    }      
+    .presentation-item {         
+        color: #e0e0e0;         
+        padding: 15px;         
+        margin: 10px 0;         
+        border-radius: 4px;         
+        background-color: #333333;     
+    }      
+    .presentation-title {         
+        color: #ffffff;         
+        font-weight: bold;         
+        margin-bottom: 5px;     
+    }      
+    .presentation-details {         
+        color: #cccccc;         
+        font-size: 0.9em;         
+        margin: 5px 0;     
+    }      
+    .presentation-date {         
+        color: #66b3ff;         
+        font-size: 0.8em;         
+        margin-top: 5px;     
+    }      
+    .presentation-type {         
+        display: inline-block;         
+        background-color: #404040;         
+        color: #ffffff;         
+        padding: 2px 8px;         
+        border-radius: 12px;         
+        font-size: 0.8em;         
+        margin: 5px 0;     
+    } 
+</style>  
 
-    .presentation-card {
-        background-color: #2b2b2b;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+<div class="presentations-container">     
+    <!-- Oral Presentations -->     
+    <div class="presentation-card">         
+        <h2 class="category-title">Oral Presentations</h2>                  
 
-    .presentation-card:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    }
-
-    .category-title {
-        color: #66b3ff;
-        font-size: 1.3em;
-        font-weight: bold;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #404040;
-        padding-bottom: 10px;
-    }
-
-    .presentation-item {
-        color: #e0e0e0;
-        padding: 15px;
-        margin: 10px 0;
-        border-radius: 4px;
-        background-color: #333333;
-    }
-
-    .presentation-title {
-        color: #ffffff;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .presentation-details {
-        color: #cccccc;
-        font-size: 0.9em;
-        margin: 5px 0;
-    }
-
-    .presentation-date {
-        color: #66b3ff;
-        font-size: 0.8em;
-        margin-top: 5px;
-    }
-
-    .presentation-type {
-        display: inline-block;
-        background-color: #404040;
-        color: #ffffff;
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 0.8em;
-        margin: 5px 0;
-    }
-</style>
-
-<div class="presentations-container">
-    <!-- Conference Presentations -->
-    <div class="presentation-card">
-        <h2 class="category-title">Conference Presentations</h2>
-        
         <div class="presentation-item">
-            <div class="presentation-title">Understanding the Evolution of Microbial Interactions During Spaceflight</div>
+            <div class="presentation-title">COSPAR 2024</div>
             <div class="presentation-type">Oral Presentation</div>
             <div class="presentation-details">
-                ASM Microbe 2024, Chicago, IL<br>
-                <em>Yang, J.</em>, Barrila, J., Ott, C.M., and Nickerson, C.A.
+                In session F.2: Influence of spaceflight environments on biological systems
             </div>
-            <div class="presentation-date">June 2024</div>
+            <div class="presentation-date">July 17, 2024</div>
         </div>
 
         <div class="presentation-item">
-            <div class="presentation-title">Biofilm Formation in Space: Implications for Long-term Space Travel</div>
+            <div class="presentation-title">Biofilm MSFC Working Group Seminar</div>
+            <div class="presentation-type">Zoom Presentation</div>
+            <div class="presentation-details">
+                Longitudinal Characterization of Multispecies Microbial Populations Recovered from Spaceflight Potable Water
+            </div>
+            <div class="presentation-date">September 16, 2021, 1pm</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">University of Alabama, Tuscaloosa</div>
+            <div class="presentation-type">Oral Presentation</div>
+            <div class="presentation-details">
+                Spaceflight Microbiology: Microbiology in the Built Environment (MoBE)
+            </div>
+            <div class="presentation-date">February 6, 2020</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">Tri-Services Microbiome Conference (TSMC)</div>
+            <div class="presentation-type">Oral Presentation</div>
+            <div class="presentation-details">
+                Phenotypic Analysis of Microbes in the International Space Station (ISS) potable water system, The microbiome of the built environment section. Department of Defense (DoD), Dayton, OH, USA
+            </div>
+            <div class="presentation-date">October 23, 2019</div>
+        </div>
+        
+        <div class="presentation-item">
+            <div class="presentation-title">Leaders in Industry-University Cooperation (LINC) Seminar</div>
+            <div class="presentation-type">Oral Presentation</div>
+            <div class="presentation-details">
+                Longitudinal Characterization of Social Interactions of Multispecies Microbial Populations Recovered from Spaceflight Potable Water
+            </div>
+            <div class="presentation-date">September 24, 2019</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">The 58th Annual Meeting of the Arizona-Nevada Branch of the American Society for Microbiology (ASM)</div>
             <div class="presentation-type">Poster Presentation</div>
             <div class="presentation-details">
-                Gordon Research Conference on Space Biology, Galveston, TX<br>
-                <em>Yang, J.</em>, McLean, R.J.C., and Nickerson, C.A.
+                Multispecies Interactions And Hemolytic Subpopulations of Biofilm-forming Microbiota Recovered from Spaceflight Potable Water
             </div>
-            <div class="presentation-date">March 2024</div>
+            <div class="presentation-date">Flagstaff, AZ (April 13, 2019)</div>
         </div>
-    </div>
 
-    <!-- Invited Talks -->
-    <div class="presentation-card">
-        <h2 class="category-title">Invited Talks</h2>
+
+        <div class="presentation-item">
+            <div class="presentation-title">The American Society for Microbiology (ASM)/American Society for Virology (ASV) Conference on Interplay of Viral and Bacterial Pathogens</div>
+            <div class="presentation-type">Invited Speaker</div>
+            <div class="presentation-details">
+                Jiseon Yang, J. Barrila, A. Crabbé, S. F. Sarker, Y. Liu, C. M. Ott, M. A. Nelman-Gonzalez, S. J. Clemett, S. D. Nydam, R. J. Forsyth, R. R. Davis, B. E. Crucian, H. Quiriarte, K. L. Roland, K. Brenneman, C. Sams, C. Loscher, C. A. Nickerson. Three-dimensional organotypic co-culture model of intestinal epithelial cells and macrophages to study Salmonella enterica colonization patterns.
+            </div>
+            <div class="presentation-date">Bethesda, MD, USA (May 4, 2017)</div>
+        </div>
         
-        <div class="presentation-item">
-            <div class="presentation-title">Microbial Life in Space: Challenges and Opportunities</div>
-            <div class="presentation-type">Keynote Speaker</div>
-            <div class="presentation-details">
-                Department of Microbiology Seminar Series<br>
-                University of California, Berkeley
-            </div>
-            <div class="presentation-date">October 2023</div>
-        </div>
-
-        <div class="presentation-item">
-            <div class="presentation-title">Space Microbiology: From Earth to the Stars</div>
-            <div class="presentation-type">Guest Lecture</div>
-            <div class="presentation-details">
-                NASA Astrobiology Institute Seminar Series<br>
-                Virtual Presentation
-            </div>
-            <div class="presentation-date">September 2023</div>
-        </div>
     </div>
 
-    <!-- Research Abstracts -->
-    <div class="presentation-card">
-        <h2 class="category-title">Research Abstracts</h2>
+    <!-- Abstracts and Posters -->     
+    <div class="presentation-card">         
+        <h2 class="category-title">Abstracts and Posters (Selected)</h2>                  
         
+    
         <div class="presentation-item">
-            <div class="presentation-title">Effects of Microgravity on Bacterial Pathogenesis</div>
-            <div class="presentation-type">Abstract</div>
+            <div class="presentation-title">2023 ASM</div>
+            <div class="presentation-type">Poster</div>
             <div class="presentation-details">
-                International Space Station Research Conference<br>
-                <em>Yang, J.</em>, Barrila, J., and Nickerson, C.A.<br>
-                Abstract #ISS2024-156
+                Yang J, Barrila J, Nauman EA, Ott CM, Seth D Nydam, Shanshan Yang, Jin Park, Ami Gutierrez-Jensen, C. Mark Ott, Jason Steel, Nickerson CA. Increases in physiological fluid shear enhance mechanotransductive pathogenic phenotypes and reveal molecular regulatory mechanisms in multidrug resistant Salmonella.
             </div>
-            <div class="presentation-date">2024</div>
+            <div class="presentation-date">Houston, TX (2023)</div>
+        </div>
+
+
+        <div class="presentation-item">
+            <div class="presentation-title">HRP Investigators’ Workshop</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                Barrila J, Gangaraju S, Banken L, Yang J, Davis RR, Medina-Colorado AA, Park JS, Blakely EA, Stafford P, Ott CM, Nickerson CA. Effects of Low Dose Radiation and Radiation Countermeasures on Infection by Spaceflight Analogue Cultured Salmonella using 3-D Biomimetic Human Tissue Models.
+            </div>
+            <div class="presentation-date">Galveston, TX (2023)</div>
         </div>
 
         <div class="presentation-item">
-            <div class="presentation-title">Novel Approaches to Studying Bacterial Interactions in Space</div>
-            <div class="presentation-type">Abstract</div>
+            <div class="presentation-title">ASM Microbe 2023</div>
+            <div class="presentation-type">Poster</div>
             <div class="presentation-details">
-                Astrobiology Science Conference<br>
-                <em>Yang, J.</em>, Ott, C.M., and McLean, R.J.C.<br>
-                Abstract #AbSciCon2023-789
+                Barrila J, Koroli S, Franco Meléndez KP, Yang J, Gangaraju S, Thornhill S, Almongor A, Medina-Colorado AA, Oubre C, Crucian B, Banken LL, Davis RR, Syed H, Sethi R, Vu C, Ott CM, and Nickerson CA. Effect of spaceflight analogue culture on the growth, pathogenesis-related stress responses and infection profiles of Salmonella Enteritidis.
             </div>
-            <div class="presentation-date">2023</div>
+            <div class="presentation-date">Houston, TX (2023)</div>
         </div>
-    </div>
 
-    <!-- Workshop Presentations -->
-    <div class="presentation-card">
-        <h2 class="category-title">Workshop Presentations</h2>
         
+
         <div class="presentation-item">
-            <div class="presentation-title">Advanced Techniques in Space Microbiology</div>
-            <div class="presentation-type">Workshop</div>
+            <div class="presentation-title">ASGSR 2022</div>
+            <div class="presentation-type">Invited Presentation</div>
             <div class="presentation-details">
-                NASA Space Biology Program Workshop<br>
-                Kennedy Space Center, FL
+                Nickerson C, Franco Meléndez KP, Crenshaw K, Barrila J, Yang J, Gangaraju S, Davis RR, Forsyth R, Ott CM, Kader R, Curtiss R, Roland K, and Nickerson CA. Role of RpoS in regulating stationary phase Salmonella Typhimurium pathogenesis-related stress responses under spaceflight analogue low fluid shear force conditions.
             </div>
-            <div class="presentation-date">July 2023</div>
+            <div class="presentation-date">Houston, TX (2022)</div>
         </div>
 
         <div class="presentation-item">
-            <div class="presentation-title">Biofilm Analysis Methods for Space Research</div>
-            <div class="presentation-type">Workshop</div>
+            <div class="presentation-title">ASGSR 2022</div>
+            <div class="presentation-type">Poster</div>
             <div class="presentation-details">
-                International Space Station Research Workshop<br>
-                Johnson Space Center, Houston, TX
+                Barrila J, Koroli S, Franco Meléndez KP, Yang J, Gangaraju S, Thornhill S, Almongor A, Medina-Colorado AA, Oubre C, Crucian B, Banken LL, Davis RR, Vu C, Ott CM, and Nickerson CA. Effect of spaceflight analogue culture on the growth, pathogenesis-related stress responses and infection profiles of Salmonella Enteritidis.
             </div>
-            <div class="presentation-date">April 2023</div>
+            <div class="presentation-date">Houston, TX (2022)</div>
         </div>
-    </div>
-</div>
+
+        
+
+        <div class="presentation-item">
+            <div class="presentation-title">ASM Microbe 2019</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                Jiseon Yang, Jennifer Barrila, C. Mark Ott, Olivia King, Rebekah Bruce, Robert JC McLean, and Cheryl A. Nickerson. Multispecies interactions and hemolytic subpopulations of biofilm-forming microbiota recovered from spaceflight potable water.
+            </div>
+            <div class="presentation-date">June 2019</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">ASM Microbe 2019</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                Karla Franco, Keith Crenshaw, Jiseon Yang, Jennifer Barrila, Mark Ott, and Cheryl A. Nickerson. Mechanobiology of stationary phase stress responses in Salmonella Typhimurium is largely independent of RpoS under physiological fluid shear conditions.
+            </div>
+            <div class="presentation-date">June 2019</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">8th ASM Conference on Biofilm</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                Jiseon Yang, Jennifer Barrila, Olivia King, Rebekah Bruce, C. Mark Ott, Robert JC McLean, Cheryl A. Nickerson. Multidrug resistant microbial consortia isolated from International Space Station (ISS) potable water: Multi-species interactions, biofilm formation, metabolic characteristics, and hemolytic subpopulations.
+            </div>
+            <div class="presentation-date">October 2018</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">2018 Gordon Research Conference on Microbiology of Built Environment</div>
+            <div class="presentation-type">Invited Presentation</div>
+            <div class="presentation-details">
+                Jiseon Yang, Jennifer Barrila, Olivia King, Bruce Rebekah, C. Mark Ott, Robert JC McLean, Cheryl A. Nickerson. Multidrug resistant microbial consortia isolated from International Space Station (ISS) potable water: Multi-species interactions, biofilm formation, metabolic characteristics, and hemolytic subpopulations.
+            </div>
+            <div class="presentation-date">July 2018</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">Synthetic Biology Engineering Evolution and Design Conference</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                Jiseon Yang, Jennifer Barrila, Rebecca J. Forsyth, Neta Sal-Man, Sandhya Gangaraju, C. Mark Ott, Cheryl A. Nickerson. Three-Dimensional Tissue Culture Models: Next Generation Predictive Preclinical Platforms for Human Health and Disease.
+            </div>
+            <div class="presentation-date">June 2018</div>
+        </div>
+
+         
+
+        <div class="presentation-item">
+            <div class="presentation-title">The 115th American Society in Microbiology General Meeting</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                J. Yang, J. Barrila, K. L. Roland, J. Kilbourne, C. M. Ott, R. Forsyth, and C. A. Nickerson. Characterization of the Invasive, Multidrug Resistant Nontyphoidal Salmonella Strain D23580 in a Murine Model of Infection.
+            </div>
+            <div class="presentation-date">May 2015</div>
+        </div>
+
+        <div class="presentation-item">
+            <div class="presentation-title">The 115th American Society in Microbiology</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                J. Yang, A. Crabbé, S. F. Sarker, J. Barrila, B. E. Crucian, M. A. Nelman-Gonzales, H. Quiriarte, K. Brenneman, C. Sams, C. M. Ott, and C. A. Nickerson. Three-dimensional Co-culture Model of Intestinal Epithelial Cells and Macrophages Reveals Altered Colonization Profiles of Salmonella Pathovars.
+            </div>
+            <div class="presentation-date">May 2015</div>
+        </div>
+
+  
+        <div class="presentation-item">
+            <div class="presentation-title">The Center of Infectious Disease and Vaccine Open House</div>
+            <div class="presentation-type">Poster</div>
+            <div class="presentation-details">
+                Jiseon Yang, Jennifer Barrila, C. Mark Ott, Kenneth L. Roland, Roy Curtiss III, and Cheryl A. Nickerson. Characterization of Invasive Multidrug Resistant Salmonella enterica serovar Typhimurium ST313 D23580 in Response to Physiological Fluid Shear.
+            </div>
+            <div class="presentation-date">2012</div>
+        </div>
+
+        
+
+        <!-- Repeat similar blocks for remaining entries -->
+
+
+
+        <!-- Additional poster entries would follow the same structure -->
+    </div>     
+
+    <!-- Other categories (Invited Talks, Research Abstracts, etc.) would follow a similar structure -->
+</div> 
+
 {% endblock %}

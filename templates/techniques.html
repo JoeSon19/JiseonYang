@@ -247,6 +247,37 @@
     </div>
 
 
+    <!-- 3D Technology -->     
+    <div class="technique-card">         
+        <h2 class="category-title">3D Technology</h2>         
+        <ul class="technique-list">                                   
+            <li class="technique-item">             
+                <img src="https://media.istockphoto.com/id/1320489713/vector/3d-printing-icon.jpg?s=612x612&w=0&k=20&c=3-DpmuTQSnIRA2Ex8c2u6K-SJj_wfLP_hjoCfk0IMPg=" alt="3D Printing Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">             
+                <span class="technique-title" onclick="toggleDescription('desc-3d-printing')">3D Printing</span>             
+                <div class="description" id="desc-3d-printing">                 
+                    3D Printing involves creating physical objects from digital models, often used in prototyping, manufacturing, and medical applications.             
+                </div>         
+            </li>                                       
+            <li class="technique-item">             
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLM9SguPRLG5c0o2ACN9iGyJlo9sryaga3ww&s" alt="3D CAD Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">             
+                <span class="technique-title" onclick="toggleDescription('desc-3d-cad')">3D CAD</span>             
+                <div class="description" id="desc-3d-cad">                 
+                    3D CAD (Computer-Aided Design) is used to create precise 3D models and designs, facilitating engineering, architecture, and manufacturing processes.             
+                </div>         
+            </li>                           
+        </ul>     
+    </div>
+
+    <script>
+        // Toggle description visibility
+        function toggleDescription(id) {
+            var description = document.getElementById(id);
+            description.style.display = description.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+
+
     <!-- General Molecular Biology Techniques -->
     <div class="technique-card">
         <h2 class="category-title">General Molecular Biology Techniques</h2>
@@ -307,6 +338,14 @@
 
             
             <li class="technique-item">
+                <img src="https://i.imgur.com/dn96dc6.png" alt="LPS profiling Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-lps')">LPS profiling</span>
+                <div class="description" id="desc-lps">
+                    LPS profiling is the analysis of lipopolysaccharides (LPS) in bacterial cell membranes to understand their structure, composition, and role in immune response and pathogenicity.
+                </div>
+            </li>
+
+            <li class="technique-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKAe1meHlKbBhKh5lv8VKx64gOOtSXXyPQhQ&s" alt="qRT-PCR Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
                 <span class="technique-title" onclick="toggleDescription('desc-qrtpcr')">qRT-PCR</span>
                 <div class="description" id="desc-qrtpcr">
@@ -339,9 +378,18 @@
             
             <li class="technique-item">
                 <img src="https://www.southernbiotech.com/wp/wp-content/uploads/2022/08/ELISA_Plate_26Jul22.jpg" alt="ELISA Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-elisa')">ELISA</span>
+                <span class="technique-title" onclick="toggleDescription('desc-elisa')">Enzyme-linked immunosorbent assay (ELISA)</span>
                 <div class="description" id="desc-elisa">
                     ELISA is a plate-based assay used to detect and quantify substances such as proteins, antibodies, and hormones.
+                </div>
+            </li>
+
+
+            <li class="technique-item">
+                <img src="https://i.imgur.com/gcPiqxi.png" alt="Bacteria Cell Fractionation and Protein Profiling Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-fractionation')">Bacteria Cell Fractionation and Protein Profiling</span>
+                <div class="description" id="desc-fractionation">
+                    Bacteria cell fractionation and protein profiling involve separating bacterial cellular components to analyze and identify proteins, providing insights into their functions and roles within the cell.
                 </div>
             </li>
 
@@ -437,7 +485,7 @@
             
             <li class="technique-item">
                 <img src="https://www.researchgate.net/publication/283754366/figure/fig1/AS:614099700437006@1523424186813/Schematic-representation-of-rotating-wall-vessel-RWV-bioreactor.png" alt="RWV Bioreactor Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-rwv-bioreactor')">Culture Using NASA-designed RWV Bioreactors</span>
+                <span class="technique-title" onclick="toggleDescription('desc-rwv-bioreactor')">Culture using dynamic NASA-designed Rotating Wall Vessel (RWV) bioreactors</span>
                 <div class="description" id="desc-rwv-bioreactor">
                     The Rotating Wall Vessel (RWV) bioreactor, designed by NASA, provides a dynamic culture environment that simulates microgravity for advanced bacterial studies.
                 </div>
@@ -456,7 +504,7 @@
             
             <li class="technique-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ZoyxXacACrXkmTMvyyErAByTEHVnif743pekPlJO8wNWWpxtti4sv3K9V7wJC9E_4TM&usqp=CAU" alt="Monolayer Cell Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-monolayer')">Standard Monolayer Cell Culture</span>
+                <span class="technique-title" onclick="toggleDescription('desc-monolayer')">Standard monolayer cell culture techniques (including intestinal epithelial cells, monocytes, macrophages)</span>
                 <div class="description" id="desc-monolayer">
                     Standard monolayer cell culture techniques are used for cultivating cells such as intestinal epithelial cells, monocytes, and macrophages in a two-dimensional layer.
                 </div>
@@ -467,7 +515,7 @@
             
             <li class="technique-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRa4JlECTPs9QNsYmLm82neuis10_vDru-mQ&s" alt="3D Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-3d-culture')">3D Organotypic Intestinal Cell Culture</span>
+                <span class="technique-title" onclick="toggleDescription('desc-3d-culture')">Three-dimensional (3-D) organotypic intestinal cell culture using RWV bioreactors </span>
                 <div class="description" id="desc-3d-culture">
                     Three-dimensional (3D) organotypic intestinal cell cultures are developed using RWV bioreactors, providing a more physiologically relevant model for cell studies.
                 </div>
@@ -478,7 +526,7 @@
             
             <li class="technique-item">
                 <img src="https://journals.physiology.org/cms/10.1152/ajpgi.00043.2021/asset/images/medium/ajpgi.00043.2021_f001.gif" alt="Co-Culture Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-co-culture')">3D Human Intestinal Epithelial Co-Cultures</span>
+                <span class="technique-title" onclick="toggleDescription('desc-co-culture')">3-D human intestinal epithelial co-cultures containing human macrophages</span>
                 <div class="description" id="desc-co-culture">
                     3D human intestinal epithelial co-cultures integrate human macrophages, creating a complex model to study host-microbe interactions.
                 </div>
@@ -488,7 +536,7 @@
             
             <li class="technique-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghNQp1bKOguTjv7uEtbIjk7Z8XCMFcqGsy7V3qkAxyMcb_rwGGJ_1Oi6Rr-p_-cdHhUs&usqp=CAU" alt="Bacterial Infection Studies Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-infection')">Bacterial Infection Studies</span>
+                <span class="technique-title" onclick="toggleDescription('desc-infection')"> Bacterial infection studies (gentamicin protection assay)</span>
                 <div class="description" id="desc-infection">
                     Bacterial infection studies, such as the gentamicin protection assay, are used to investigate bacterial invasion and replication within host cells.
                 </div>
@@ -516,8 +564,8 @@
             
             <li class="technique-item">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/CelegansGoldsteinLabUNC.jpg/220px-CelegansGoldsteinLabUNC.jpg" alt="General Maintenance Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-maintenance')">General Maintenance</span>
-                <div class="description" id="desc-maintenance">
+                <span class="technique-title" onclick="toggleDescription('desc-maintenance1')">General Maintenance</span>
+                <div class="description" id="desc-maintenance1">
                     General maintenance of *C. elegans* includes feeding, freezing, and recovery processes to ensure healthy and viable populations.
                 </div>
             </li>
@@ -577,8 +625,17 @@
         </li>
 
         <li class="technique-item">
+            <img src="https://www.zeiss.com/content/dam/rms/reference-master/products/light/confocal/lsm-900/lsm_900_wallpaper.jpg/_jcr_content/renditions/original.image_file.639.639.390,0,1029,639.file/lsm_900_wallpaper.jpg" alt="Laser Scanning Confocal Microscopy Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="technique-title" onclick="toggleDescription('desc-confocal')">Laser Scanning Confocal Microscopy (4 lasers to white laser, multiple channels)</span>
+            <div class="description" id="desc-confocal">
+                Laser Scanning Confocal Microscopy uses multiple laser channels, including options from 4 lasers to a white laser, to produce high-resolution, 3D images of specimens by selectively illuminating specific depths and capturing detailed optical sections.
+            </div>
+        </li>
+
+        
+        <li class="technique-item">
             <img src="https://biotium.com/wp-content/uploads/2017/12/Three-color-live-cell-cropped1.png" alt="Chemical Staining Techniques Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-            <span class="technique-title" onclick="toggleDescription('desc-staining')">Chemical Staining Techniques</span>
+            <span class="technique-title" onclick="toggleDescription('desc-staining')">Expertise in a wide range of chemical staining techniques for microscopic imaging of both bacterial and mammalian cells, including immunohistochemical profiling and biofilm staining</span>
             <div class="description" id="desc-staining">
                 Expertise in various chemical staining techniques for bacterial and mammalian cells, including immunohistochemistry and biofilm staining.
             </div>
@@ -586,7 +643,7 @@
 
         <li class="technique-item">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCtX4jtC56MsZyvJCJ1oM-yN1ECcg3k2nV7PhuqpnEMCkIlgQZsh8ZV5MqJoV3IpRq2CZWuhzjYCt-_rloKEcd2THX6GE7OYe1fmUYaxfyBNKB7FaE1eWd5tjpHqffdXDZxjvlYq3DHvk/s1600/sem+vs+tem+majordifferences.jpg" alt="SEM and TEM Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-            <span class="technique-title" onclick="toggleDescription('desc-sem-tem')">SEM and TEM</span>
+            <span class="technique-title" onclick="toggleDescription('desc-sem-tem')">SEM and TEM (not expert)</span>
             <div class="description" id="desc-sem-tem">
                 Scanning Electron Microscopy (SEM) and Transmission Electron Microscopy (TEM) are advanced techniques for high-resolution imaging of cellular structures.
             </div>
@@ -612,6 +669,7 @@
 
 
             
+            
             <li class="technique-item">
                 <img src="https://media.publit.io/file/procedureswithcare/PWC_Mouse_IP_4.jpg" alt="Administration Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
                 <span class="technique-title" onclick="toggleDescription('desc-administration')">Oral, Intraperitoneal, and Intradermal Administration</span>
@@ -620,17 +678,15 @@
                 </div>
             </li>
 
-
             <li class="technique-item">
                 <img src="https://i.imgur.com/ZSDRjh7.png" alt="Animal Infections Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-infection')">Animal Infections and LD50 Studies</span>
-                <div class="description" id="desc-infection">
-                    Techniques for studying animal infections and determining lethal dose 50% (LD50) in experimental animals.
+                <span class="technique-title" onclick="toggleDescription('Animal Infections')">Animal Infections and LD<sub>50</sub> Studies</span>
+                <div class="description" id="Animal Infections">
+                    Techniques for studying animal infections and determining the lethal dose 50% (LD<sub>50</sub>) in experimental animals.
                 </div>
             </li>
 
 
-            
             <li class="technique-item">
                 <img src="https://i.imgur.com/AsKiFdq.png" alt="Tissue Dissection Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
                 <span class="technique-title" onclick="toggleDescription('desc-dissection')">Tissue Dissections in Mice and Chickens</span>
@@ -642,21 +698,28 @@
 
             
             <li class="technique-item">
-                <img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780323910156001229-f26_02-01-9780323910156.jpg" alt="Organ Examination Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-examination')">Examination of Mouse and Chicken Organs</span>
-                <div class="description" id="desc-examination">
+                <img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780323910156001229-f26_02-01-9780323910156.jpg" 
+                     alt="Organ Examination Icon" 
+                     class="icon" 
+                     style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-examination1')">Examination of Mouse and Chicken Organs</span>
+                <div class="description" id="desc-examination1" style="display: none;">
                     Techniques for examining organs in mice and chickens to assess health, infection, and physiological conditions.
                 </div>
             </li>
 
-            
             <li class="technique-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScBLtloC9ZaZKV9cK0J1EG-8rU2cLXdLadgbsErQMYoK-PseGezKz5L-e0yX_z8PCgJ5U&usqp=CAU" alt="Microorganism Isolation Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-isolation')">Isolation and Quantitation of Microorganisms</span>
-                <div class="description" id="desc-isolation">
-                    Methods for isolating and quantifying microorganisms from animal tissues and organs.
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScBLtloC9ZaZKV9cK0J1EG-8rU2cLXdLadgbsErQMYoK-PseGezKz5L-e0yX_z8PCgJ5U&usqp=CAU" 
+                     alt="Isolation and Quantitation of Microorganisms from Animal Tissues and Organs" 
+                     class="icon" 
+                     style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-examination2')">Isolation and Quantitation of Microorganisms from Animal Tissues and Organs</span>
+                <div class="description" id="desc-examination2" style="display: none;">
+                    Techniques for isolating and quantifying microorganisms from animal tissues and organs, used for studying their presence and impact in various biological contexts.
                 </div>
             </li>
+
+
 
             
             <li class="technique-item">
@@ -734,23 +797,44 @@
                 </div>
             </li>
 
+            <li class="technique-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/ISS-08_Michael_Foale_conducts_an_inspection_of_the_Microgravity_Science_Glovebox.jpg" 
+                     alt="Spaceflight Experiment aboard ISS Icon" 
+                     class="icon" 
+                     style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-spaceflight-experiment')">Spaceflight Experiment aboard ISS</span>
+                <div class="description" id="desc-spaceflight-experiment" style="display: none;">
+                    A spaceflight experiment aboard the ISS involves conducting scientific research in microgravity to study the effects on biological, physical, or technological systems.
+                </div>
+            </li>
+            
             
         </ul>
     </div>
 
     <!-- Development of Selective Media -->
     <div class="technique-card">
-        <h2 class="category-title">Development of Selective Media</h2>
+        <h2 class="category-title">Development of various selective or selective/deferential media </h2>
         <ul class="technique-list">
 
             
             <li class="technique-item">
-                <img src="https://asm.org/ASM/media/Article-Images/2020/September/Hemolysis_types-592x460.jpg?ext=.jpg" alt="Selective Media Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                <span class="technique-title" onclick="toggleDescription('desc-selective-media')">Selective and Differential Media Development</span>
+                <img src="https://asm.org/ASM/media/Article-Images/2020/September/Mannitol_salt_agar-350x348.jpg?ext=.jpg" alt="Selective Media Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-selective-media')">Developing Selective Media</span>
                 <div class="description" id="desc-selective-media">
-                    Techniques for developing selective and selective/differential media to support the growth of specific microorganisms while inhibiting others.
+                    Developing selective media involves creating a growth medium that supports the growth of specific microorganisms while inhibiting the growth of others.
                 </div>
             </li>
+
+
+            <li class="technique-item">
+                <img src="https://i.imgur.com/ZDYerld.png" alt="Differential/Selective Media Icon" class="icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                <span class="technique-title" onclick="toggleDescription('desc-diff-selective-media')">Developing Differential/Selective Media</span>
+                <div class="description" id="desc-diff-selective-media">
+                    Developing differential/selective media involves formulating a growth medium that not only supports the growth of specific microorganisms while inhibiting others but also allows for the differentiation between microbial types based on their biochemical properties.
+                </div>
+            </li>
+
 
             
         </ul>
@@ -783,8 +867,41 @@
         </ul>
     </div>
 
-    
-
-    
 </div>
+
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
 {% endblock %}

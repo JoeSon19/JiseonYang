@@ -3,13 +3,35 @@
 {% block title %}Professor Jiseon Yang - Gallery{% endblock %}
 
 {% block content %}
-<h1 class="mb-4">Research Gallery</h1>
+<h1 class="mb-4">Gallery</h1>
 
 <style>
     .gallery-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+    }
+
+    /* Year filter buttons */
+    .year-buttons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .year-button {
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: gray; /* Changed background color to gray */
+        color: white;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+
+    .year-button:hover {
+        background-color: darkgray; /* Darker gray on hover */
     }
 
     .gallery-grid {
@@ -27,16 +49,14 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .gallery-image {
+        width: 100%;
+        height: 80%; /* Adjust to fit within the fixed height */
+        object-fit: cover; /* Ensures the image covers the container */
+    }
     .gallery-item:hover {
         transform: scale(1.02);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    }
-
-    .gallery-image {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        display: block;
     }
 
     .gallery-caption {
@@ -93,64 +113,124 @@
 </style>
 
 <div class="gallery-container">
+    <!-- Year Filter Buttons -->
+    <div class="year-buttons">
+        <button class="year-button" onclick="filterByYear('all')">All</button>
+        <button class="year-button" onclick="filterByYear('2024')">2024</button>
+        <button class="year-button" onclick="filterByYear('Before 2024')">Before 2024</button>
+    </div>
+
     <div class="gallery-grid">
-        <!-- Research Images -->
-        <div class="gallery-item">
-            <img src="static/images/publications/spaceflight_microbiology.jpg" 
-                 alt="Spaceflight Microbiology Research" 
-                 class="gallery-image"
-                 onclick="openModal(this)">
+        
+        
+        <!-- Images -->
+        
+        <div class="gallery-item" data-year="2024">
+            <video src="static/images/Gallery/head smoke.mp4" 
+                   alt="Head Smoke" 
+                   class="gallery-image" 
+                   controls 
+                   onclick="openModal(this)">
+            </video>
             <div class="gallery-caption">
-                Spaceflight Microbiology: Analysis of microbial responses in space environments
+                Head Smoke
                 <div class="gallery-date">2024</div>
             </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="static/images/publications/gut_microbes.jpg" 
-                 alt="Gut Microbes Research" 
-                 class="gallery-image"
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/Halloween.jpg" 
+                 alt="Halloween" 
+                 class="gallery-image" 
                  onclick="openModal(this)">
             <div class="gallery-caption">
-                Study of pathogenic phenotypes in fluid shear conditions
+                Halloween
                 <div class="gallery-date">2024</div>
             </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="static/images/publications/sustainable_space.jpg" 
-                 alt="Sustainable Space Research" 
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/mad mouse.png" 
+                 alt="Mad Space Mouse" 
                  class="gallery-image"
                  onclick="openModal(this)">
             <div class="gallery-caption">
-                Sustainable space exploration through microbial research
-                <div class="gallery-date">2023</div>
+                Mad Space Mouse
+                <div class="gallery-date">2024</div>
             </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="static/images/publications/spaceflight_book.jpg" 
-                 alt="Spaceflight Research Publication" 
-                 class="gallery-image"
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/experiment in lab.png" 
+                 alt="Experiment in Lab" 
+                 class="gallery-image" 
                  onclick="openModal(this)">
             <div class="gallery-caption">
-                Book chapter on spaceflight culture studies and disease mechanisms
-                <div class="gallery-date">2016</div>
+                Experiment in Lab
+                <div class="gallery-date">2024</div>
             </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="static/images/publications/nasa_research.jpg" 
-                 alt="NASA Research Project" 
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/experiment in lab v2.png" 
+                 alt="Experiment in Lab V2" 
+                 class="gallery-image" 
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Experiment in Lab V2
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/experiment in lab v3.png" 
+                 alt="Experiment in Lab V3" 
+                 class="gallery-image" 
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Experiment in Lab V3
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="Before 2024">
+            <img src="static/images/Gallery/space fllight.png" 
+                 alt="Space Flight" 
                  class="gallery-image"
                  onclick="openModal(this)">
             <div class="gallery-caption">
-                NASA-funded research on microbial interactions in space
-                <div class="gallery-date">2019-2023</div>
+                Space Flight
+                <div class="gallery-date">Before 2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="Before 2024">
+            <video src="static/images/Gallery/space flight video.mp4" 
+                   alt="Space Flight Video" 
+                   class="gallery-image" 
+                   controls 
+                   onclick="openModal(this)">
+            </video>
+            <div class="gallery-caption">
+                Space Flight Video
+                <div class="gallery-date">Before 2024</div>
+            </div>
+        </div>
+
+
+        <div class="gallery-item" data-year="Before 2024">
+            <img src="static/images/Gallery/albert einstein.jpg" 
+                 alt="Albert Einstein" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Albert Einstein
+                <div class="gallery-date">Before 2024</div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Modal -->
 <div id="imageModal" class="modal">
@@ -181,6 +261,53 @@
             modal.style.display = "none";
         }
     }
+
+    // Filter gallery items by year
+    function filterByYear(year) {
+        var items = document.querySelectorAll('.gallery-item');
+        items.forEach(function(item) {
+            if (year === 'all' || item.getAttribute('data-year') === year) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
 </script>
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
 
 {% endblock %}

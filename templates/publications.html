@@ -98,7 +98,7 @@
         <button class="filter-button" onclick="filterPublications('all')">All</button>
         <button class="filter-button" onclick="filterPublications('peer-reviewed')">Peer-Reviewed Publications</button>
         <button class="filter-button" onclick="filterPublications('book-chapters')">Book Chapters<div>and</div> Non-Peer-Reviewed Publications</button>
-        <button class="filter-button" onclick="filterPublications('research-activity')">Research Activity</button>
+        <button class="filter-button" onclick="filterPublications('research-activity')">Etc</button>
       </div>
 
         <!-- Buttons for filtering publications by specific years -->
@@ -455,6 +455,41 @@
       }
     });
   }
+</script>
+
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 </script>
 
 {% endblock %} <!-- Content block ends -->

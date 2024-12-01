@@ -67,9 +67,11 @@
 <!-- About Me section with description of expertise and achievements -->
 <section class="about">
     <h2>About Me</h2>
-    <p>I specialize in bacteriology and space life science, focusing on bacterial pathogenesis, genetic engineering, biofilms, space biology, vaccine development, and host-pathogen interaction. My work leverages diverse human surrogate models, such as 3D tissue cultures and animal models, with a goal of advancing our understanding of microbial interactions within ecosystems. This research aims to uncover microbial community dynamics, persistence, and pathogenicity both on Earth and in space, supporting life sustainability in challenging environments.</p>
-    <p>I hold an Alfred P. Sloan Postdoctoral Fellowship for studying the ISS microbiome, with publications on genomics, microbiology, and space biology. I currently lead a NASA-funded project on bacterial interspecies interactions in extreme environments, integrating systemic approaches and multi-directional analysis to explore complex microbial interactions. My achievements include the ASM Peggy Cotter Early Career Award and an Outstanding Teaching Award.</p>
+    <p>I specialize in bacteriology and space life sciences, focusing on bacterial pathogenesis, genetic engineering, biofilms, space biology, vaccine development, and host-pathogen interactions. My work utilizes diverse human surrogate models, including 3D tissue cultures and animal models, to advance our understanding of microbial interactions within ecosystems. This research seeks to uncover the dynamics, persistence, and pathogenicity of microbial communities both on Earth and in space, contributing to life sustainability in extreme environments.</p>
+    <p>In addition to my expertise in microbiology, I am skilled in statistical analysis and modeling, which I apply to my research for data-driven insights and robust experimental design. I have held an Alfred P. Sloan Postdoctoral Fellowship to study the microbiome aboard the International Space Station (ISS) and have published extensively in the fields of genomics, microbiology, and space biology. Currently, I lead a NASA-funded project examining bacterial interspecies interactions in extreme environments, using integrated systemic approaches and multi-directional analyses, and advanced statistical modeling to explore complex microbial behavior.</p>
+    <p>My achievements include receiving the ASM Peggy Cotter Early Career Award and an Outstanding Teaching Award, reflecting my commitment to both cutting-edge research and education.</p>
 </section>
+
 
 <!-- Research Interests section with a list of topics -->
 <section class="research-interests">
@@ -108,5 +110,40 @@
         <li>Pusan National University, South Korea - B.S., Microbiology - 2003</li>
     </ul>
 </section>
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
 
 {% endblock %} <!-- Content block ends -->

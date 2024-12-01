@@ -95,8 +95,6 @@
             <div class="funding-details">
                 <strong>Principal Investigator:</strong> Jiseon Yang<br>
                 <strong>Funding Agency:</strong> NASA Ames Research Center<br>
-                <strong>Grant Number:</strong> 80NSSC19K1597<br>
-                <strong>Point of Contact:</strong> Yuri Griko, 650-604-0519, <a href="mailto:yuri.v.griko@nasa.gov">yuri.v.griko@nasa.gov</a>
             </div>
             <div class="funding-period">11/1/2019 - 10/31/2025</div>
             <div class="funding-amount">$749,999.00</div>
@@ -125,18 +123,10 @@
                 <strong>Principal Investigator:</strong> Cheryl Nickerson, Ph.D.<br>
                 <strong>Co-Investigator:</strong> Jiseon Yang<br>
                 <strong>Funding Agency:</strong> NASA Headquarters<br>
-                <strong>Grant Number:</strong> 80NSSC20K0016<br>
-                <strong>Point of Contact:</strong> Diana Risin, 281-483-7650, <a href="mailto:Diana.Risin-1@nasa.gov">Diana.Risin-1@nasa.gov</a>
             </div>
             <div class="funding-period">10/1/2019 - 9/30/2024</div>
             <div class="funding-amount">$193,343.00</div>
         </div>
-
-
-
-
-
-
 
         
     </div>
@@ -155,8 +145,6 @@
                 <strong>Sponsor Principal Investigator:</strong> Jiseon Yang<br>
                 <strong>ASU Internal Principal Investigator:</strong> Cheryl Nickerson, Ph.D.<br>
                 <strong>Funding Agency:</strong> Sloan (Alfred P.) Foundation<br>
-                <strong>Award Number:</strong> G-2017-9852<br>
-                <strong>Point of Contact:</strong> Leslie Lin, 212-649-1649, <a href="mailto:lin@sloan.org">lin@sloan.org</a>
             </div>
             <div class="funding-period">6/1/2017 - 12/31/2021 (no-cost extension)</div>
             <div class="funding-amount">$140,000.00</div>
@@ -317,4 +305,40 @@
 
         
 </section>
+
+
+        <!-- Go to Top Button with ↑ Icon -->
+        <button onclick="scrollToTop()" class="go-top">↑</button>
+
+        <style>
+            /* Updated CSS for the button */
+            .go-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #007bff;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 24px; /* Increased font size for better visibility of the arrow */
+                transition: background-color 0.3s;
+            }
+
+            .go-top:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+        <script>
+            // Scroll to top function
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+
 {% endblock %}

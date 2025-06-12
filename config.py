@@ -20,3 +20,12 @@ class Config:
     # CSRF protection
     WTF_CSRF_ENABLED = True
     WTF_CSRF_SECRET_KEY = os.environ.get('WTF_CSRF_SECRET_KEY', 'dev-csrf-key-change-in-production')
+    
+    # Production environment settings
+    ENV = os.environ.get('FLASK_ENV', 'production')
+    DEBUG = False
+    TESTING = False
+    
+    # Server configuration
+    HOST = '0.0.0.0'
+    PORT = int(os.environ.get('PORT', 5000))

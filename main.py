@@ -20,7 +20,7 @@ try:
 except Exception as e:
     logger.error(f"Database initialization error: {str(e)}")
 
-# Health check endpoint
+# Health check endpoint for deployment
 @app.route('/health')
 def health_check():
     try:
@@ -33,6 +33,11 @@ def health_check():
     except Exception as e:
         logger.error(f"Health check failed: {str(e)}")
         return {'status': 'unhealthy', 'error': str(e)}, 500
+
+# Simple health check for deployment readiness
+@app.route('/ping')
+def ping():
+    return 'pong', 200
 
 @app.route('/')
 def index():
@@ -114,16 +119,22 @@ def gallery():
 def datascience():
     return render_template('DataScience.html')
 
-if __name__ == '__main__':
+# Initialize database tables
+def init_db():
     try:
         with app.app_context():
             db.create_all()
             logger.info("Database tables created successfully")
     except Exception as e:
         logger.error(f"Error creating database tables: {str(e)}")
+
+if __name__ == '__main__':
+    # Initialize database
+    init_db()
     
     # Get port from environment variable for deployment compatibility
     port = int(os.environ.get('PORT', 5000))
     logger.info(f"Starting Flask server on 0.0.0.0:{port}")
     
-    app.run(host='0.0.0.0', port=port, debug=False)
+    # Production-ready configuration
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)

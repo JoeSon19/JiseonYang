@@ -83,6 +83,10 @@ def presentations():
 def gallery():
     return render_template('gallery.html')
 
+@app.route('/datascience')
+def datascience():
+    return render_template('DataScience.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

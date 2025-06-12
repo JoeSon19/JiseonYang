@@ -21,11 +21,11 @@ args = "Save Publication Images"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Flask Server"
+args = "Create Placeholders"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Create Placeholders"
+args = "Flask Server"
 
 [[workflows.workflow]]
 name = "Move Profile Picture"
@@ -53,21 +53,6 @@ task = "shell.exec"
 args = "python save_publication_images.py"
 
 [[workflows.workflow]]
-name = "Flask Server"
-author = "agent"
-
-[workflows.workflow.metadata]
-agentRequireRestartOnSave = false
-
-[[workflows.workflow.tasks]]
-task = "packager.installForAll"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "pkill python3; python main.py"
-waitForPort = 5000
-
-[[workflows.workflow]]
 name = "Create Placeholders"
 author = "agent"
 
@@ -80,6 +65,15 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python create_placeholder_images.py"
+
+[[workflows.workflow]]
+name = "Flask Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+waitForPort = 5000
 
 [deployment]
 run = ["sh", "-c", "pkill python3; python main.py"]

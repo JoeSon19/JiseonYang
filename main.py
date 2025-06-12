@@ -129,12 +129,23 @@ def init_db():
         logger.error(f"Error creating database tables: {str(e)}")
 
 if __name__ == '__main__':
-    # Initialize database
-    init_db()
-    
-    # Get port from environment variable for deployment compatibility
-    port = int(os.environ.get('PORT', 5000))
-    logger.info(f"Starting Flask server on 0.0.0.0:{port}")
-    
-    # Production-ready configuration
-    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
+    try:
+        # Initialize database
+        init_db()
+        
+        # Get port from environment variable for deployment compatibility
+        port = int(os.environ.get('PORT', 5000))
+        logger.info(f"Starting Flask server on 0.0.0.0:{port}")
+        
+        # Production-ready configuration
+        app.run(
+            host='0.0.0.0', 
+            port=port, 
+            debug=False, 
+            threaded=True,
+            use_reloader=False
+        )
+    except Exception as e:
+        logger.error(f"Failed to start application: {str(e)}")
+        import sys
+        sys.exit(1)

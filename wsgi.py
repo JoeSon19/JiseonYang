@@ -1,25 +1,27 @@
 """
 WSGI entry point for production deployment
 """
-from main import app, init_db
-import logging
 import os
+import logging
+from main import app, init_db
 
-# Configure logging for production
+# Configure production logging
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s %(levelname)s %(name)s %(message)s'
+    format='%(asctime)s %(levelname)s: %(message)s'
 )
-logger = logging.getLogger(__name__)
 
 # Initialize database on startup
-init_db()
+try:
+    init_db()
+    logging.info("WSGI: Database initialized successfully")
+except Exception as e:
+    logging.error(f"WSGI: Database initialization failed: {str(e)}")
+
+# Export application for WSGI servers
+application = app
 
 if __name__ == "__main__":
-    # This is for production WSGI servers like Gunicorn
     port = int(os.environ.get('PORT', 5000))
-    logger.info(f"Starting WSGI application on port {port}")
-    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
-
-# Export app for WSGI servers
-application = app
+    logging.info(f"WSGI: Starting application on 0.0.0.0:{port}")
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True, use_reloader=False)

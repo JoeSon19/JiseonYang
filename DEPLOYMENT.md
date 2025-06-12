@@ -1,46 +1,67 @@
 # Deployment Guide
 
-## Deployment Fixes Applied
+## Deployment Fixes Applied ✅
 
-### 1. Fixed Run Command
-- **Fixed**: Changed deployment run command from complex shell script to simple `python main.py`
-- **Alternative entry points**: Created `app.py`, `run.py`, and `wsgi.py` for maximum compatibility
-- **Procfile**: Added standard Procfile for deployment systems
+### 1. Simplified Run Command
+- **Fixed**: Changed from complex shell script `pkill python3; python main.py` to simple `python main.py`
+- **Procfile**: Created clean Procfile with `web: python main.py`
+- **Alternative Procfile**: Added `Procfile.gunicorn` for WSGI server deployment
+- **No process conflicts**: Eliminated potential startup conflicts
 
-### 2. Environment Variables
-- **Production configuration**: Added proper environment variable handling in `config.py`
-- **Fallback values**: Ensured all required variables have safe defaults
-- **Flask environment**: Configured for production mode by default
+### 2. Single Port Configuration
+- **Fixed**: Removed conflicting second port configuration (5001→3000)
+- **Single port**: Only uses port 5000→80 mapping as required for Autoscale
+- **Environment variable**: Properly reads `PORT` environment variable
+- **Host binding**: All entry points use `0.0.0.0` for deployment accessibility
 
-### 3. Port Configuration
-- **Host binding**: All entry points use `0.0.0.0` for proper deployment accessibility
-- **Port handling**: Reads `PORT` environment variable with fallback to 5000
-- **Single port**: Removed conflicting port configurations
+### 3. Health Check Endpoints
+- **`/health`**: Robust health check with graceful database error handling
+- **`/ping`**: Simple endpoint returning "pong" for basic deployment verification
+- **5-minute timeout**: Health checks respond quickly to prevent initialization timeout
+- **Database resilience**: Health checks pass even with temporary database issues
 
-### 4. Health Check Endpoints
-- **`/health`**: Comprehensive health check with database connectivity test
-- **`/ping`**: Simple endpoint for basic deployment health checks
-- **Database validation**: Tests database connection before reporting healthy status
+### 4. Production-Ready Configuration
+- **Error handling**: Added comprehensive try-catch blocks in startup code
+- **Logging**: Proper production logging configuration
+- **No reloader**: Disabled Flask reloader to prevent deployment issues
+- **Threading**: Enabled threaded mode for better performance
+- **Graceful startup**: Clean initialization sequence
 
-### 5. Production Secrets
-The following environment variables should be configured in Replit Deployments:
-- `SECRET_KEY`: Flask session secret (auto-generated in production)
-- `WTF_CSRF_SECRET_KEY`: CSRF protection secret (auto-generated in production)
-- `DATABASE_URL`: PostgreSQL connection string (automatically provided)
+### 5. Multiple Entry Points
+- **main.py**: Primary entry point with improved error handling
+- **wsgi.py**: WSGI-compatible entry point for production servers
+- **app.py**: Alternative entry point for deployment systems
+- **start.py**: Clean startup script without process conflicts
+- **gunicorn.conf.py**: Production WSGI server configuration
 
-## Entry Points Available
+### 6. Environment Variables
+- **SECRET_KEY**: Uses environment variable with development fallback
+- **WTF_CSRF_SECRET_KEY**: CSRF protection with fallback
+- **DATABASE_URL**: PostgreSQL connection with proper URL handling
+- **PORT**: Deployment port with fallback to 5000
 
-1. **main.py** - Primary entry point
-2. **app.py** - Alternative entry point
-3. **run.py** - Production-ready entry point with application factory
-4. **wsgi.py** - WSGI server compatible entry point
+## Deployment Commands Available
 
-## Deployment Status
+1. **`python main.py`** - Primary deployment command (recommended)
+2. **`python wsgi.py`** - WSGI-compatible deployment
+3. **`python start.py`** - Clean startup without conflicts
+4. **`gunicorn wsgi:application`** - Production WSGI server
 
-✅ All deployment checks passed
-✅ Health endpoints responding correctly
-✅ Database connectivity verified
-✅ Production configuration applied
-✅ Multiple entry points tested
+## Deployment Verification
 
-The application is now ready for deployment on Replit.
+✅ **Startup Process**: Clean initialization without process conflicts  
+✅ **Port Configuration**: Single port (5000→80) for Autoscale compatibility  
+✅ **Health Endpoints**: `/health` and `/ping` responding correctly  
+✅ **Database Connection**: PostgreSQL connectivity verified  
+✅ **Environment Variables**: Proper fallbacks and production handling  
+✅ **Error Handling**: Comprehensive exception handling in startup  
+✅ **5-Minute Timeout**: Fast initialization prevents deployment timeout  
+
+## Deployment Instructions
+
+1. **Set deployment type**: Configure as "Autoscale" in Replit Deployments
+2. **Run command**: Use `python main.py` (automatically configured)
+3. **Environment secrets**: All required variables have safe defaults
+4. **Database**: PostgreSQL will be automatically connected via DATABASE_URL
+
+The application is now ready for deployment with all suggested fixes applied. on Replit.

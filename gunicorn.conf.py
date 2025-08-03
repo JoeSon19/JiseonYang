@@ -13,7 +13,7 @@ backlog = 2048
 workers = 1  # Single worker for Replit environment
 worker_class = "sync"
 worker_connections = 1000
-timeout = 30
+timeout = 120
 keepalive = 2
 
 # Restart workers

@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 def wait_for_database():
     """Wait for database to be ready with exponential backoff"""
-    max_retries = 10
+    max_retries = 5  # Reduced for faster deployment
     retry_count = 0
     
     while retry_count < max_retries:
@@ -26,7 +26,7 @@ def wait_for_database():
             return True
         except Exception as e:
             retry_count += 1
-            wait_time = min(2 ** retry_count, 30)  # Exponential backoff, max 30s
+            wait_time = min(2 ** retry_count, 10)  # Faster backoff, max 10s
             logger.warning(f"Database initialization attempt {retry_count} failed: {str(e)}")
             if retry_count < max_retries:
                 logger.info(f"Retrying in {wait_time} seconds...")

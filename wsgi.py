@@ -1,32 +1,40 @@
+#!/usr/bin/env python3
 """
-WSGI entry point for production deployment
-This file provides the WSGI application object that Gunicorn can use
+WSGI entry point for production deployment with Gunicorn
 """
 
 import os
 import sys
 import logging
-
-# Add the project directory to Python path
-sys.path.insert(0, os.path.dirname(__file__))
-
 from main import app, init_db
 
 # Configure logging for production
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s: %(message)s'
+)
 logger = logging.getLogger(__name__)
 
-# Initialize database on startup
-try:
-    init_db()
-    logger.info("Database initialized successfully")
-except Exception as e:
-    logger.error(f"Database initialization error: {str(e)}")
+def create_application():
+    """Create and configure the Flask application for production"""
+    logger.info("Initializing application for production deployment")
+    
+    try:
+        # Initialize database
+        with app.app_context():
+            init_db()
+            logger.info("Database initialization completed")
+    except Exception as e:
+        logger.warning(f"Database initialization warning: {str(e)}")
+        logger.info("Application will continue without database initialization")
+    
+    return app
 
-# WSGI application object
-application = app
+# Create the application instance
+application = create_application()
 
 if __name__ == "__main__":
-    # For direct execution (development)
+    # For development server
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    host = os.environ.get('HOST', '0.0.0.0')
+    application.run(host=host, port=port, debug=False)

@@ -1,0 +1,23 @@
+runtime: python311
+env: standard
+
+entrypoint: python deploy_start.py
+
+env_variables:
+  PORT: 5000
+  HOST: 0.0.0.0
+
+# Health check configuration
+liveness_check:
+  path: "/health"
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 1
+
+readiness_check:
+  path: "/ping"
+  check_interval_sec: 5
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 1

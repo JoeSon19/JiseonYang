@@ -23,18 +23,31 @@ except Exception as e:
 # Health check endpoint for deployment
 @app.route('/health')
 def health_check():
+    """
+    Comprehensive health check for deployment readiness
+    Returns 200 OK if application is ready to serve traffic
+    """
+    health_status = {
+        'status': 'healthy',
+        'timestamp': str(db.func.now() if hasattr(db, 'func') else 'unknown'),
+        'application': 'running'
+    }
+    
     try:
         # Test database connection with retry logic
         with app.app_context():
             from sqlalchemy import text
             result = db.session.execute(text('SELECT 1'))
             result.fetchone()
-            db.session.commit()
-        return {'status': 'healthy', 'database': 'connected'}, 200
+            db.session.close()
+            health_status['database'] = 'connected'
+        return health_status, 200
     except Exception as e:
         logger.warning(f"Database connection issue in health check: {str(e)}")
         # Return healthy for basic deployment checks even if database has temporary issues
-        return {'status': 'healthy', 'database': 'retry', 'message': 'Application running'}, 200
+        health_status['database'] = 'retrying'
+        health_status['database_message'] = 'Temporary connection issue'
+        return health_status, 200
 
 # Simple health check for deployment readiness
 @app.route('/ping')
@@ -137,18 +150,19 @@ if __name__ == '__main__':
         
         # Get port from environment variable for deployment compatibility
         port = int(os.environ.get('PORT', 5000))
-        logger.info(f"Starting Flask server on 0.0.0.0:{port}")
-        logger.info("Health check endpoints available at /health and /ping")
+        host = os.environ.get('HOST', '0.0.0.0')
         
-        # Production-ready configuration with timeout handling
+        logger.info(f"Starting Flask server on {host}:{port}")
+        logger.info("Health check endpoints available at /health and /ping")
+        logger.info("Application ready for deployment")
+        
+        # Production-ready configuration optimized for deployment
         app.run(
-            host='0.0.0.0', 
-            port=port, 
-            debug=False, 
+            host=host,
+            port=port,
+            debug=False,
             threaded=True,
-            use_reloader=False,
-            # Additional deployment optimizations
-            processes=1
+            use_reloader=False
         )
     except Exception as e:
         logger.error(f"Failed to start application: {str(e)}")

@@ -49,10 +49,17 @@ def health_check():
         health_status['database_message'] = 'Temporary connection issue'
         return health_status, 200
 
-# Simple health check for deployment readiness
+# Simple health check for deployment readiness - ultra fast response
 @app.route('/ping')
 def ping():
+    """Ultra-fast health check for GCE Autoscale deployment"""
     return 'pong', 200
+
+# Additional quick health check
+@app.route('/ready')
+def ready():
+    """Deployment readiness check"""
+    return {'status': 'ready'}, 200
 
 @app.route('/')
 def index():

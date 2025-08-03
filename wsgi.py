@@ -30,6 +30,9 @@ def create_application():
     
     return app
 
+# Create application instance for Gunicorn
+application = create_application()
+
 # Create the application instance
 application = create_application()
 

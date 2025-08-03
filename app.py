@@ -1,23 +1,48 @@
+#!/usr/bin/env python3
 """
-Alternative entry point for deployment compatibility
-This ensures the Flask app can be started with various deployment commands
+Simple, clean deployment startup script for Flask application.
+This script avoids process conflicts and provides quick health check endpoints.
 """
-from main import app, init_db
+
 import os
 import logging
+from main import app, init_db
 
-# Configure production logging
+# Configure logging for deployment
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s %(levelname)s %(name)s %(message)s'
+    format='%(asctime)s %(levelname)s: %(message)s'
 )
+logger = logging.getLogger(__name__)
 
-# Initialize database on import
-init_db()
-
-# Export app for deployment systems
-application = app
+def main():
+    """Clean startup function for deployment"""
+    logger.info("Starting application deployment...")
+    
+    # Initialize database
+    try:
+        init_db()
+        logger.info("Database initialized successfully")
+    except Exception as e:
+        logger.warning(f"Database initialization warning: {str(e)}")
+        logger.info("Continuing without database...")
+    
+    # Get single port configuration from environment
+    port = int(os.environ.get('PORT', 5000))
+    host = '0.0.0.0'
+    
+    logger.info(f"Starting Flask server on {host}:{port}")
+    logger.info("Health check endpoints: /health and /ping")
+    logger.info("Application ready for deployment")
+    
+    # Start with production-ready configuration
+    app.run(
+        host=host,
+        port=port,
+        debug=False,
+        threaded=True,
+        use_reloader=False
+    )
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
+    main()

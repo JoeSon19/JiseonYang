@@ -1,39 +1,34 @@
 #!/usr/bin/env python3
 """
-Production startup script for deployment
-This script provides a clean, simple way to start the Flask application
-without complex shell commands that cause deployment conflicts.
+Simple startup script for deployment
+This provides a clean entry point without process conflicts
 """
 
 import os
-import logging
 import sys
-from main import app, init_db
+import logging
 
-# Configure logging for production
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def start_application():
-    """
-    Start the Flask application with production-ready configuration
-    """
+def main():
+    """Main startup function"""
     try:
+        # Import and initialize the application
+        from main import app, init_db
+        
         # Initialize database
-        logger.info("Initializing database...")
         init_db()
         
-        # Get port from environment variable for deployment compatibility
+        # Get port from environment
         port = int(os.environ.get('PORT', 5000))
-        host = os.environ.get('HOST', '0.0.0.0')
+        host = '0.0.0.0'
         
-        logger.info(f"Starting Flask server on {host}:{port}")
-        logger.info("Health check endpoints available at /health and /ping")
+        logger.info(f"Starting application on {host}:{port}")
+        logger.info("Health endpoints available: /health and /ping")
         
-        # Production-ready configuration
+        # Start the application
         app.run(
             host=host,
             port=port,
@@ -47,4 +42,4 @@ def start_application():
         sys.exit(1)
 
 if __name__ == '__main__':
-    start_application()
+    main()

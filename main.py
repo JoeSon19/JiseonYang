@@ -138,14 +138,17 @@ if __name__ == '__main__':
         # Get port from environment variable for deployment compatibility
         port = int(os.environ.get('PORT', 5000))
         logger.info(f"Starting Flask server on 0.0.0.0:{port}")
+        logger.info("Health check endpoints available at /health and /ping")
         
-        # Production-ready configuration
+        # Production-ready configuration with timeout handling
         app.run(
             host='0.0.0.0', 
             port=port, 
             debug=False, 
             threaded=True,
-            use_reloader=False
+            use_reloader=False,
+            # Additional deployment optimizations
+            processes=1
         )
     except Exception as e:
         logger.error(f"Failed to start application: {str(e)}")

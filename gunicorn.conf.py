@@ -4,11 +4,11 @@ import os
 bind = f"0.0.0.0:{os.environ.get('PORT', 5000)}"
 backlog = 2048
 
-# Worker processes
-workers = 2
+# Worker processes - optimized for deployment
+workers = 1  # Single worker for better resource usage on deployment
 worker_class = "sync"
 worker_connections = 1000
-timeout = 60
+timeout = 120  # Longer timeout for startup
 keepalive = 2
 
 # Restart workers after this many requests

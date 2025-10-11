@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Jiseon Yang - Our Team</title>
+    <style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    padding-right: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 240px; /* Increased from 200px to create more space */
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #66b3ff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #e6e6e6;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 3px solid #333333;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+    margin-left: 240px; /* Updated to match main content margin */
+}
+
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Team member styles */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border: 3px solid #333333;
+}
+
+.team-member-info {
+    flex-grow: 1;
+}
+
+.team-member h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #99ccff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Jiseon Yang, Ph.D.</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="DataScience.html">Statistical Data Analysis and Data Science Projects</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="presentations.html">Presentations</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="honors.html">Honors & Awards</a></li>
+                    <li><a href="techniques.html">Research Techniques</a></li>
+                    <li><a href="services.html">Services & Memberships</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <h1 class="mb-4">Our Team</h1>
+
+<section class="section">
+    <h2>Current Research Group Members</h2>
+
+
+     <!--team -->
+        <div class="team-members">
+            <div class="team-member">
+                <img src="https://i.imgur.com/GNIPmsm.png" alt="Richard R Davis" class="team-member-photo">
+                <div class="team-member-info">
+                    <h3>Richard R Davis</h3>
+                    <p><strong>Position:</strong> Research Specialist Sr</p>
+                    <p><strong>Affiliation:</strong> Biodesign Institute (BDI), ASU</p>
+                    <p><strong>Years:</strong> 2023 - Present</p>
+                </div>
+            </div>
+
+
+            <!--team -->    
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://i.imgur.com/GRb7qKQ.png" alt="Isaac Hong" class="team-member-photo">
+                    <div class="team-member-info">
+                        <h3>Abriel Knipmeyer</h3>
+                        <p><strong>Position:</strong> Student Worker</p>
+                        <p><strong>Degree:</strong> BS </p>
+                        <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                        <p><strong>Years:</strong> 2025 - Present</p>
+
+                    </div>
+                </div>
+       
+                
+    
+             <!--team -->
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://i.imgur.com/6hVIvTt.png" alt="Jongho Son" class="team-member-photo">
+                    <div class="team-member-info">
+                        <h3>Jongho Son</h3>
+                        <p><strong>Position:</strong> Data & Software Engineer</p>
+                        <p><strong>Degree:</strong> MS</p>
+                        <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                        <p><strong>Years:</strong> 2024 - Present</p>
+                    </div>
+                </div>
+
+           
+
+                <!--team -->
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="https://i.imgur.com/OqFgIOm.png" alt="Sandhya Gangaraju" class="team-member-photo">
+                        <div class="team-member-info">
+                            <h3>Sandhya Gangaraju</h3>
+                            <p><strong>Position:</strong> Principal Research Specialist</p>
+                            <p><strong>Affiliation:</strong> Biodesign Institute (BDI), ASU</p>
+                            <p><strong>Years:</strong> 2024 - Present</p>
+                        </div>
+                    </div>
+                
+        
+    </div>
+</section>
+
+
+<section class="section">
+    <h2>Past Research Group Members</h2>
+    
+    <!--team -->    
+    <div class="team-members">
+        <div class="team-member">
+            <img src="https://i.imgur.com/GRb7qKQ.png" alt="Isaac Hong" class="team-member-photo">
+            <div class="team-member-info">
+                <h3>Isaac Hong</h3>
+                <p><strong>Position:</strong> Student Worker</p>
+                <p><strong>Degree:</strong> BS candidate</p>
+                <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                <p><strong>Years:</strong> 2023 - 2025</p>
+
+            </div>
+        </div>
+
+    
+         <!--team member -->
+             <div class="team-members">
+                 <div class="team-member">
+                     <img src="https://i.imgur.com/U1PrFeq.png" alt="Mina Hong" class="team-member-photo">
+                     <div class="team-member-info">
+                         <h3>Mina Hong</h3>
+                         <p><strong>Position:</strong> Student Worker</p>
+                         <p><strong>Degree:</strong> BS</p>
+                         <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                         <p><strong>Years:</strong> 2022 – 2023</p>
+                     </div>
+                 </div>
+    
+
+          <!--team member-->
+         <div class="team-members">
+             <div class="team-member">
+                 <img src="https://i.imgur.com/2vflTWL.png" alt="Sehui Lee" class="team-member-photo">
+                 <div class="team-member-info">
+                     <h3>Sehui Lee</h3>
+                     <p><strong>Position:</strong> Visiting Student</p>
+                     <p><strong>Affiliation:</strong> Pusan National University (PNU)</p>
+                     <p><strong>Degree:</strong> PhD candidate</p>
+                     <p><strong>Years:</strong> 2024</p>
+                 </div>
+             </div>
+     
+
+         <!--team member-->
+         <div class="team-members">
+             <div class="team-member">
+                 <img src="https://i.imgur.com/VRU2cM0.png" alt="Gautam Sai Nakka" class="team-member-photo">
+                 <div class="team-member-info">
+                     <h3>Gautam Sai Nakka</h3>
+                     <p><strong>Position:</strong> Student Worker</p>
+                     <p><strong>Degree:</strong> MS</p>
+                     <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                     <p><strong>Years:</strong> 2021 – 2022</p>
+                 </div>
+             </div>
+         
+
+
+         <!--team member-->
+         <div class="team-members">
+             <div class="team-member">
+                 <img src="https://i.imgur.com/PaTfDnX.png" alt="Sara Koroli" class="team-member-photo">
+                 <div class="team-member-info">
+                     <h3>Sara Koroli</h3>
+                     <p><strong>Position:</strong> Research Technician</p>
+                     <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                     <p><strong>Years:</strong> 2020 – 2021</p>
+                 </div>
+             </div>
+         
+
+
+         <!--team member-->
+         <div class="team-members">
+             <div class="team-member">
+                 <img src="https://i.imgur.com/uBu6Mmx.png" alt="Olivia King" class="team-member-photo">
+                 <div class="team-member-info">
+                     <h3>Olivia King</h3>
+                     <p><strong>Position:</strong> Student</p>
+                     <p><strong>Degree:</strong> BS/MS</p>
+                     <p><strong>Affiliation:</strong> Arizona State University (ASU)</p>
+                     <p><strong>Years:</strong> 2017 – 2019</p>
+                 </div>
+             </div>
+            
+
+
+
+                         
+        
+    </section>
+
+<section class="section">
+    <h2>Join Our Team</h2>
+    <p>We are always looking for motivated students and researchers interested in space microbiology and astrobiology. If you're passionate about understanding how microorganisms behave in space and want to contribute to the future of space exploration, please <a href="contact.html">contact us</a> for potential opportunities.</p>
+</section>
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Jiseon Yang. All rights reserved.</p>
+    </footer>
+</body>
+</html>

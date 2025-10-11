@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Jiseon Yang - Services & Memberships</title>
+    <style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    padding-right: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 240px; /* Increased from 200px to create more space */
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #66b3ff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #e6e6e6;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 3px solid #333333;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+    margin-left: 240px; /* Updated to match main content margin */
+}
+
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Team member styles */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border: 3px solid #333333;
+}
+
+.team-member-info {
+    flex-grow: 1;
+}
+
+.team-member h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #99ccff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Jiseon Yang, Ph.D.</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="DataScience.html">Statistical Data Analysis and Data Science Projects</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="presentations.html">Presentations</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="honors.html">Honors & Awards</a></li>
+                    <li><a href="techniques.html">Research Techniques</a></li>
+                    <li><a href="services.html">Services & Memberships</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <h1 class="mb-4">Services & Memberships</h1>
+
+<style>
+    .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .service-card {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .category-title {
+        color: #66b3ff;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #404040;
+        padding-bottom: 10px;
+    }
+
+    .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .service-item {
+        color: #e0e0e0;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .service-item:hover {
+        background-color: #363636;
+    }
+
+    .date-tag {
+        background-color: #404040;
+        color: #ffffff;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        margin-left: 10px;
+    }
+</style>
+
+<div class="services-container">
+  
+
+    <!-- Editors -->
+    <div class="service-card">
+        <h2 class="category-title">Editor</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                Associate Editor, npj Microgravity<br>
+                <a href="https://www.nature.com/npjmgrav/editors" target="_blank">
+                    https://www.nature.com/npjmgrav/editors
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    
+    <!-- Grant Review Panel -->
+    <div class="service-card">
+        <h2 class="category-title">Grant Review Panel</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                NASA 2020-21 Human Exploration Research_Microbiology Panel
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Peer Review Service for Academic Journals -->
+    <div class="service-card">
+        <h2 class="category-title">Peer Review Service for Academic Journals</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                npj Microgravity
+                <span class="date-tag">2024</span>
+            </li>
+            <li class="service-item">
+                npj Microgravity
+                <span class="date-tag">2023</span>
+            </li>
+            <li class="service-item">
+                BIOFLM (Elsevier)
+                <span class="date-tag">2023-03-01</span>
+            </li>
+            <li class="service-item">
+                npj Microgravity
+                <span class="date-tag">2023-01-09</span>
+            </li>
+            <li class="service-item">
+                npj Microgravity
+                <span class="date-tag">2022-08-09</span>
+            </li>
+            <li class="service-item">
+                BIOFLM (Elsevier)
+                <span class="date-tag">2021-11-30</span>
+            </li>
+            <li class="service-item">
+                npj Microgravity
+                <span class="date-tag">Ad hoc reviewer</span>
+            </li>
+            <li class="service-item">
+                Nature Communications
+                <span class="date-tag">Ad hoc reviewer</span>
+            </li>
+            <li class="service-item">
+                Applied and Environmental Microbiology
+                <span class="date-tag">Ad hoc reviewer</span>
+            </li>
+            <li class="service-item">
+                Microbiology Open
+                <span class="date-tag">Ad hoc reviewer</span>
+            </li>
+            <li class="service-item">
+                Applied and Environmental Microbiology
+                <span class="date-tag">Ad hoc reviewer</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Community Service -->
+    <div class="service-card">
+        <h2 class="category-title">Community Service</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                ASU Biodesign Open Door
+                <span class="date-tag">2012 – 2019</span>
+                <p class="description">Annual outreach event, giving the public an opportunity to learn about research at Biodesign and inspire kids to pursue STEM careers.</p>
+            </li>
+            <li class="service-item">
+                Volunteer for COVID-19 Testing
+                <span class="date-tag">Biodesign Institute, Arizona State University</span>
+                <p class="description">Served as a volunteer to assist with COVID-19 testing at the Biodesign Institute.</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- A Panel Member -->
+    <div class="service-card">
+        <h2 class="category-title">A Panel Member</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                Speaker in Panel Discussion
+                <span class="date-tag">ASU Postdoctoral Career Conference</span>
+                <span class="date-tag">2020.04.30</span>
+                <p class="description">Served as a speaker in a panel discussion on the session ‘Postdoc to ASU Research Professor’.</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Science Community Member -->
+    <div class="service-card">
+        <h2 class="category-title">Science Community Member</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                NASA Analysis Working Group (AWG) Member
+                <span class="date-tag">NASA AI/ML AWG</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Memberships and Societies -->
+    <div class="service-card">
+        <h2 class="category-title">Memberships and Societies</h2>
+        <ul class="service-list">
+            <li class="service-item">
+                ASM Arizona/Southern Nevada Branch
+            </li>
+            <li class="service-item">
+                American Society for Microbiology
+            </li>
+            <li class="service-item">
+                American Society for Gravitational and Space Research (ASGSR)
+            </li>
+            <li class="service-item">
+                Committee on Space Research (COSPAR)
+            </li>
+            <li class="service-item">
+                American Mathematical Society (AMS)
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Jiseon Yang. All rights reserved.</p>
+    </footer>
+</body>
+</html>

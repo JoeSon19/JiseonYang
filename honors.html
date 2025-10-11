@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiseon Yang - Home</title>
+    <title>Professor Jiseon Yang - Honors and Awards</title>
     <style>
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -242,114 +242,162 @@ a:hover {
             </nav>
         </aside>
         <main>
-            <!-- Content block begins -->
+            <h1 class="mb-4">Honors and Awards</h1>
 
-<!-- Profile section with image, title, and basic information -->
-<div class="profile-section">
-    <!-- Profile picture -->
-    <img src="static/images/profile_picture.jpg" alt="Jiseon Yang" class="profile-picture">
-    
-    <!-- Profile information -->
-    <div class="profile-info">
-        <h1>Jiseon Yang, Ph.D.</h1>
-        <p>Assistant Research Professor</p>
-        <p>Biodesign Center for Fundamental & Applied Microbiomics</p>
-        <p>Arizona State University</p>
-    </div>
-    
-    <!-- Research background image -->
-    <img src="static/images/bannerfinal2.png" alt="Space Research Background" class="research-image">
-</div>
-
-<!-- White line separator for visual division -->
-<hr class="white-line" style="height: 4px;">
-
-<!-- Placeholder for timeline section -->
-<div class="Banner size">
-    <!-- Timeline content can be added here -->
-</div>
-
-<!-- CSS styling for the layout and visual elements -->
 <style>
-    .profile-section {
-        display: flex; /* Align items in a row */
-        align-items: center; /* Center items vertically */
-        gap: 20px; /* Space between elements */
+    .awards-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
     }
 
-    .profile-picture {
-        width: 150px; /* Fixed width for the profile picture */
-        height: auto; /* Maintains aspect ratio */
-        border-radius: 50%; /* Makes the image circular */
+    .award-card {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .profile-info {
-        flex-grow: 1; /* Allows info to expand as needed */
-        max-width: 400px; /* Limits width for readability */
+    .award-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     }
 
-    .research-image {
-        width: 600px; /* Sets research image width */
-        height: auto; /* Maintains aspect ratio */
-        border-radius: 10px; /* Slightly rounded corners */
-        margin-left: auto; /* Aligns image to the right */
+    .award-year {
+        color: #66b3ff;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
-    /* Style for the white line */
-    .white-line {
-        border: none; /* Removes default border */
-        height: 2px; /* Sets line thickness */
-        background-color: white; /* Sets line color */
-        margin: 20px 0; /* Spacing above and below the line */
+    .award-title {
+        color: #ffffff;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .award-description {
+        color: #e0e0e0;
+        font-size: 0.9em;
+        line-height: 1.6;
     }
 </style>
 
-<!-- About Me section with description of expertise and achievements -->
-<section class="about">
-    <h2>About Me</h2>
-    <p>I specialize in bacteriology and space life sciences, focusing on bacterial pathogenesis, genetic engineering, biofilms, space biology, vaccine development, and host-pathogen interactions. My work utilizes diverse human surrogate models, including 3D tissue cultures and animal models, to advance our understanding of microbial interactions within ecosystems. This research seeks to uncover the dynamics, persistence, and pathogenicity of microbial communities both on Earth and in space, contributing to life sustainability in extreme environments.</p>
-    <p>In addition to my expertise in microbiology, I am skilled in statistical analysis and modeling, which I apply to my research for data-driven insights and robust experimental design. I have held an Alfred P. Sloan Postdoctoral Fellowship to study the microbiome aboard the International Space Station (ISS) and have published extensively in the fields of genomics, microbiology, and space biology. Currently, I lead a NASA-funded project examining bacterial interspecies interactions in extreme environments, using integrated systemic approaches and multi-directional analyses, and advanced statistical modeling to explore complex microbial behavior.</p>
-    <p>My achievements include receiving the ASM Peggy Cotter Early Career Award and an Outstanding Teaching Award, reflecting my commitment to both cutting-edge research and education.</p>
-</section>
+<div class="awards-container">
+    <section class="section">
+        <h2>Travel Funds</h2>
+        
+        <div class="award-card">
+            <div class="award-year">2019</div>
+            <div class="award-title">Tri-Services Microbiome Conference (TSMC)</div>
+            <div class="award-description">
+                Microbiome of the Built Environment section, Department of Defense (DoD), Dayton, OH, USA (October 23, 2019).
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2019</div>
+            <div class="award-title">ASM Microbe 2019 Travel Fund</div>
+            <div class="award-description">
+                Travel fund to present my work at the ASM Microbe 2019 in San Francisco, June 2019.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2018</div>
+            <div class="award-title">Gordon Research Conference on the Microbiology of the Built Environment</div>
+            <div class="award-description">
+                Awarded $1635.27 to attend the conference in July 2018.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2017</div>
+            <div class="award-title">ASM/ASV Conference Travel Grant</div>
+            <div class="award-description">
+                Travel grant for the American Society for Microbiology/American Society for Virology Conference ($500). May 2017.
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Awards</h2>
 
 
-<!-- Research Interests section with a list of topics -->
-<section class="research-interests">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Mechanisms of bacterial infectious diseases and host-pathogen interactions</li>
-        <li>Bioengineering and molecular biology applications in microbial systems</li>
-        <li>Space life sciences and translational research for public health on Earth</li>
-        <li>Biofilm formation, multispecies interactions, and long-term microbial adaptation</li>
-        <li>Tissue regeneration and 3D tissue engineering</li>
-        <li>Statistical data analysis in biological research</li>
-        <li>Big data analysis and computational biology</li>
-    </ul>
-</section>
+        <div class="award-card">
+            <div class="award-year">2019</div>
+            <div class="award-title">ASM Peggy Cotter Early Career Travel Award</div>
+            <div class="award-description">
+                Awarded by the American Society for Microbiology ($1650). March 1, 2019.
+            </div>
+        </div>
 
+        <div class="award-card">
+            <div class="award-year">2016</div>
+            <div class="award-title">The Churchill Award for International Collaborations</div>
+            <div class="award-description">
+                Presented at Fusion 2016, the Biodesign Institute, Arizona State University. April 1, 2016.
+            </div>
+        </div>
+        
+        <div class="award-card">
+            <div class="award-year">2014</div>
+            <div class="award-title">Outstanding Teaching Associate of the Year</div>
+            <div class="award-description">
+                Awarded by Arizona State University, School of Life Sciences (award $500). May 12, 2014.
+            </div>
+        </div>
 
-<!-- Research/Teaching Experience section listing professional experience -->
-<section class="experience">
-    <h2>Research/Teaching Experience</h2>
-    <ul>
-        <li>Oct 2019 – Present: Assistant Research Professor, Center for Fundamental and Applied Microbiomics (CFAM), Biodesign Institute (BDI), Arizona State University (ASU), Tempe, AZ</li>
-        <li>June 2017 – Sep 2019: Alfred P. Sloan Postdoctoral Fellow, CFAM and Center for Immunotherapy, Vaccines and Virotherapy (CIVV), BDI, ASU, Tempe, AZ</li>
-        <li>July 2015 – June 2017: Postdoctoral Research Associate, CIVV, BDI, ASU, Tempe, AZ</li>
-        <li>April 2006 – Aug 2009: Assistant Research Technologist, Dr. Josephine E. Clark-Curtiss, CIVV, BDI, ASU, Tempe, AZ</li>
-    </ul>
-</section>
+    </section>
 
+    <section class="section">
+        <h2>Scholarships</h2>
 
-<!-- Education section listing academic qualifications -->
-<section class="education">
-    <h2>Education</h2>
-    <ul>
-        <li>Arizona State University, Tempe, AZ, USA - M.S., Statistics - Present</li>
-        <li>Arizona State University, Tempe, AZ, USA - Ph.D., Microbiology - 2015</li>
-        <li>Pusan National University, South Korea - M.S., Microbiology - 2005</li>
-        <li>Pusan National University, South Korea - B.S., Microbiology - 2003</li>
-    </ul>
-</section>
+        <div class="award-card">
+            <div class="award-year">2015</div>
+            <div class="award-title">University Graduate Fellowship (UGF) Award</div>
+            <div class="award-description">
+                Arizona State University. 2015 Spring.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2014</div>
+            <div class="award-title">University Graduate Fellowship (UGF) Award</div>
+            <div class="award-description">
+                Arizona State University ($1,916). 2014 Summer.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2014</div>
+            <div class="award-title">SOLS Graduate Research Scholarship</div>
+            <div class="award-description">
+                School of Life Sciences, Arizona State University ($976). 2014 Summer.
+            </div>
+        </div>
+
+        <div class="award-card">
+            <div class="award-year">2013</div>
+            <div class="award-title">SOLS Graduate Research Scholarship</div>
+            <div class="award-description">
+                School of Life Sciences, Arizona State University ($5,785). 2013 Summer.
+            </div>
+        </div>
+        
+        <div class="award-card">
+            <div class="award-year">2012</div>
+            <div class="award-title">SOLS Graduate Research Scholarship</div>
+            <div class="award-description">
+                School of Life Sciences, Arizona State University ($4,581). 2012 Summer.
+            </div>
+        </div>
+
+        
+    </section>
+</div>
 
 <!-- Go to Top Button with ↑ Icon -->
 <button onclick="scrollToTop()" class="go-top">↑</button>

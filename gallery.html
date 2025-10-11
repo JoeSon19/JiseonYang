@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Jiseon Yang - Gallery</title>
+    <style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    padding-right: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 240px; /* Increased from 200px to create more space */
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #66b3ff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #e6e6e6;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 3px solid #333333;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+    margin-left: 240px; /* Updated to match main content margin */
+}
+
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Team member styles */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border: 3px solid #333333;
+}
+
+.team-member-info {
+    flex-grow: 1;
+}
+
+.team-member h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #99ccff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Jiseon Yang, Ph.D.</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="DataScience.html">Statistical Data Analysis and Data Science Projects</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="presentations.html">Presentations</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="honors.html">Honors & Awards</a></li>
+                    <li><a href="techniques.html">Research Techniques</a></li>
+                    <li><a href="services.html">Services & Memberships</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <h1 class="mb-4">Gallery</h1>
+
+<style>
+    .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Year filter buttons */
+    .year-buttons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .year-button {
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: gray; /* Changed background color to gray */
+        color: white;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+
+    .year-button:hover {
+        background-color: darkgray; /* Darker gray on hover */
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .gallery-item {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 80%; /* Adjust to fit within the fixed height */
+        object-fit: cover; /* Ensures the image covers the container */
+    }
+    .gallery-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery-caption {
+        padding: 15px;
+        color: #ffffff;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .gallery-date {
+        color: #66b3ff;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90vh;
+        margin-top: 50px;
+    }
+
+    .modal-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+<div class="gallery-container">
+    <!-- Year Filter Buttons -->
+    <div class="year-buttons">
+        <button class="year-button" onclick="filterByYear('all')">All</button>
+        <button class="year-button" onclick="filterByYear('2024')">2024</button>
+        <button class="year-button" onclick="filterByYear('Before 2024')">Before 2024</button>
+    </div>
+
+    <div class="gallery-grid">
+        
+        
+        <!-- Images -->
+        
+        <div class="gallery-item" data-year="2024">
+            <video src="static/images/Gallery/head smoke.mp4" 
+                   alt="Head Smoke" 
+                   class="gallery-image" 
+                   controls 
+                   onclick="openModal(this)">
+            </video>
+            <div class="gallery-caption">
+                Head Smoke
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/Halloween.jpg" 
+                 alt="Halloween" 
+                 class="gallery-image" 
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Halloween
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/mad mouse.png" 
+                 alt="Mad Space Mouse" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Mad Space Mouse
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/experiment in lab.png" 
+                 alt="Experiment in Lab" 
+                 class="gallery-image" 
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Experiment in Lab
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/experiment in lab v2.png" 
+                 alt="Experiment in Lab V2" 
+                 class="gallery-image" 
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Experiment in Lab V2
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="2024">
+            <img src="static/images/Gallery/experiment in lab v3.png" 
+                 alt="Experiment in Lab V3" 
+                 class="gallery-image" 
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Experiment in Lab V3
+                <div class="gallery-date">2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="Before 2024">
+            <img src="static/images/Gallery/space fllight.png" 
+                 alt="Space Flight" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Space Flight
+                <div class="gallery-date">Before 2024</div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-year="Before 2024">
+            <video src="static/images/Gallery/space flight video.mp4" 
+                   alt="Space Flight Video" 
+                   class="gallery-image" 
+                   controls 
+                   onclick="openModal(this)">
+            </video>
+            <div class="gallery-caption">
+                Space Flight Video
+                <div class="gallery-date">Before 2024</div>
+            </div>
+        </div>
+
+
+        <div class="gallery-item" data-year="Before 2024">
+            <img src="static/images/Gallery/albert einstein.jpg" 
+                 alt="Albert Einstein" 
+                 class="gallery-image"
+                 onclick="openModal(this)">
+            <div class="gallery-caption">
+                Albert Einstein
+                <div class="gallery-date">Before 2024</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption" class="modal-caption"></div>
+</div>
+
+<script>
+    function openModal(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var captionText = document.getElementById("modalCaption");
+        
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.nextElementSibling.textContent;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    window.onclick = function(event) {
+        var modal = document.getElementById("imageModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Filter gallery items by year
+    function filterByYear(year) {
+        var items = document.querySelectorAll('.gallery-item');
+        items.forEach(function(item) {
+            if (year === 'all' || item.getAttribute('data-year') === year) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Jiseon Yang. All rights reserved.</p>
+    </footer>
+</body>
+</html>

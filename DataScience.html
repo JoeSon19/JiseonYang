@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Jiseon Yang - DataScience</title>
+    <style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    padding-right: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 240px; /* Increased from 200px to create more space */
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #66b3ff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #e6e6e6;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 3px solid #333333;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+    margin-left: 240px; /* Updated to match main content margin */
+}
+
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Team member styles */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border: 3px solid #333333;
+}
+
+.team-member-info {
+    flex-grow: 1;
+}
+
+.team-member h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #99ccff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Jiseon Yang, Ph.D.</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="DataScience.html">Statistical Data Analysis and Data Science Projects</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="presentations.html">Presentations</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="funding.html">Funding</a></li>
+                    <li><a href="honors.html">Honors & Awards</a></li>
+                    <li><a href="techniques.html">Research Techniques</a></li>
+                    <li><a href="services.html">Services & Memberships</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <h1 class="mb-4">Statistical Data Analysis and Data Science Projects</h1>
+
+<section class="section">
+    <ul>
+        <li>
+            <strong>Analyzing Longitudinal Growth Using Mixed-Effects Models</strong><br>
+            
+        <br>
+            Investigated growth trajectories in a seven-week strength training study across three treatment groups: weights-increasing, repetitions-increasing, and control. Applied random intercept and slope models in R to analyze linear and quadratic trends in strength improvement. Selected AR(1) covariance structure through comparisons of Unstructured, Compound Symmetry, and Toeplitz models using AIC, BIC, and likelihood ratio tests. Identified significant group-specific trends and visualized results to provide actionable insights.
+        </li>
+        
+        <br>
+        
+        <li>
+            <strong>Spatiotemporal Modeling of Air Quality and Disease Cases</strong><br>
+          
+        <br>
+            Examined the spatiotemporal association between air quality (PM10 levels) and an infectious disease case across Arizona counties from 2000 to 2022. Implemented Moran's I for spatial autocorrelation, ARIMA and SARIMA models for seasonal patterns, and Bayesian spatiotemporal modeling with Integrated Nested Laplace Approximation (INLA). Identified spatial heterogeneity, temporal trends, and seasonality, providing insights into environmental factors influencing disease spread. Leveraged R for data analysis, visualization, and predictive modeling.
+        </li>
+        
+        <br>
+        
+        <li>
+            <strong>Clinical Trial Analysis of Anti-Epileptic Drug Efficacy</strong><br>
+            
+        <br>
+            Assessed the efficacy of Progabide in a placebo-controlled, double-blinded trial involving 59 participants. Modeled seizure count reductions over time using Generalized Estimating Equations (GEE) with an AR(1) covariance structure. Conducted hypothesis testing in SAS and interpreted results to provide evidence of treatment efficacy.
+        </li>
+        
+        <br>
+        
+        <li>
+            <strong>Bacterial Population Dynamics Under Simulated Microgravity</strong><br>
+           
+        <br>
+            Analyzed population dynamics and interspecies interactions of Ralstonia and Sphingomonas in a 100-day mixed-culture study under simulated microgravity and standard gravity. Modeled temporal changes in colony size distribution using linear mixed-effects models in R. Investigated species-specific growth patterns and their environmental interactions, providing insights into microbial behavior under spaceflight conditions.
+        </li>
+        
+        <br>
+        
+        <li>
+            <strong>Gender Bias and Educational Opportunity Cost Analysis (Regression Modeling)</strong><br>
+           
+        <br>
+            Conducted a comprehensive analysis of wage disparities among programmers and engineers in Silicon Valley using the 2000 U.S. Census data. Developed and refined linear regression models to evaluate the effects of gender and educational attainment on income. Explored the economic trade-offs of pursuing higher education degrees, leveraging R for statistical modeling, data visualization, and diagnostics.
+        </li>
+        
+        <br>
+        
+        <li>
+            <strong>Bioinformatics Analysis of the Astronaut Salivary Microbiome (Team Work)</strong><br>
+        
+            Analyzed the salivary microbiome of astronauts at three time points—pre-flight, during-flight, and post-flight—using 16S rRNA sequencing data. Performed differential abundance analysis, beta diversity analysis (Weighted-UniFrac), and alpha diversity analysis (Shannon Index) to investigate the impact of spaceflight on microbial communities. Identified microbial families potentially associated with mental health stressors using QIIME2 and Python. Results provided preliminary insights into spaceflight-induced microbiome changes and their implications for astronaut health.
+        </li>
+    </ul>
+</section>
+
+<!-- Go to Top Button with ↑ Icon -->
+<button onclick="scrollToTop()" class="go-top">↑</button>
+
+<style>
+    /* Updated CSS for the button */
+    .go-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 24px; /* Increased font size for better visibility of the arrow */
+        transition: background-color 0.3s;
+    }
+
+    .go-top:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    // Scroll to top function
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Jiseon Yang. All rights reserved.</p>
+    </footer>
+</body>
+</html>
